@@ -1,0 +1,99 @@
+﻿
+<!doctype html>
+
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8">
+    <title>谦讯网络-微信效果预览</title>
+    <link rel="stylesheet" media="screen" href="content/responsinator/css/main.css?v=9">
+    <!--[if IE 8]><link rel='stylesheet' media='screen' href='content/responsinator/css/ie8.css?v=9' type='text/css' /><![endif]-->
+    <link rel="stylesheet" media="screen" href="content/responsinator/css/responsinator.css?v=2">
+    <script type='text/javascript' src='content/responsinator/includes/main.min.js?v=27'></script>
+</head>
+<body>
+    <script>
+    window.onload = function () {
+        if (window.location.host == "wepage.weistone.net") {
+            document.title = "微業資訊";
+        }
+    }
+    </script>
+    <div id='tools'>
+        <form>
+            <label for='url'>微信效果预览</label>
+        </form>
+    </div>
+    <section id='devices'>                       
+    <div class='deviceWrap iphone-portrait'>
+        <div class='device' style='width: 320px; height: 416px; padding-top: 20px;padding-bottom: 44px;'>
+
+                            <div class='flashingTop' style='height: 20px; width: 320px'><span class='time'></span></div>
+            
+                            <div class='flashingBottom' style='height: 44px'></div>
+            
+            
+            <iframe src='about:blank' id='iphone-portrait' style=''></iframe>
+
+            
+        </div><!-- /device -->
+    </div><!-- /deviceWrap -->
+    <div class='deviceTitle'><em>iPhone<span> · 宽度: 320px</span></em></div>                                   
+    <div class='deviceWrap android-240x320-portrait'>
+        <div class='device' style='width: 240px; height: 300px; padding-top: 20px;'>
+
+                            <div class='flashingTop' style='height: 20px; width: 240px'><span class='time'></span></div>
+            
+            
+            
+            <iframe src='about:blank' id='android-240x320-portrait' style=''></iframe>
+
+            
+        </div><!-- /device -->
+    </div><!-- /deviceWrap -->
+    <div class='deviceTitle'><em>Android小屏<span> · 宽度: 240px</span></em></div>                                               
+    <div class='deviceWrap android-384x620-portrait'>
+        <div class='device' style='width: 384px; height: 600px; padding-top: 20px;'>
+
+                            <div class='flashingTop' style='height: 20px; width: 384px'><span class='time'></span></div>
+            
+            
+            
+            <iframe src='about:blank' id='android-384x620-portrait' style=''></iframe>
+
+            
+        </div><!-- /device -->
+    </div><!-- /deviceWrap -->
+    <div class='deviceTitle'><em>Android大屏<span> · 宽度: 384px</span></em></div>
+    </section>
+    <script type="text/javascript">
+        var t = decodeURIComponent(get_param("url"));
+        try {
+            window.frames["iphone-portrait"].src = t;
+            window.frames["android-240x320-portrait"].src = t;
+            window.frames["android-384x620-portrait"].src = t;
+        } catch (e) {
+        }
+        try {
+            window.frames["iphone-portrait"].location.href = t;
+            window.frames["android-240x320-portrait"].location.href = t;
+            window.frames["android-384x620-portrait"].location.href = t;
+        } catch (e) {
+        }
+        window.frames["iphone-portrait"].src = t;
+        window.frames["android-240x320-portrait"].src = t;
+        window.frames["android-384x620-portrait"].src = t;
+
+        function get_param(param) {
+            var query = location.search.substring(1).split('&');
+            for (var i = 0; i < query.length; i++) {
+                var kv = query[i].split('=');
+                if (kv[0] == param) {
+                    return kv[1];
+                }
+            }
+            return null;
+        }
+    </script>
+</body>
+</html>

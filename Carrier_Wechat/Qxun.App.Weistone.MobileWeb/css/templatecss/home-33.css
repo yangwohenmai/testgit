@@ -1,0 +1,39 @@
+.body{
+    max-width:640px;
+    margin:auto;
+    min-height:100%;
+    background-color:#e1e0de;
+    position:relative;
+}
+
+.list_ul{
+    margin: 10px;
+    overflow: hidden;
+    padding: 5px;
+    width:300px;
+    margin:auto;
+    padding-top:100px;
+}
+
+.list_ul a{
+    color:#FFFFFF;
+    display:block;
+    background:#655637;
+    line-height:46px;
+    overflow:hidden;
+}
+.list_ul li{
+    padding:6px;
+    display:inline-block;
+    width:50%;
+    float:left;
+    text-align:center;
+    -webkit-box-sizing:border-box;
+}
+.logo
+{
+padding: 5px;
+padding-top: 20px;
+width: 300px;
+margin: auto;
+}

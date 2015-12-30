@@ -1,0 +1,37 @@
+﻿.swipe{
+    overflow: hidden;
+    visibility: hidden;
+    position: relative;
+}
+.swipe-wrap{
+    overflow: hidden;
+    position: relative;
+}
+.swipe-wrap > div{
+    float: left;
+    width: 100%;
+    position: relative;
+}
+.swipe-wrap > div > img{
+    width: 100%;
+}    
+.swipe > ol{
+    height: 20px;
+    position: relative;
+    z-index: 10;
+    margin-top: -25px;
+    text-align: right;
+    padding-right: 20px;
+    background-color: rgba(0,0,0,0.5);
+}    
+.swipe > ol > li{
+    display: inline-block;
+    margin: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #757575;
+    border-radius: 10px;
+}
+.swipe > ol > li.on{
+    background-color: #ffffff;
+}

@@ -1,0 +1,10 @@
+﻿body{font-size: 12px;font-weight:100;}
+.body{padding: 15px 5% 2em;}
+.footer{text-align: center;}
+.map_area {height: 75px;overflow: hidden;margin-bottom: 5px;}
+a:link,a:visited{text-decoration:none;}
+ul {margin: 0;padding-left: 0;}
+ul li { list-style:none; padding:.7em 0; margin:0; border-bottom:1px solid #e3e3e3;}
+.banner{overflow: hidden;}
+.banner > div{overflow: hidden;}
+.banner > div > img{width: 100%;}    

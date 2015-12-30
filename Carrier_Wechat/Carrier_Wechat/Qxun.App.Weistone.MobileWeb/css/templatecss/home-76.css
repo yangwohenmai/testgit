@@ -1,0 +1,270 @@
+﻿*
+{
+    padding: 0;
+    margin: 0;
+}
+body
+{
+    width: 100%;
+    font-family: 微软雅黑;
+}
+a
+{
+    text-decoration: none;
+}
+a img
+{
+    border: none;
+}
+img
+{
+    border: none;
+}
+.container
+{
+    background-color: #0a0b0d;
+    max-width: 640px;
+    margin: auto;
+}
+.maincontainer
+{
+    background-color: #0a0b0d;
+}
+/**************banner***************/
+.box_swipe
+{
+    overflow: hidden;
+    position: relative;
+}
+.box_swipe ul
+{
+    -webkit-padding-start: 0px;
+}
+
+.box_swipe > ol
+{
+    height: 20px;
+    position: relative;
+    z-index: 10;
+    margin-top: -25px;
+    text-align: right;
+    padding-right: 15px;
+    background-color: rgba(0,0,0,0.3);
+}
+.box_swipe > ol > li
+{
+    display: inline-block;
+    margin: 5px 0;
+    width: 8px;
+    height: 8px;
+    background-color: #757575;
+    border-radius: 8px;
+}
+.box_swipe > ol > li.on
+{
+    background-color: #ffffff;
+}
+.box_li
+{
+    max-width: 640px;
+    display: table-cell;
+    vertical-align: top;
+}
+/**************banner***************/
+
+.bannerstyle
+{
+    margin-top: -45px;
+    height: 40px;
+    position: relative;
+    z-index: 10;
+    text-align: right;
+    background-color: rgba(0,0,0,0.5);
+}
+/**************ul li***************/
+.list_menu
+{
+    position: absolute;
+    max-width: 640px;
+    width: 100%;
+    left: 0;
+    bottom: 60px;
+    
+}
+.first_li {
+    width: 35%;
+}
+.scend_li {
+    width: 39%;
+}
+.third_li {
+    width: 44%;
+}
+.fourth_li {
+    width: 40%;
+}
+.fifth_li {
+    width: 42%;
+}
+.sixth_li {
+    width: 39%;
+}
+.list_menu li
+{
+    list-style-type: none;
+}
+.list_menu li a img
+{
+    max-width: 100%;
+}
+
+.list-box
+{
+    position: relative;
+}
+.list-box div
+{
+    position: absolute;
+    left: 20px;
+    top: 23%;
+    color: rgb(255, 255, 255);
+    font-size: 26px;
+    min-width: 100px;
+}
+.list-box img
+{
+    width: 100%
+}
+.copyright
+{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 48px;
+    clear: both;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    font-size: 18px;
+}
+
+/**********************功能展示兼容性设置开始**********************/
+
+@media (min-width: 240px)
+{
+    .list-box .title_font
+    {
+        font-size: 12px;
+        top: 19%;
+        white-space: nowrap;
+word-break: break-all;
+overflow: hidden;
+text-overflow: ellipsis;
+width:75%;
+    }
+    .tele_phone {
+        height: 47px;
+    }
+}
+@media (min-width: 320px)
+{
+    .list-box .title_font
+    {
+        font-size: 15px;
+        top: 21%
+        white-space: nowrap;
+word-break: break-all;
+overflow: hidden;
+text-overflow: ellipsis;
+width:75%;
+    }
+    .tele_phone {
+        height: 56px;
+    }
+}
+@media (min-width: 384px)
+{
+    .list-box .title_font
+    {
+        font-size: 18px;
+        top: 21%
+        white-space: nowrap;
+word-break: break-all;
+overflow: hidden;
+text-overflow: ellipsis;
+width:75%;
+    }
+    .tele_phone {
+        height: 64px;
+    }
+}
+@media (min-width: 480px)
+{
+    .list-box .title_font
+    {
+        font-size: 21px;
+        top: 23%
+        white-space: nowrap;
+word-break: break-all;
+overflow: hidden;
+text-overflow: ellipsis;
+width:75%;
+    }
+    .tele_phone {
+        height: 75px;
+    }
+}
+@media (min-width: 568px)
+{
+    .list-box .title_font
+    {
+        font-size: 25px;
+        top: 23%
+        white-space: nowrap;
+word-break: break-all;
+overflow: hidden;
+text-overflow: ellipsis;
+width:75%;
+    }
+    .tele_phone {
+        height: 83px;
+    }
+}
+@media (min-width: 600px)
+{
+    .list-box .title_font
+    {
+        font-size: 32px;
+        top: 16%
+        white-space: nowrap;
+word-break: break-all;
+overflow: hidden;
+text-overflow: ellipsis;
+width:75%;
+    }
+    .tele_phone {
+        height: 90px;
+    }
+}
+@media (min-width: 768px)
+{
+    .list-box .title_font
+    {
+        font-size: 36px;
+        top: 15%
+        white-space: nowrap;
+word-break: break-all;
+overflow: hidden;
+text-overflow: ellipsis;
+width:75%;
+    }
+    .tele_phone {
+        height: 96px;
+    }
+}
+@media (min-width: 1024px)
+{
+    .tele_phone {
+        height: 121px;
+    }
+}
+/**********************功能展示兼容性设置结束**********************/

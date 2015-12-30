@@ -1,0 +1,60 @@
+﻿
+@{
+    Layout = "~/mobile/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "产品知识库";
+    var aid = Request["aid"];
+}
+<style>
+    .form_detail_row {
+        color: rgb(103, 98, 98);
+    }
+    .articleImage {
+        width: 100%;
+    }
+    .articleTitle {
+        font-size: 1.4em;
+        color: black;
+    }
+    .articleInfo {
+        word-wrap: break-word;
+    }
+        .articleInfo img {
+        max-width:100%;
+        }
+</style>
+<div class="lshm_container no_bottomfixed">
+    <div class="lshm_form">
+        <form id="form1">
+            <div class="form_content">
+                <div class="form_detail" style="padding: 12px 15px 0 15px;">
+                    <div class="form_detail_row">
+                        <div class="articleTitle"></div>
+                    </div>
+                    <div class="form_detail_row">
+                        <div style="margin-top:-14px;" class="articleDate"></div>
+                    </div>
+                    <div class="form_detail_row" style="margin-bottom:0">
+                        <img class="articleImage" />
+                    </div>
+                    <div class="form_detail_row">
+                        <div class="articleInfo"></div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    $(function () {
+        $(function () {
+            $.post("@Url.Action("GetRepositoryArticleEntityById", "RepositoryArticle")@Html.Raw(ViewBag.oQueryString)", { id: '@aid' }, function (data) {
+                if (data.ExtInfo != null) {
+                    $(".articleTitle").html(data.ExtInfo.Title);
+                    $(".articleDate").html(data.ExtInfo.UploadTime.split("T")[0] + "&nbsp;&nbsp;" + "阅读量：" + data.ExtInfo.Quantity);
+                    $(".articleImage").attr("src", data.ExtInfo.CoverImgUrl);
+                    $(".articleInfo").html(data.ExtInfo.Contents);
+                }
+            });
+        })
+    });
+</script>

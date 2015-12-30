@@ -1,0 +1,43 @@
+.nav{ width:42px; position:fixed; z-index:200; background:#e5e5e7; bottom:20px; border-radius:0 5px 5px 0;}
+.nav ul li  span{ display:block; font-size:20px;text-align:center;line-height:42px; color:#0084e0; background-size:42px auto;  width:42px; height:42px;}
+.nav ul li  span.tel{background:url(~/../../../images/Menu/Menu8/v85_nav.png); background-size:42px auto;  background-position:0 0px; }
+.nav ul li  span.address{background:url(~/../../../images/Menu/Menu8/v85_nav.png); background-size:42px auto;  background-position:0 42px; }
+.share{
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	z-index:1000;
+	background:rgba(0,0,0,0.5);
+	display:none;
+}
+.share.on{
+	display:block;
+}
+.share table{
+	float:right;
+	margin-right:10px;
+	width:235px;
+	text-align:center;
+}
+.share table img{
+}
+.share tr:nth-of-type(2){
+	text-align:center;
+	border:2px dashed #fff;
+	border-radius:8px;
+	-webkit-border-radius:8px;
+	display:block;
+	color:#fff;
+	line-height:30px;
+}
+.share td{
+	width:116px;
+	text-align:center;
+}
+.share tr:nth-of-type(2) img{
+	width:66px!important;
+	height:66px!important;
+	margin:5px;
+}

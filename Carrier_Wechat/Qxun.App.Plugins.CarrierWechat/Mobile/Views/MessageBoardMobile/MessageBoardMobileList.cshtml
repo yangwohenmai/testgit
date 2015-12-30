@@ -1,0 +1,92 @@
+﻿@{
+    var MessageStatus = Qxun.UI.Background.App_Code.CreateForm.GetEnumNameByType(typeof(Qxun.App.Plugins.CarrierWechat.Public.MessageStatus), "MessageStatus");
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          name="viewport">
+    <!-- #Mobile Devices Support -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="YES" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/css/materialize/css/materialize.min.css")" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/css/materialize/css/main.min.css")" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <script type="text/javascript" src="@Url.Content("~/js/jquery-1.11.2.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/js/materialize/materialize.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/js/jquery.validate.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/js/jquery.tmpl.min.js")"></script>
+    
+    <title>我的留言</title>
+</head>
+<body>
+    <header id="header" class="page-topbar">
+        <!-- start header nav-->
+        <div class="navbar-fixed">
+            <nav class="cyan">
+                <div class="nav-wrapper">
+                    <h1 class="logo-wrapper">
+                        <a href="#!" class="brand-logo darken-1" style="margin:0;padding:0;line-height: 56px;">
+                            我的留言
+                        </a>
+                    </h1>
+                </div>
+            </nav>
+        </div>
+        <!-- end header nav-->
+    </header>
+    <div id="main">
+        <div class="wrapper">
+            <section id="content">
+                <div class="container">
+                    <div class="section">
+                        <p style="text-align:center"><a class="btn waves-effect waves-light blue" href="@Url.Action("MessageBoardEdit", "MessageBoardMobile")@Html.Raw(ViewBag.oQueryString)" style="width:80%">我要留言</a></p>
+                        <div id="work-collections">
+                            <div class="row">
+
+                                <div class="col s12 m12 l6">
+                                    <ul id="issues-collection" class="collection">
+                                        <li class="collection-item">
+                                            <span class="collection-header">我的留言</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script type="text/x-jquery-tmpl" id="MessageBoardListTmpl">
+        <li class="collection-item">
+            <a href="@Url.Action("MessageBoardInfo", "MessageBoardMobile")@Html.Raw(ViewBag.oQueryString)&id=${Id}">
+                <div class="row">
+                    <div class="col s8">
+                        <p class="collections-title">提交时间:${MessageDate}</p>
+                    </div>
+                    <div class="col s4">
+                        <p class="collections-title">@MessageStatus</p>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </script>
+    <script>
+    $(function () {
+        $.post("@Url.Action("GetMessageBoardMobileEntities", "MessageBoardMobile")@Html.Raw(ViewBag.oQueryString)", {page:1,pageSize:100}, function (data) {
+            if (data!=null) {
+                $("#MessageBoardListTmpl").tmpl(data.ContentEntity.Body).appendTo("#issues-collection");
+            }
+        })
+    })
+    </script>
+
+</body>
+</html>

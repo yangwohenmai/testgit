@@ -1,0 +1,314 @@
+﻿*
+{
+    padding:0; 
+    margin:0;
+}
+html
+{
+    height:100%
+}
+body 
+{
+	width: 100%;
+    font-family:微软雅黑,黑体;
+    height:100%
+}
+a{
+	text-decoration:none;
+}
+img
+{
+    border:0;
+}
+.container
+{
+	max-width: 640px;
+	margin: auto;
+	background:url(../../../images/home/home74/bg.jpg) no-repeat center;
+	height:100%
+}
+/******************banner条开始********************/
+.box_swipe{
+    overflow:hidden;
+    position:relative;
+    visibility: visible;
+}
+.box_swipe ul{
+    -webkit-padding-start: 0px;
+}
+.telstyle
+{
+    position:absolute;top:0;right:0;
+}
+.teldiv
+{
+    position: relative;margin-top: 50%;float: right;
+}
+/******************banner条结束********************/
+/******************分类开始********************/
+.categorystyle
+{
+    position:fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 640px;
+	margin: auto;
+	
+}
+.categoryul
+{
+    list-style:none;
+}
+.categoryul li
+{ 
+    float:left;
+    width:33.3%;
+    text-align:center;
+    margin-top:20px;
+}
+.categoryul li img
+{
+    vertical-align:middle;
+    width:15%;
+}
+.categoryul li a
+{
+    text-decoration:none;
+}
+.line
+{
+    background: url(../../../images/home/home74/line.jpg) no-repeat right center;
+}
+.categoryul li div
+{
+    white-space: nowrap;
+word-break: break-all;
+overflow: hidden;
+text-overflow: ellipsis;
+    color:White;
+    margin-top:5px;
+}
+.menuul
+{
+    list-style:none;
+}
+.menuul>li
+{ 
+    float:left;
+    width:33%;
+    margin-top:20px;
+    text-align:center;
+}
+.menuul>li img
+{
+    vertical-align:middle;
+    margin-top:10px;
+    margin-bottom:10px;
+    width: 20%;
+}
+.menuul>li a
+{
+    text-decoration:none;
+}
+.menu_font{
+    text-align:left;
+    position:absolute;
+    list-style:none;
+    z-index:3;
+    background-color:black;
+    border-radius: 5px;
+    width: 150px;
+}
+.menu_font.hidden{
+    display:none;
+}
+.menu_font li:first-of-type {
+    border-top: 0;
+}
+.menu_font li:last-of-type {
+    border-bottom: 0;
+}
+.menu_font li
+{
+    border-top: 1px solid rgb(64, 72, 75);
+    border-bottom: 1px solid rgb(0, 6, 9);
+}
+.menu_font li a
+{
+    margin-left:15px;
+    color:White;
+    line-height:45px;
+}
+
+.divbg
+{
+    position:absolute;z-index:1;left: 0;right: 0;bottom: 0;
+}
+.menubg
+{
+    position:absolute;z-index:1;left: 0;right: 0;bottom: 0;
+}
+.menustyle
+{
+    position:relative;z-index:1
+}
+/******************分类结束********************/
+.updownstyle
+{
+    width:100%;
+    text-align:center;
+    position:absolute;
+    top:0;
+}
+
+.yellowfont
+{
+    color:#bba56c;
+}
+.clearfix
+{
+    float: none;
+    clear: both;
+}
+.bannerimgSize
+{
+    width: 32%;
+}
+.bannerstyle
+{
+    background:url(../../../images/home/home74/bigbg.png);
+    padding-top: 6px;
+}
+.bannerbg
+{
+    width:100%;
+}
+.bannerli
+{
+    padding-left: 1%;
+}
+
+@media (min-width: 240px)
+{
+    .updownstyle
+    {
+        font-size: 12px;
+        margin-top: 8px;
+    }
+    .updownstyle div img
+    {
+        width:7%;
+    }
+    .bannerimgSize
+    {
+        width: 31%;
+    }
+    .bannerli
+    {
+        padding-left: 1%;
+    }
+}
+@media (min-width: 320px)
+{
+    .updownstyle
+    {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    .updownstyle div img
+    {
+        width:10%;
+    }
+    .bannerimgSize
+    {
+        width: 32%;
+    }
+    .bannerli
+    {
+        padding-left: 0.5%;
+    }
+}
+@media (min-width: 384px)
+{
+    .updownstyle
+    {
+        margin-top: 14px;
+    }
+    .updownstyle div img
+    {
+        width:6%;
+    }
+    .bannerli
+    {
+        padding-left: 0.5%;
+    }
+}
+@media (min-width: 480px)
+{
+    .updownstyle
+    {
+        margin-top: 18px;
+        font-size: 24px;
+    }
+    .updownstyle div img
+    {
+        width:10%;
+    }
+    .bannerli
+    {
+        padding-left: 0.7%;
+    }
+}
+@media (min-width: 568px)
+{
+    .updownstyle
+    {
+        font-size: 25px;
+        margin-top: 23px;
+    }
+    .updownstyle div img
+    {
+        width:8%;
+    }
+    .bannerli
+    {
+        padding-left: 0.7%;
+    }
+}
+@media (min-width: 600px)
+{
+    .updownstyle
+    {
+        font-size: 28px;
+        margin-top: 22px;
+    }
+    .bannerli
+    {
+        padding-left: 1.5%;
+    }
+}
+@media (min-width: 768px)
+{
+    .updownstyle
+    {
+        font-size: 28px;
+        margin-top: 25px;
+    }
+    .bannerli
+    {
+        padding-left: 0.8%;
+    }
+}
+@media (min-width: 1024px)
+{
+    .updownstyle
+    {
+        font-size: 28px;
+        margin-top: 25px;
+    }
+    .bannerli
+    {
+        padding-left: 0.8%;
+    }
+}

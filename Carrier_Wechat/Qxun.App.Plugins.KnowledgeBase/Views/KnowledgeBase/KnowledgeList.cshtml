@@ -1,0 +1,255 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var ExistRoot = ViewBag.ExistRoot;
+}
+@Html.Partial("_KindEditorResource")
+@Html.Partial("_FormResource")
+@Html.Partial("_ListResource")
+<link href="@Url.Content("~/Content/css/KnowledgeBase/KnowledgeBase.css?v=")@ViewBag.Version" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Scripts/jstree/dist/themes/default/style.min.css?v=")@ViewBag.Version" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/themes/base/jquery-ui.css?v=")@ViewBag.Version" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/Scripts/jstree/dist/jstree.min.js?v=")@ViewBag.Version" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/KnowledgeBase/KnowledgeBase.js?v=")@ViewBag.Version" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/ueditor/ueditor.config.js?v=")@ViewBag.Version"></script>
+<!-- 编辑器源码文件 -->
+<script src="@Url.Content("~/Scripts/ueditor/ueditor.all.min.js?v=")@ViewBag.Version"></script>
+<script src="@Url.Content("~/Scripts/ZeroClipboard.js?v=")@ViewBag.Version" type="text/javascript"></script>
+<div class="maincontentinner1">
+    <div class="main_bd">
+        <div class="knowledgeHearder">
+            <span style="font-size: 18px;">知识库</span>
+            <div class="search" style="float: right;height: 100%;line-height: 44px;">
+                <input class="searchValue input-large" style="height: 26px;border-radius: 5px !important;border: 1px solid rgb(204, 204, 204);padding-left: 5px;"/>
+                <a href="javascript:void(0)" class="btn btn-primary searchBtn">查询</a>
+                @if (ViewBag.CopyUrl != null)
+                {
+                    <a id="btnCopyTo" href="javascript:void(0)" target="_blank" type="button" class="btn btn-primary pull-right" style="margin-left: 5px;margin-top: 9px;">
+                        @Html.Raw("复制知识库链接")
+                    </a>
+                }
+            </div>
+        </div>
+        <div class="knowledgeBody" style="position:relative">
+            @if (!ExistRoot)
+            {
+                <a href="javascript:void(0)" class="btn btn-primary addRootCatalog" style="position: absolute;top: 140px;left: 74px;">添加根目录</a>
+            }
+            <div class="knowledge-jstree knowledgeBody_left">
+               
+            </div>
+            <div class="knowledge-list knowledgeBody_right">
+                <div id="konwledgeArticleLsit" style="position: relative;">
+                    <div class="dataTables_filter" id="dyntable_filter">
+                    </div>
+                    <table id="Table1" class="table table-bordered responsive dataTable">
+                        <thead>
+                            <tr>
+                                <th>
+                                    条目名
+                                </th>
+                                <th>
+                                    描述
+                                </th>
+                                <th>
+                                    上传人
+                                </th>
+                                <th>
+                                    浏览数
+                                </th>
+                                <th>
+                                    上传时间
+                                </th>
+                                <th>
+                                    操作
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody"></tbody>
+                    </table>
+                    <div class="dataTables_info" id="Div25" style="background: rgb(234, 234, 234);">
+                        &nbsp;
+                    </div>
+                    <div class="dataTables_paginate paging_bootstrap pagination" id="Div26">
+                        <ul id="tableFoot"></ul>
+                    </div>
+                </div>
+                <div id="knowledgeArticleEdit">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="konwledgeBaseCatalogEditModal" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="width: 600px; display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form id="Form1" method="post" class="form-horizontal" enctype="multipart/form-data">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        ×
+                    </button>
+                    <h4 class="modal-title">
+                        新增子目录
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="dialog_content">
+                        <div class="dialog_catalog_name">
+                            <div class="form_item">
+                                <label for="RepositoryCatalog_Title" class="form_label" style="line-height: 32px;">
+                                    目录名称
+                                </label>
+                                <div class="form_control">
+                                    <input type="hidden" class="input_text" id="RepositoryCatalog_Id" value="">
+                                    <input type="hidden" class="input_text" id="RepositoryCatalog_ParentId" value="">
+                                    <input type="hidden" class="input_text" id="RepositoryCatalog_WeixinPlatId" value="">
+                                    <input type="text" class="input_text" name="RepositoryCatalog_Title" id="RepositoryCatalog_Title" placeholder="目录名称不为空且不能超过50个字">
+                                    <span class="form_info_block">目录名称不为空且不能超过50个字</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary uploadbtn" id="btnRepositoryCatalogAddSave">
+                    提交
+                </button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    取消
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="konwledgeBaseArticleEditModal" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="width: 600px; top: 5%; display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form id="Form1" method="post" class="form-horizontal" enctype="multipart/form-data">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        ×
+                    </button>
+                    <h4 class="modal-title">
+                        新增条目
+                    </h4>
+                </div>
+                <div class="modal-body" style="max-height: 480px;">
+                    <input id="RepositoryArticle_Id" value="" type="hidden" >
+                    <input id="RepositoryArticle_CatalogId" value="" type="hidden">
+                    <input id="RepositoryArticle_WeixinPlatId" value="" type="hidden">
+                    <input id="RepositoryArticle_Quantity" value="" type="hidden">
+                    <div class="form_item">
+                        <label class="form_label">
+                            所属目录
+                        </label>
+                        <div class="form_control">
+                            <input id="RepositoryArticle_CatalogName" type="text"  class="input_text js_partial_require" placeholder="" readonly="readonly" value="">
+                        </div>
+                    </div>
+                    <div class="form_item">
+                        <label class="form_label">
+                            条目名
+                        </label>
+                        <div class="form_control">
+                            <input id="RepositoryArticle_Title" type="text" class="input_text js_partial_require" placeholder="" value="">
+                        </div>
+                    </div>
+                    <div class="form_item">
+                        <label class="form_label">
+                            封面图片
+                        </label>
+                        <div class="form_control">
+                            @Html.Partial("UploadImagePartial", new ViewDataDictionary(ViewData) { { "count", "1" }, { "picHidden", "RepositoryArticle_CoverImg" }, { "tip", "" }, { "isShow", true } })
+                        </div>
+                    </div>
+                    <div class="form_item">
+                        <label class="form_label">
+                            摘要
+                        </label>
+                        <div class="form_control">
+                                <textarea id="RepositoryArticle_Abstract" class="input_text js_partial_require"></textarea>
+                        </div>
+                    </div>
+                    <div class="form_item">
+                        <label class="form_label">
+                            是否显示封面
+                        </label>
+                        <div class="form_control">
+                            <input name="RepositoryArticle_Display" type="radio" class="input_text js_partial_require" data-state="1" checked="checked"> 是 
+                            <input name="RepositoryArticle_Display" type="radio" class="input_text js_partial_require" data-state="0" placeholder="" value=""> 否 
+                        </div>
+                    </div>
+                    <div class="form_item">
+                        <label class="form_label">
+                            正文
+                        </label>
+                        <div class="form_control" style=" margin-left: 0;">
+                            <script id="RepositoryArticle_Contents" name="content" type="text/plain" width="100%">
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary uploadbtn" id="btnRepositoryArticleAddSave" style="width: 150px;">
+                        保存
+                    </button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        取消
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/x-jquery-tmpl" id="knowledgeBaseArticleTmpl">
+    <tr class="gradeX odd" id="${Id}">
+        <td class="a_Title">
+            ${Title}
+        </td>
+        <td class="a_Abstract">
+            ${Abstract}
+        </td>
+        <td class="a_UploadName">
+            ${UploadName}
+        </td>
+        <td class="a_Quantity">
+            ${Quantity}
+        </td>
+        <td class="a_UploadTime">
+            ${formatDate(UploadTime).split('.')[0]}
+        </td>
+        <td class=" ">
+            <a href="javascript:void(0)" item-id="${Id}" class="handleIcon btn-detail-open" title="编辑"></a>
+            <a href="javascript:void(0)" item-id="${Id}" class="handleIcon btn-del-open" title="删除"></a>
+        </td>
+    </tr>
+    <div id="dateail_${id}"></div>
+</script>
+<script type="text/javascript">
+    $(function () {
+        if ($("#btnCopyTo").length > 0) {
+            ZeroClipboard.setMoviePath('@Url.Content("~/Scripts/ZeroClipboard.swf?v=")@ViewBag.Version');
+            var clip = new ZeroClipboard.Client(); // 新建一个对象
+            clip.setHandCursor(true); // 设置鼠标为手型
+            clip.setText('@ViewBag.CopyUrl'.replace(/&amp;/g, "&")); // 设置要复制的文本。
+            clip.glue("btnCopyTo"); // 和上一句位置不可调换
+            clip.addEventListener("complete", function () {
+                alert("链接已成功复制到剪贴板，右键选择粘贴或按键盘快捷键“Ctrl+V“即可使用");
+            });
+        }
+    });
+</script>
+<script type="text/javascript">
+    var editorTEXTInitContent = "";
+    var editorTEXT = UE.getEditor('RepositoryArticle_Contents', {
+        catchRemoteImageEnable: false,
+        initialFrameHeight: 300,
+        toolbars: [['fullscreen', 'source', "fontsize", "|", "blockquote", "horizontal", "|", "removeformat", "link", "unlink", "|","insertimage", "insertmusic", "insertaudio", "insertcard"], ["bold", "italic", "underline", "forecolor", "backcolor", "|", "justifyleft", "justifycenter", "justifyright", "|", "rowspacingtop", "rowspacingbottom", "lineheight", "|", "insertorderedlist", "insertunorderedlist", "|", "imagenone", "imageleft", "imageright", "imagecenter"]]
+
+    });
+</script>
+<!--数据加载的提示-->
+<div id="load" class="tipsClass"></div>

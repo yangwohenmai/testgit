@@ -1,0 +1,100 @@
+﻿@{
+    var platId = Request["r"];
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/css/materialize/css/materialize.min.css")" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/css/materialize/css/main.min.css")" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/css/UnitCheck.css")" media="screen,projection">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="@Url.Content("~/js/jquery-1.11.2.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/js/materialize/materialize.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/js/jquery.validate.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/js/Jquery.Query.js")"></script>
+    <title>CarrierWechat</title>        
+</head>
+<body>
+    <header id="header" class="page-topbar">
+        <!-- start header nav-->
+        <div class="navbar-fixed">
+            <nav class="cyan">
+                <div class="nav-wrapper">
+                    <h1 class="logo-wrapper">
+                        <a href="#!" class="brand-logo darken-1" style="margin:0;padding:0;line-height: 56px;">
+                            保固查询
+                        </a>
+                    </h1>
+                </div>
+            </nav>
+        </div>
+        <!-- end header nav-->
+    </header>
+    <div id="main">
+        <div class="wrapper">
+            <section id="content">
+                <div class="container">
+                    <div class="section">
+                        <div class="section">
+                            <div class="row">
+                                <div class="col s12 m12 l6">
+                                    <div class="row">
+                                        <form class="col s12">
+                                            <label for="UnitType" class="UnitType">机组型号</label>
+                                            </br>
+                                            <input type="text" name="UnitType" id="UnitType" value="" readonly="readonly">
+                                            </br>
+                                            </br>
+
+                                            <label for="DeadLine" class="DeadLine">保修期限</label>
+                                            </br>
+                                            <input type="text" name="DeadLine" id="DeadLine" value="" readonly="readonly">
+                                            </br>
+                                            </br>                                          
+                                            <div id="comment">如需查询详细内容，请联系021-111111</div>                                           
+                                            </br>
+                                            </br>
+
+                                            <button class="btn m-bottom-10" id="btnBack">返回</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            init();
+            $("#btnBack").click(function () {
+                var back = "@Url.Action("UnitInfo", "UnitInfo")@Html.Raw(ViewBag.oQueryString)";
+                location.href = back;
+                return false;//表单里的<button>标签定义的按钮会自动提交，返回false阻止其提交
+            })
+        })
+        //初始化页面元素
+        function init() {
+            var UnitNumber = $.query.get("UnitNumber");
+            $.ajax({
+                url: "@Url.Action("GetUnitInformationList", "UnitInfo")@Html.Raw(ViewBag.oQueryString)&UnitNumber=" + UnitNumber,
+                data: {},
+                success: function (data) {
+                    if (data != null) {
+                        $("#UnitType").val(data.ExtInfo.UnitType);
+                        $("#DeadLine").val(data.ExtInfo.DeadLine.replace("T"," "));
+                    }
+                }
+
+            });
+        }
+    </script>
+
+</body>
+</html>

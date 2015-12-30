@@ -1,0 +1,112 @@
+.nav_10{
+	height:60px;
+	text-align:center;
+}
+.nav_10 ul{
+	border-top:1px solid #4b3e38;
+	height:53px;
+	position:fixed;
+	z-index:200;
+	bottom:0;
+	left:0;
+	width:100%;
+	border:5px solid red;
+	border-width: 4px 0 0 0;
+	border-image: url(../../../images/Menu/Menu9/v80_7.png) 9 repeat;
+	background: #c23828;
+	background-clip: content-box;
+}
+.nav_10 li>a{
+	font-size:12px;
+	color:#ffffff;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	border-bottom:0;
+	display:block;
+	height:100%;
+	padding:5px 0;
+	text-align:center;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.nav_10 li>a.on, .nav_10 li>a.active{
+	color:#fff;
+}
+.nav_10 li>a>*{
+	pointer-events:none;
+}
+.nav_10 li>a>span{
+	display: block;
+	width:25px;
+	height:25px;
+	margin:auto;
+	background:url(../../../images/Menu/Menu9/v80_nav.png) no-repeat -13px -13px;
+	-webkit-background-size: auto 100px;
+}
+.nav_10 li>a>span.back{
+	background-position:-13px -13px;
+}
+.nav_10 li>a>span.phone{
+	background-position:-65px -13px;
+}
+.nav_10 li>a>span.address{
+	background-position:-113px -13px;
+}
+.nav_10 li>a>span.home{
+	background-position:-162px -13px;
+}
+.nav_10 li>a>span.share1{
+	background-position:-214px -13px;
+}
+
+.nav_10 li>a.on>span, .nav_10 li>a.active>span{
+	background-position-y:-64px;
+}
+
+.nav_10 li>a label{
+	width: 60px;
+	display: block;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	width: 100%;
+}
+
+.share{
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	z-index:1000;
+	background:rgba(0,0,0,0.5);
+	display:none;
+}
+.share.on{
+	display:block;
+}
+.share table{
+	float:right;
+	margin-right:10px;
+	width:235px;
+	text-align:center;
+}
+.share table img{
+}
+.share tr:nth-of-type(2){
+	text-align:center;
+	border:2px dashed #fff;
+	border-radius:8px;
+	-webkit-border-radius:8px;
+	display:block;
+	color:#fff;
+	line-height:30px;
+}
+.share td{
+	width:116px;
+	text-align:center;
+}
+.share tr:nth-of-type(2) img{
+	width:66px!important;
+	height:66px!important;
+	margin:5px;
+}

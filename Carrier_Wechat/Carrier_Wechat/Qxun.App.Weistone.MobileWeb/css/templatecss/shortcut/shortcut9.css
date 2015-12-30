@@ -1,0 +1,121 @@
+.nav_10{
+	height:40px;
+	text-align:center;
+}
+.nav_10 ul{
+	
+	height:40px;
+	position:fixed;
+	z-index:200;
+	bottom:0;
+	left:0;
+	width:100%;
+	background: #353535;
+}
+
+.nav_10 li{
+	border-left:1px solid #464646;
+	border-right:1px solid #232323;
+	height:100%;
+	
+}
+
+.nav_10 li:first-child{
+	border-left:none;
+}
+.nav_10 li:last-child{
+	border-right:none;
+}
+.nav_10 li>a{
+	font-size:12px;
+	color:#ffffff;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	border-bottom:0;
+	display:block;
+	height:100%;
+	padding:8px 0;
+}
+
+.nav_10 li>a>*{
+	pointer-events:none;
+}
+.nav_10 li>a>span{
+	display: block;
+	width:25px;
+	height:25px;
+	margin:auto;
+	font-size:20px;
+	color:#fde028;
+}
+.nav_10 li>a>span.back{
+	background:url(../../img/template/lib/v83_icon.png);
+	-webkit-background-size: auto 25px;
+	background-position:-16px 0px;
+}
+.nav_10 li>a>span.conversation{
+	background:url(../../img/template/lib/v81_nav.png) no-repeat;
+	-webkit-background-size: auto 50px;
+	background-position:0px 0x;
+}
+.nav_10 li>a>span.star{
+	background:url(../../img/template/lib/v81_nav.png) no-repeat;
+	-webkit-background-size: auto 50px;
+	background-position:-25px 0px;
+}
+.nav_10 li>a>span.home{
+	color:#363634;
+}
+.nav_10 li>a>span.money{
+	background:url(../../img/template/lib/v81_nav.png) no-repeat;
+	-webkit-background-size: auto 50px;
+	width:28px;
+	background-position:-75px 0px;
+}
+.nav_10 li>a>span.settings{
+	background:url(../../img/template/lib/v81_nav.png) no-repeat;
+	-webkit-background-size: auto 50px;
+	background-position:-103px 0px;
+}
+.nav_10 li.on{
+	background-color:#ffe228;
+	border:none;
+	height:38px;
+	margin-top:2px;
+	margin-left:-1px;
+	padding-left:1px;
+}
+.nav_10 li.on + li { border-left:none;}
+.nav_10 li>a.on>span, .nav_10 li>a.active>span{
+	background-position-y:-25px;
+	
+}
+
+.nav_10 li>a label{
+	width: 60px;
+	display: block;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	width: 60px;
+}
+
+.nav_10 li.more{
+ 	position:relative;
+	border-top:1px solid #464646;
+}
+.nav_10 li.more>a>span{
+	background:none;
+}
+.nav_10 li.more ul{
+	position:absolute;
+	bottom:120px;
+	display:none;
+	
+}
+.nav_10 li.more ul.on{display:block; left:-1px; right:0px;}
+.nav_10 li.more ul li{
+	border-top:1px solid #464646;
+	border-bottom:1px solid #232323;
+	background: #353535;
+}

@@ -1,0 +1,61 @@
+.body{
+	max-width:640px;
+	margin:auto;
+	min-height:100%;
+	background-color:#e1e0de;
+	position:relative;
+	font-size:12px;
+}
+
+.body{
+	display:block;
+	padding:10px;
+	background-color:#b62b23;
+}
+
+.section_body{
+	background:url('../../images/Details/Details9/v80_5.jpg') repeat-x center 0;
+	-webkit-background-size:100%;
+}
+img{width: 100%}
+.article{
+	color:#333333;
+	margin:auto 15px;
+	overflow: hidden;
+	border-radius:5px;
+	min-height:200px;
+	padding-bottom:20px;
+}
+.article .content{
+	letter-spacing: 1px;
+	line-height: 1.8;
+	/*white-space: pre-line!important;*/
+	font-size: 12px;
+	padding:10px;
+}
+.article img{
+	max-width:100%!important;
+}
+
+.article header{
+	padding:10px 0;
+}
+.article header *{
+	margin:5px 10px;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+	overflow: hidden;
+	font-size:12px;
+	font-weight:100;
+}
+.article header h3{
+	font-size:17px;
+}
+
+footer .copy{
+	line-height:25px;
+	display: block;
+	color:#ffffff;
+	text-align:center;
+
+}

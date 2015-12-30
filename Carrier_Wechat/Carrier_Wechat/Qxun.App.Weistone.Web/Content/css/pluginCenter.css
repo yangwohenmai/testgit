@@ -1,0 +1,86 @@
+﻿ul, ol {
+padding-left: 0;
+list-style-type: none;
+}
+.main_bd {
+padding-bottom: 30px;
+}
+dd {
+margin-left: 0;
+}
+.plugins_wrp {
+padding: 20px 0px;
+}
+.plugins_wrp .plugin_desc {
+padding-bottom: 16px;
+color: rgb(141, 141, 141);
+}
+.plugins_wrp ul {
+margin-right: -24px;
+overflow: hidden;
+}
+.plugins_wrp .item_wrp {
+float: left;
+display: inline-block;
+width: 50%;
+position: relative;
+}
+.plugin_item {
+display: block;
+overflow: hidden;
+margin-right: 24px;
+margin-bottom: 24px;
+color: rgb(34, 34, 34);
+height: 92px;
+padding-left: 94px;
+border: 1px solid rgb(231, 231, 235);
+}
+.plugin_item:hover {
+text-decoration: none;
+background-color: rgb(244, 245, 249);
+border-color: rgb(217, 218, 220);
+}
+.plugin_item .plugin_icon {
+position: absolute;
+width: 94px;
+height: 94px;
+background-color: rgb(204, 204, 204);
+top: 0;
+left: 0;
+}
+a img, fieldset {
+border: 0;
+}
+.plugin_item .plugin_status {
+position: relative;
+float: right;
+text-align: right;
+padding: 36px 30px 35px 0;
+}
+.plugin_item .plugin_status .access {
+background: url("../../Content/Images/plugins_z.png") 0 -196px no-repeat;
+width: 16px;
+height: 16px;
+vertical-align: middle;
+display: inline-block;
+position: absolute;
+right: 10px;
+top: 40px;
+}
+.plugin_item .plugin_content {
+padding: 10px 0 10px 20px;
+overflow: hidden;
+}
+.plugin_item .plugin_content .title {
+margin-bottom: 4px;
+width: 216px;
+font-size: 14px;
+color: rgb(34, 34, 34);
+}
+.plugin_item .plugin_content .desc {
+color: rgb(141, 141, 141);
+font-size: 12px;
+line-height: 24px;
+width: 100%;
+    max-width: 238px;
+}

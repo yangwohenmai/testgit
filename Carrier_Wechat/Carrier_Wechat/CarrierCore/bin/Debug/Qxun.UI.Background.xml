@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Qxun.UI.Background</name>
+    </assembly>
+    <members>
+        <member name="T:Qxun.UI.Background.Pages.HelperPage">
+            <summary>
+            HelperPageForAppCode
+            </summary>
+        </member>
+        <member name="P:Qxun.UI.Background.Pages.HelperPage.Html">
+            <summary>
+            Supports the rendering of HTML controls in a view.
+            </summary>
+        </member>
+        <member name="P:Qxun.UI.Background.Pages.HelperPage.ViewData">
+            <summary>
+            Represents a container that is used to pass data between a controller and a view.
+            </summary>
+        </member>
+        <member name="P:Qxun.UI.Background.Pages.HelperPage.Url">
+            <summary>
+            Contains methods to build URLs for ASP.NET MVC within an application.
+            </summary>
+        </member>
+        <member name="M:Qxun.UI.Background.App_Code.CreateForm.GetEnumNameByType(System.Type,System.String,System.Boolean)">
+            <summary>
+            根据枚举类型拼接if语句给tmpl模板使用
+            </summary>
+            <param name="enumType">枚举类型</param>
+            <param name="field">字段名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.UI.Background.App_Code.CreateForm.GetEnumSelect(System.Type,Qxun.UI.Background.App_Code.CreateForm.SelectType)">
+            <summary>
+            根据枚举类生成input-select的option
+            </summary>
+            <param name="enumType">枚举类型</param>
+            <param name="type">option字段类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.UI.Background.App_Code.CreateForm.GenerateCustomFormToken(System.String)">
+            <summary>
+            生成防重复提交的表单Token
+            </summary>
+        </member>
+        <member name="M:Qxun.UI.Background.App_Code.CreateForm.CreateCustomFormToken(System.String)">
+            <summary>
+            创建用于防止重复提交的表单元素
+            </summary>
+        </member>
+        <member name="M:Qxun.UI.Background.App_Code.CreateForm.GetPageTitle(System.String,System.String)">
+            <summary>
+            表单页面中设置：添加、修改标题
+            </summary>
+            <param name="title">标题</param>
+            <param name="pageId">url中的id，比如全景图中的url中有两个id，这里需要指定一个id</param>
+            <returns></returns>
+        </member>
+        <member name="P:Qxun.UI.Background.App_Code.CreateForm.GenerateFormToken">
+            <summary>
+            生成防重复提交的表单Token
+            </summary>
+        </member>
+        <member name="P:Qxun.UI.Background.App_Code.CreateForm.FormTokenName">
+            <summary>
+            防重复提交的表单Id
+            </summary>
+        </member>
+        <member name="P:Qxun.UI.Background.App_Code.CreateForm.CustomTokenName">
+            <summary>
+            防重复提交的表单自定义TokenName字段名
+            </summary>
+        </member>
+        <member name="P:Qxun.UI.Background.App_Code.CreateForm.CreateFormToken">
+            <summary>
+            创建用于防止重复提交的表单元素
+            </summary>
+        </member>
+        <member name="T:Qxun.UI.Background.Config.FormLineConfig">
+            <summary>
+            表单行配置
+            </summary>
+        </member>
+        <member name="F:Qxun.UI.Background.Config.FormLineConfig._isShow">
+            <summary>
+            单图文添加成功是否显示在按钮左侧
+            </summary>
+        </member>
+        <member name="F:Qxun.UI.Background.Config.FormLineConfig._tipIsShowTitle">
+            <summary>
+            提示信息是否显示在标题后面
+            </summary>
+        </member>
+        <member name="P:Qxun.UI.Background.Config.FormLineConfig.desc">
+            <summary>
+            左侧名称
+            </summary>
+        </member>
+        <member name="P:Qxun.UI.Background.Config.FormLineConfig.name">
+            <summary>
+            entity字段名
+            </summary>
+        </member>
+        <member name="P:Qxun.UI.Background.Config.FormLineConfig.type">
+            <summary>
+            类型 input-text,select,textarea,radio,hidden,checkBox
+            multi-image为批量上传,single-image为单图片上传,input-selectTwo有两个select,kindEditerTextarea
+            </summary>
+        </member>
+        <member name="P:Qxun.UI.Background.Config.FormLineConfig.tips">
+            <summary>
+            右侧提示
+            </summary>
+        </member>
+        <member name="P:Qxun.UI.Background.Config.FormLineConfig.vaildType">
+             <summary>
+            校验方法
+             </summary>
+        </member>
+        <member name="P:Qxun.UI.Background.Config.FormLineConfig.inputContent">
+            <summary>
+            元素内容（如下拉框的值和radio的值）
+            </summary>
+        </member>
+        <member name="P:Qxun.UI.Background.Config.FormLineConfig.functionName">
+            <summary>
+            特定的function名称
+            </summary>
+        </member>
+        <member name="P:Qxun.UI.Background.Config.FormLineConfig.functionStr">
+            <summary>
+            特定的function
+            </summary>
+        </member>
+        <member name="P:Qxun.UI.Background.Config.FormLineConfig.inputValue">
+            <summary>
+            元素的值(元素类型为hidden时赋值)
+            </summary>
+        </member>
+        <member name="P:Qxun.UI.Background.Config.FormLineConfig.cssClass">
+            <summary>
+            checkBox指定样式
+            </summary>
+        </member>
+        <member name="T:Qxun.UI.Background.Entities.AuthorityConfigEntity">
+            <summary>
+            权限配置
+            </summary>
+        </member>
+        <member name="T:Qxun.UI.Background.Entities.FunctionEntity">
+            <summary>
+            用户是否添加了功能
+            </summary>
+        </member>
+        <member name="P:Qxun.UI.Background.Entities.FunctionEntity.FuncType">
+            <summary>
+            功能名称
+            </summary>
+        </member>
+        <member name="P:Qxun.UI.Background.Entities.FunctionEntity.IsShow">
+            <summary>
+            是否已添加
+            </summary>
+        </member>
+        <member name="T:Qxun.UI.Background.Entities.SystemAuthorityEntity">
+            <summary>
+            系统配置权限设置
+            </summary>
+        </member>
+        <member name="P:Qxun.UI.Background.Entities.SystemAuthorityEntity.IsNotCheckPlat">
+            <summary>
+            是否不校验平台
+            </summary>
+        </member>
+        <member name="P:Qxun.UI.Background.Entities.SystemAuthorityEntity.IsNotCheckModule">
+            <summary>
+            是否不校验功能模块
+            </summary>
+        </member>
+        <member name="P:Qxun.UI.Background.Entities.SystemAuthorityEntity.AuthorityConfigEntity">
+            <summary>
+            校验的功能模块
+            </summary>
+        </member>
+        <member name="P:Qxun.UI.Background.Entities.SystemAuthorityEntity.MaxPlatCount">
+            <summary>
+            授权绑定微信平台个数
+            </summary>
+        </member>
+    </members>
+</doc>

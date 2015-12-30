@@ -1,0 +1,10 @@
+body{background: #ffffff;}
+.weistone-list-item{ height:40px;}.weistone-list-item-line{padding-left:10px;}.weistone-copyright{ color:#000;}.weistone-copyright{ color:#000;}
+.weistone-list-item-title{
+    white-space: normal!important;
+    height:27px;
+    line-height:27px;
+    overflow:hidden;
+    padding-right:50px;
+    -webkit-box-sizing:border-box;
+}

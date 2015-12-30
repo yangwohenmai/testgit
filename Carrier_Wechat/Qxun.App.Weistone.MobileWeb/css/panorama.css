@@ -1,0 +1,98 @@
+﻿body, div, h1, h2, h3, span, p {
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    color: #000000; 
+}
+/* fullscreen */
+html {
+    height:100%;
+}
+body {
+    height:100%;
+    margin: 0px;
+    overflow:hidden; /* disable scrollbars */
+}
+body {
+  font-size: 10pt;
+  background : #ffffff; 
+}
+table,tr,td {
+    font-size: 10pt;
+    border-color : #777777;
+    background : #dddddd; 
+    color: #000000; 
+    border-style : solid;
+    border-width : 2px;
+    padding: 5px;
+    border-collapse:collapse;
+}
+h1 {
+    font-size: 18pt;
+}
+h2 {
+    font-size: 14pt;
+}
+.warning { 
+    font-weight: bold;
+} 
+/* fix for scroll bars on webkit & Mac OS X Lion */ 
+::-webkit-scrollbar {
+    background-color: rgba(0,0,0,0.5);
+    width: 0.75em;
+}
+::-webkit-scrollbar-thumb {
+    background-color:  rgba(255,255,255,0.5);
+}
+a {
+    text-decoration: none;
+}
+.view_change{
+    position: fixed; z-index: 1000; bottom:0; left: 0; width: 100%; height: 52px; background-color: #262626; border: 1px solid #000000;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset; text-align: center;
+}
+.view_change a, span{
+    display: inline-block;
+    width: 80px;
+    height: 42px;
+    margin: 5px;
+    background-color: #333;
+    box-shadow: 3px 2px 0 rgba(0,0,0,0.8);
+    font-size: 15px;
+    text-align: center;
+    line-height: 42px;
+    color: #fff;
+}
+.view_change span.current{
+    background-color: #4eb3d7;
+}
+.pop-box {   
+    z-index: 9999;
+    margin-bottom: 3px;   
+    display: none;   
+    position: absolute;   
+    width:100%;
+    height:100%;
+    background: #262626;
+    filter:alpha(Opacity=90);
+    -moz-opacity:0.9;
+    opacity: 0.9;
+}
+.pop-box .pop-box-body {   
+    clear: both;   
+    margin: 5px;
+} 
+.pop-box a{   
+    display: inline-block;
+    width: 80px;
+    height: 42px;
+    margin: 5px;
+    background-color: #4eb3d7;
+    box-shadow: 3px 2px 0 rgba(0,0,0,0.8);
+    font-size: 15px;
+    text-align: center;
+    line-height: 42px;
+    color: #fff;   
+} 
+.pop-box .close{
+  position:relative;
+  float:right; 
+}

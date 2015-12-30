@@ -1,0 +1,395 @@
+﻿#token-input-js_party_list:focus{box-shadow: none;-webkit-box-shadow:none}
+body {
+font: 14px/1.5 "Helvetica Neue",Helvetica Neue,Helvetica,Arial,Heiti SC,Hiragino Sans GB,Microsoft Yahei,sans-serif;
+-webkit-font-smoothing: antialiased;
+}
+.col_main {height: 630px;margin: 0 auto;overflow: hidden;background-color: rgb(255, 255, 255);border-radius: 3px;}
+.col_mainInner {position: relative;height: 100%;}
+.contact_view {position: absolute;width: 100%;top: 0;bottom: 0;}
+/*======================================tool_bar工具栏===================================================start*/
+.tool_bar {position: relative;height: 44px;line-height: 44px;padding: 0 10px;text-align: center;border-bottom: 1px solid rgb(204, 204, 204);background: rgb(234, 234, 234);background: -webkit-linear-adienttop,rgb(243, 243, 243),rgb(238, 238, 238);background: -moz-linear-gradient(top,#f3f3f3,#eee);background: linear-gradient(top,#f3f33f,#eee);}
+.tool_bar_simple {margin-right:400px}
+.tool_bar .bar_left {float:left}
+.tool_bar .bar_right_list_title {position:absolute;left:50%;margin-left:130px}
+.tool_bar .bar_right_leftbutton { float: left;line-height: 40px;}
+.tool_bar .js_menu_title{ height: 100%;line-height: 45px}
+.tool_bar .bar_right_text-title {position:absolute;left:50%;width:160px;text-align:center;margin-left: 50px;font-size: 16px;}
+.tool_bar .bar_left_withborder {height:100%;border-right:1px solid #ccc}
+.bar_left_withborder a {padding:0 20px 0 0;display:block}
+.tool_bar .bar_right_search {line-height:44px;height:44px;position:absolute;left:50%;margin-left:-200px}
+.bar_right_search .toolbar_search_form .input_text {width:400px;padding-right:30px;padding-left:5px;margin-top:7px}
+.tool_bar .toolbar_search_add_box {padding-right:10px;border-right:1px solid #ccc;width:240px;height:44px}
+.toolbar_search_add_box .toolbar_search_form {position:absolute;left:10px}
+.toolbar_search_add_box .toolbar_search_form .input_text {width:200px;padding-left:10px;padding-right:30px}
+.tool_bar .bar_panel_wrap {position:absolute;left:0;border-right:1px solid #ccc;width:210px}
+.tool_bar .tool_bar_add {float:right;margin-right:15px;vertical-align:-5px;opacity:.7;filter:alpha(opacity=70)}
+.tool_bar .tool_bar_search {float:right;margin-right:15px}
+.tool_bar .icon_search {vertical-align:-5px}
+.tool_bar .bar_right {float:right}
+.tool_bar .page_title {width:50%;position:absolute;left:25%;font-weight:400;text-align:center;color:#222;font-size:16px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.tool_bar a.page_title {width:7em;overflow:visible;left:50%;margin-left:-3.5em}
+.tool_bar .page_title:hover {text-decoration:none;cursor:default}
+.tool_bar a.page_title:hover {text-decoration:none;cursor:pointer}
+.tool_bar .page_title .icon_lock, .tool_bar .page_title .icon_questionmask {display:none}
+.tool_bar a.tree_selected_title {left:0;margin-left:0;text-align:left;float:left}
+.tool_bar .icon_arrow {position:absolute;top:50%;margin-left:4px;margin-top:-1px}
+.tool_bar .bar_left .dropdown-menu {position:absolute}
+.tool_bar .bar_left .dropdown-menu:before {content:" ";display:block;position:absolute;top:-7px;left:71px;width:14px;height:7px;background-image:url(../sprite/style-old-global_6cee4d61.png);background-position:-240px -178px}
+.tool_bar .back {margin-left:15px}
+.toolbar_search_add_box .icon_add {cursor:pointer;margin:13px 10px 13px 20px;float:right;outline:0}
+.toolbar_search_add_box .icon_search {float:right;cursor:pointer;margin:12px 0}
+.toolbar_search_form {position:relative;display:inline-block}
+.toolbar_search_form_tree {float:left}
+.toolbar_search_form .icon_magnifying {position:absolute;right:7px;top:50%;margin-top:-9px}
+.toolbar_search_form .input_text {padding-left:30px;width:210px;background-color:#f8f8f8}
+.toolbar_search_form_tree .input_text {width:164px}
+.toolbar_search_add_box .icon_add {cursor: pointer;margin: 13px 10px 13px 20px;float: right;outline: 0;}
+.ui-ml-medium {margin-left: 10px;}
+.icon_add {width: 18px;height: 18px;background-position: 0 0;vertical-align: middle;}
+.icon {display: inline-block;width: 24px;height: 24px;background-image: url(../../images/Contacts/icon_main_5940308d.png)!important;background-repeat: no-repeat!important;}
+.tool_bar .bar_left .dropdown-menu:before {content: " ";display: block;position: absolute;top: -7px;left: 71px;width: 14px;height: 7px;background-image: url(../../images/Contacts/style-old-global_6cee4d61.png);background-position: -240px -178px;}
+.toolbar_search_add_box .icon_search {float: right;cursor: pointer;margin: 12px 0;}
+.tool_bar .icon_search {vertical-align: -5px;}
+.icon_search {width: 20px;height: 20px;background-position: -223px -160px;}
+
+.toolbar_search_add_box .toolbar_search_form {position: absolute;left: 10px;}
+.toolbar_search_add_box .toolbar_search_form .input_text {width: 200px;padding-left: 10px;padding-right: 30px;border-radius: 5px;margin-top: 7px;}
+.toolbar_search_form .input_text {padding-left: 30px;width: 210px;background-color: rgb(248, 248, 248);}
+.input_text {width: 240px;height: auto;line-height: 20px;padding: 4px 5px;background-color: rgb(255, 255, 255);border: 1px solid rgb(204, 204, 204);border-radius: 3px;}
+.toolbar_search_form .icon_magnifying {position: absolute;right: 7px;top: 50%;margin-top: -9px;}
+.icon_magnifying {width: 17px;height: 17px;background-position: 0 -96px;}
+
+.dropdown {position: relative;}
+.drop_choose_menu>a {padding-left: 10px;line-height: 44px;}
+.choose_menu_title {font-weight: 400;color: rgb(34, 34, 34);font-size: 16px;float: left;cursor: pointer;}
+.caret {display: inline-block;width: 0;height: 0;margin-left: 2px;padding-bottom: 3px;vertical-align: middle;border-top: 4px solid;border-right: 4px solid rgba(0, 0, 0, 0);border-left: 4px solid rgba(0, 0, 0, 0);margin-top:0 !important}
+.dropdown-toggle-text {font-weight: 400;color: rgb(34, 34, 34);font-size: 16px;float: left;cursor: pointer;line-height: 44px;}
+.drop_choose_menu ul {top: 40px!important;left: -10px!important;}
+.menu_avatar_wrap {min-width: 150px;position: absolute;z-index: 20;overflow: hidden;background-color: rgb(255, 255, 255);box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);border-radius: 4px;}
+.menu_avatar_item:first-child {border: none;}
+.menu_avatar_item {padding: 10px;overflow: hidden;border-top: 1px solid rgb(229, 229, 229);cursor: pointer;}
+.menu_avatar_item.actived, .menu_avatar_item:hover {background-color: rgb(238, 238, 238);}
+.icon_menu_avatar_tree {background-position: 0 0;}
+.icon_menu_avatar {width: 40px;height: 40px;display: inline-block;float: left;background: url(../../images/Contacts/icon_menu_avatar_b6633e85.png) 0 0 no-repeat;}
+.menu_avatar_content {overflow: hidden;padding: 0 0 0 10px;}
+.menu_avatar_title_more {font-size: 14px;color: rgb(34, 34, 34);margin-top: 8px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.menu_avatar_image {width: 38px;height: 38px;border: 1px solid rgb(205, 205, 205);border-radius: 3px;overflow: hidden;float: left;}
+
+.drop_page_title ul {top: 40px;left: 50%;margin-left: -80px;}
+.gray, .gray_darken {color: #777;font-weight: 400;text-align: center;font-size: 16px;}
+/*===================================================tool_bar工具栏===================================end*/
+
+/*===================================新增成员弹出层========================================================start*/
+.form_add_member {padding: 40px 0 20px;}
+.mod-form__account-basic-info-block {position: relative;}
+.form_item {margin-bottom: 20px;line-height: 34px;}
+.form_add_member .form_item {padding-left: 50px;margin-bottom: 10px;}
+.mod-form__avatar-editor {background: url(../img/dev/icon_avatar_default_78376cff.png);height: 80px;width: 80px;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;
+-webkit-background-clip: padding-box;-moz-background-clip: padding-box;background-clip: padding-box;border: 1px solid rgb(221, 221, 221);position: absolute;top: 0;left: 75px;}
+.upload_box {display: inline-block;position: relative;z-index: 1;line-height: 1.6;vertical-align: middle;padding: 0;}
+.upload_area {position: relative;display: inline-block;vertical-align: middle;}
+.form_label {float: left;width: 12em;margin-right: .7em;text-align: right;color: rgb(119, 119, 119);}
+.form_control {margin-left: 13.7em;}.form_item:before {content: "";display: table;}
+.form_item:after {content: "";display: table;clear: both;}
+.input_text {width: 240px;height: auto;line-height: 20px;padding: 4px 5px;background-color: rgb(255, 255, 255);border: 1px solid rgb(204, 204, 204);border-radius: 3px;}
+.form_add_member .input_text {width: 260px;}
+.form_info {display: inline;margin-left: .7em;}
+.form_info label{display: inherit;}
+.form_info, .form_info_block {color: rgb(119, 119, 119);}
+.form_item {margin-bottom: 16px;line-height: 34px;}
+.form_add_member .form_item {padding-left: 50px;margin-bottom: 10px;}
+.red {color: rgb(218, 74, 56);}
+.form_info_block, .form_vertical .form_info {display: block;line-height: 1.5;margin-left: auto;}
+.form_add_member .form_info_block {font-size: 12px;color: rgb(204, 204, 204);}
+
+/*===================================新增成员弹出层========================================================end*/
+
+/*===================================批量导入成员信息========================================================start*/
+.nav_box {margin: 0px 90px;text-align: center;overflow: hidden}
+.nav_box .nav {display: inline-block;padding: 8px 40px;border-radius: 4px;background: rgb(248, 248, 248);width: 282px;height: 22px;}
+.clearfix {}
+fieldset, ol, p, ul {margin: 0;padding: 0;}
+.clearfix:before {content: "";display: table;}
+.nav_box li {display: inline-block;}
+li {list-style: none;}
+.nav_box .step_count {display: inline-block;vertical-align: middle;margin-right: 6px;width: 16px;height: 16px;text-align: center;line-height: 16px;border-radius: 2px;background: rgb(198, 198, 198);color: rgb(255, 255, 255);}
+.nav_box .on .step_count {background: rgb(62, 128, 207);}
+.nav_box .step_txt {vertical-align: middle;}
+.nav_box .step_arrow {display: inline-block;position: relative;height: 12px;vertical-align: middle;margin: 0 15px;}
+.step_arrow .under {position: absolute;width: 0;height: 0;border-style: solid;border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgb(119, 119, 119);border-width: 6px 0 6px 4px;}
+.step_arrow .above {position: absolute;left: -1px;width: 0;height: 0;border-style: solid;border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgb(248, 248, 248);border-width: 6px 0 6px 4px;}
+.clearfix:after {content: "";display: table;clear: both;}
+.text_center {text-align: center;}
+.text_center p{font-size: 14px}
+.control_succeed {font-size: 24px;}
+.icon_dialog_warning, .icon_status, .nav_box .done .step_count {display: inline-block;background: url(../../images/Contacts/icon_status_3e659383.png) 0 0 no-repeat;}
+.icon_succeed {width: 40px;height: 30px;background-position: 0 0;}
+.control_succeed .icon_succeed {vertical-align: -5px;}
+
+/*===================================批量导入成员信息========================================================end*/
+/*===================================设置成员属性弹出层========================================================start*/
+.dialog_content {min-height: 120px;}
+.mod-contact-field-list {-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;-webkit-background-clip: padding-box;-moz-background-clip: padding-box;background-clip: padding-box;
+border: 1px solid rgb(221, 221, 221);}
+.ui-ml-large {margin-left: 20px;}
+.ui-mr-large {margin-right: 20px;}
+.ui-mt-large {margin-top: 20px;}
+.mod-contact-field-list__item:first-child {
+-webkit-border-top-left-radius: 3px;
+-webkit-border-top-right-radius: 3px;
+-webkit-border-bottom-right-radius: 0;
+-webkit-border-bottom-left-radius: 0;
+-moz-border-radius-topleft: 3px;
+-moz-border-radius-topright: 3px;
+-moz-border-radius-bottomright: 0;
+-moz-border-radius-bottomleft: 0;
+border-top-left-radius: 3px;
+border-top-right-radius: 3px;
+border-bottom-right-radius: 0;
+border-bottom-left-radius: 0;
+-webkit-background-clip: padding-box;
+-moz-background-clip: padding-box;
+background-clip: padding-box;
+}
+.mod-contact-field-list__item:nth-child(odd) {background: rgb(255, 255, 255);}
+.mod-contact-field-list__item {height: 30px;line-height: 30px;vertical-align: middle;padding-left: 10px;position: relative;}
+#__dialog__corpextAttrView__ .mod-contact-field-list__checkbox {vertical-align: middle;margin-right: 10px;}
+button, input, select, textarea {font-family: "Microsoft YaHei",Helvetia,"lucida Grande",Verdana,Arial;font-size: inherit;line-height: inherit;}
+.mod-contact-field-list__item:nth-child(odd) {background: rgb(255, 255, 255);}
+.mod-contact-field-list__item:nth-child(even) {background: rgb(248, 248, 248);}
+.mod-contact-field-list__item {height: 30px;line-height: 30px;vertical-align: middle;padding-left: 10px;position: relative;}
+.mod-contact-field-list__delete-icon {display: inline-block;width: 16px;height: 17px;margin-top: 7px;background-image: url(../../images/Contacts/style-old-list_c38f38c9.png);background-position: -74px 0;}
+.mod-contact-field-list__delete {height: 30px;width: 30px;text-align: center;position: absolute;top: 0;right: 15px;cursor: pointer;}
+.js_attrItem:hover .mod-contact-field-list__delete{display: block}
+.mod-contact-field-list__desc {color: rgb(119, 119, 119);margin-top: 10px;margin-left: 20px;margin-bottom: 10px;}
+.mod-contact-field-list__item_add {padding-left: 40px;}
+.input_text {width: 240px;height: auto;line-height: 20px;padding: 4px 5px;background-color: rgb(255, 255, 255);border: 1px solid rgb(204, 204, 204);border-radius: 3px;}
+#__dialog__corpextAttrView__ .mod-contact-field-list__input {height: 15px;margin-top: -2px;vertical-align: middle;width: 170px;}
+.ui-d-n {display: none!important;}
+.mod-contact-field-list__error-text {color: rgb(255, 0, 0);font-size: 12px;height: 30px;line-height: 30px;display: inline-block;}
+
+
+/*===================================设置成员属性弹出层========================================================end*/
+
+/*======================================内容样式===================================================start*/
+.contact_view .contact_box {position: absolute;left: 0;right: 0;top: 45px;bottom: 0;}
+.contact_view .tree_box {width: 260px;background-color: rgb(248, 248, 248);overflow-y: auto;position: absolute;top: 0;bottom: 0;overflow-x: hidden;}
+/*======================================内容样式===================================================end*/
+
+/*======================================成员列表===================================================start*/
+.contact_view .tree_list {border-left: 1px solid #DEDDDF;background-color: #fff;position: absolute;z-index: 0;left: 260px;top: 0;bottom: 0;right: 0;overflow: auto;}
+.title_bar {height: 32px;line-height: 32px;border-bottom: 1px solid #E7E7E7;}
+.member_list, .tree_list .title_bar {min-width: 800px;}
+.checkbox_node, .title .checkbox_node {display: inline-block;height: 30px;min-width: 40px;width: 6%;}
+.member_list li .checkbox, .title .checkbox {margin: 1px 0 0 20px;vertical-align: middle;}
+.title .name {margin-left: 44px;}
+.tree_list .account, .tree_list .mail, .tree_list .name, .tree_list .phone, .tree_list .position, .tree_list .state {display: inline-block;padding-right: 10px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;vertical-align: middle;line-height: 32px;font-size: 14px}
+.tree_list .name {width: 10%;min-width: 90px;}
+.title .title_link {color: #777;text-decoration: none;}
+.tree_list .account, .tree_list .position {width: 12%;min-width: 80px;}
+.tree_list .account, .tree_list .position {width: 12%;min-width: 80px;}
+.tree_list .phone {width: 14%;min-width: 100px;}
+.tree_list .mail {width: 15%;min-width: 150px;}
+.tree_list .state {float: right;min-width: 40px;padding-right: 20px;text-align: center;width: 6%;}
+.member_list {overflow-y: auto;}
+.member_list, .tree_list .title_bar {min-width: 800px;}
+.member_list li {display: inline-block;width: 100%;height: 30px;}
+.member_list li {position: relative;vertical-align: middle;line-height: 28px;border-bottom: 1px solid #e5e5e5;padding: 5px 0;cursor: pointer;}
+.member_list li .face {display: inline-block;width: 30px;height: 30px;margin: 0 6px 0 2px;vertical-align: middle;border: 1px solid #cdcdcd;border-radius: 2px;}
+.member_list li:hover {background-color: #f3f3f3;}
+.member_list li.checked, .member_list li.selected, .member_list li:active {background-color: #ececec;}
+.member_list li .state .icon {vertical-align: middle;}
+.icon_lock {width: 12px;height: 14px;background-position: -32px -96px;}
+.icon_questionmask {width: 10px;height: 14px;background-position: -32px -64px;}
+
+
+/*======================================成员资料弹出层===================================================start*/
+.opp_result {position: fixed;top: 0;bottom: 0;right: 0;width: 400px;background-color: #f8f8f8;box-shadow: -2px 0 4px rgba(0,0,0,.2);}
+.member_choosed_box {position: absolute;top: 0;bottom: 0;left: 0;right: 0;}
+.member_choosed_box .choosed_header {position: relative;height: 44px;line-height: 44px;text-align: center;border-bottom: 1px solid #ccc;font-size: 16px;background: #eaeaea;background: #f1f1f1;
+background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#f3f3f3),color-stop(1,#eee));background: -moz-linear-gradient(center top,#f3f3f3 0,#eee 100%);}
+.member_choosed_box .choosed_header .icon_close {float: right;margin: 10px 10px 0 0;}
+.icon_close {background-position: -27px -123px;width: 25px;height: 25px;}
+.member_choosed_box .choosed_header .choosed_mainTitle {position: absolute;width: 240px;left: 50%;margin-left: -120px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
+word-wrap: break-word;word-break: break-all;line-height: 44px;font-size: 16px;}
+.member_choosed_box .choosed_content {overflow: auto;position: absolute;top: 45px;left: 0;right: 0;bottom: 45px;padding-left: 7px;}
+.cc_header {padding: 40px 0 0 33px;overflow: hidden;}
+.cc_header img {width: 80px;height: 80px;float: left;border: 1px solid #cdcdcd;border-radius: 2px;}
+.cc_header .detail {margin-left: 102px;position: relative;width: 260px;}
+.cc_header .detail .c_name {font-weight: 700;font-size: 24px;width: 160px;margin-top: -2px;line-height: 28px;}
+.ellipsis {text-overflow: ellipsis;-o-text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
+.cc_header .detail .freeze {position: absolute;top: 4px;right: 20px;padding: 2px 4px;background-color: #eee;color: #666;}
+.cc_content {padding: 35px 0 0 30px;}
+.cc_content .item {overflow: hidden;padding: 5px 0;}
+.cc_content .label {width: 86px;float: left;color: #777;text-align: right;background: none}
+.cc_content .info {margin-left: 105px;margin-right: 10px;word-break: break-word;font-size: 14px;}
+.member_choosed_box .member_tool {background-color: #f3f3f3;border-top: 1px solid #d7d7d7;padding: 7px 10px;position: absolute;left: 0;right: 0;bottom: 0;text-align: right;}
+.member_choosed_box .member_tool .btn {margin-left: 4px;}
+.cc_header .detail .e_name {font-size: 16px;width: 160px;margin-bottom: 3px;}
+.mod-lozenges__item {background: #EEE;height: 24px;display: inline-block;color: #222;vertical-align: top;margin-right: 5px;margin-bottom: 5px;position: relative;font-size: 0;-webkit-border-radius: 2px;
+-moz-border-radius: 2px;border-radius: 2px;-webkit-background-clip: padding-box;-moz-background-clip: padding-box;background-clip: padding-box;}
+.mod-lozenges__text {display: inline-block;height: 24px;line-height: 24px;vertical-align: top;margin: 0 7px;font-size: 14px;}
+.mod-lozenges__item_text .mod-lozenges__text {margin: 0 10px;}
+/*=====================================================================更多弹出层============*/
+.menu_block, .menu_list {min-width: 150px;position: absolute;z-index: 20;overflow: hidden;background-color: #fff;box-shadow: 0 2px 10px rgba(0,0,0,.4);border-radius: 4px;}
+.menu_list li a {display: block;line-height: 32px;font-size: 14px;color: #222;text-indent: 25px;}
+.menu_list li a:hover {text-decoration: none;background-color: #ececec;cursor: pointer;}
+
+/*=====================================================================搜索后的列表============*/
+.contact_view .contact_search_box {position: absolute;left: 0;right: 0;top: 86px;bottom: 0;}
+.contact_view .tree_list_search_person {left: 0!important;}
+.contact_tab_bar {margin: 0 -10px;}
+.tab_bar {padding: 0 10px;height: 40px;line-height: 40px;border-bottom: 1px solid #e5e5e5;color: #d8d8d8;}
+.tab_bar .tab_search_title {padding: 0 10px;float: left;color: #777;line-height: 40px;font-size: 14px}
+.tab_filetype_items {overflow: hidden;}
+.tab_filetype_items li {float: left;padding: 0 10px;}
+.tab_filetype_items li a.active {border-bottom: 3px solid #4a90e2;color: #222;}
+.tab_filetype_items li a {float: left;padding: 0 10px;color: #777;height: 40px;line-height: 40px;box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;}
+.btn_back:before {content: "";display: inline-block;width: 23px;height: 11px;background: url(../../images/Contacts/icon_main_5940308d.png) -64px -32px no-repeat;}
+.bar_left_withborder a {padding: 0 20px 0 0;display: block;line-height: 44px;}
+/*=====================================================================部门下拉框============*/
+.memberDialog_selectTree {height: 125px;}
+div.token-input-dropdown {position: absolute;width: 400px;background-color: #fff;border: 1px solid #ccc;cursor: default;font-size: 14px;font-family: Verdana,sans-serif;z-index: 1;max-height: 230px;
+overflow: auto;border-radius: 3px;}
+.input_group_add {vertical-align: middle;padding: 2px;height: 20px;border: none;line-height: 20px;color: #777;outline: 0;cursor: pointer;}
+.form_info:empty, .form_info_block:empty {display: none;}
+.mod-lozenges__item {background: #EEE;height: 24px;display: inline-block;color: #222;vertical-align: top;margin-right: 5px;margin-bottom: 5px;position: relative;font-size: 0;-webkit-border-radius: 2px;
+-moz-border-radius: 2px;border-radius: 2px;-webkit-background-clip: padding-box;-moz-background-clip: padding-box;background-clip: padding-box;}
+.mod-lozenges__icon {display: inline-block;height: 24px;width: 24px;}
+.mod-lozenges__text {display: inline-block;height: 24px;line-height: 24px;vertical-align: top;margin: 0 7px;font-size: 14px;}
+.mod-lozenges__close {display: inline-block;width: 20px;height: 24px;vertical-align: top;text-align: left;margin-left: -5px;margin-right: 2px;}
+.mod-lozenges__icon-org {display: inline-block;height: 24px;width: 24px;background-image: url(../../images/Contacts/style-old-global_6cee4d61.png);background-position: -208px -184px;}
+.mod-lozenges__icon-tag {display: inline-block;height: 24px;width: 24px;background-image: url(../../images/Contacts/style-old-global_6cee4d61.png);background-position: -160px -208px;}
+.mod-lozenges__icon-department {display: inline-block;height: 24px;width: 24px;background-image: url(../../images/Contacts/style-old-global_6cee4d61.png);background-position: -208px -184px;}
+.mod-lozenges__close-icon {display: inline-block;width: 20px;height: 20px;margin-top: 2px;background-image: url(../../images/Contacts/style-old-global_6cee4d61.png);background-position: -240px -60px;}
+.mod-lozenges__close-icon:hover {background-image: url(../../images/Contacts/style-old-global_6cee4d61.png);background-position: -208px -208px;}
+/*=================================================全选的操作成=========*/
+.member_avator_list .member_avator_item {border-bottom: 0 none;cursor: default;width: 23%;padding: 10px 3px;height: 102px;float: left;text-align: center;position: relative;}
+.member_avator_item .icon_delete {position: absolute;top: 4px;left: 50%;margin-left: 21px;}
+.icon_delete {background-position: -160px 0;width: 18px;height: 18px;}
+.icon {display: inline-block;width: 24px;height: 24px;background-image: url(../../images/Contacts/icon_main_5940308d.png)!important;background-repeat: no-repeat!important;}
+.member_avator_item img {border: 1px solid #cdcdcd;border-radius: 2px;height:60px}
+.member_avator_item .c_name, .member_avator_item .e_name {width: 100%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;line-height: 1.2;}
+.icon_delete:hover{background-position:-96px 0}
+/*=====================================浮动详情层===================*/
+.member_popover {width: 330px;padding-bottom: 20px;background-color: #fff;border-radius: 3px;z-index: 999;position: absolute;box-shadow: 0 2px 10px rgba(0,0,0,.4);}
+.member_popover .cc_content, .member_popover .cc_header {padding-left: 25px;padding-top: 25px;}
+.mod-form__avatar-editor {background: url(../../images/Contacts/icon_avatar_default_78376cff.png);height: 80px;width: 80px;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;
+-webkit-background-clip: padding-box;-moz-background-clip: padding-box;background-clip: padding-box;border: 1px solid #ddd;position: absolute;top: 0;left: 75px;}
+.form_error .input_text {border-color: #da4a38;}
+.form_error .form_info, .form_error .form_info_block {color: #da4a38;}
+.form_error .form_info label, .form_error .form_info_block label{color: #da4a38;}
+
+.dialog_party_rename {padding: 60px 0 40px 20px;}
+.contact-tag-add {border-bottom: 1px solid #e5e5e5;width: 220px;margin-left: 15px;margin-top: 20px;margin-bottom: 5px;padding-bottom: 10px;}
+/*=====================================标签中的添加成员===================*/
+.mod-tree-people__org-list {width: 260px;float: left;overflow: auto;}
+.mod-tree-people__people-list {margin-left: 260px;height: 100%;border-left: 1px solid rgb(229, 229, 229);overflow-y: auto;}
+.mod-tree-people__input {margin: 20px 0px;}
+.mod-tree-people__input .token-input-list {width: 100%!important;-mz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+.dialog_content_sendTo .token-input-list {width: 545px;max-height: 90px;overflow: hidden;overflow-y: auto;}
+.token-input-list.input_text {padding: 3px 5px 0;line-height: normal;}
+li.token-input-input-token {display: inline-block;margin-bottom: 5px;}
+
+/*标签中的node图标的样式*/
+.icon_tag {background: url(../../images/Contacts/icon_main_5940308d.png)!important;}
+.icon_tag_blue {width: 14px!important;height: 17px!important;background-position: -256px -156px!important;margin-top: 6px!important;margin-right: 6px!important;}
+.jstree-lock .jstree-anchor {position: relative;}
+.jstree-lock .jstree-anchor:after {content: ' ';position: absolute;top: 6px;right: -20px;width: 11px;height: 13px;background-image: url(../../images/Contacts/style-plugin-jstree_1e9bbe34.png);background-position: 0 0;}
+.jstree-anchor{font-size:14px}
+.member_list li.pintop {background-color: rgb(245, 249, 253);}
+
+/*标签中的成员的添加*/
+.mod-tree-people__people-list {margin-left: 260px;height: 100%;border-left: 1px solid rgb(229, 229, 229);overflow-y: auto;}
+.mod-tree-people__people-item {height: 30px;line-height: 30px;padding: 5px 15px;border-bottom: 1px solid rgb(229, 229, 229);}
+.mod-tree-people__people-item_selected {background: rgb(236, 236, 236);}
+.mod-tree-people__people-avatar {-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;-webkit-background-clip: padding-box;-moz-background-clip: padding-box;background-clip: padding-box;border: 1px solid rgb(229, 229, 229);vertical-align: middle;margin-right: 5px;width: 28px;height: 28px;}
+.mod-tree-people__people-name {height: 30px;line-height: 30px;vertical-align: middle;}
+.mod-tree-people__people-checkbox {float: right;margin: 10px 0 0;}
+div.token-input-dropdown {position: absolute;width: 400px;background-color: rgb(255, 255, 255);border: 1px solid rgb(204, 204, 204);cursor: default;font-size: 14px;font-family: Verdana,sans-serif;z-index: 1;
+max-height: 230px;overflow: auto;border-radius: 3px;}
+div.token-input-dropdown p {margin: 0;padding: 5px;font-weight: 700;color: rgb(119, 119, 119);}
+div.token-input-dropdown ul {margin: 0;padding: 0;}
+div.token-input-dropdown ul li.token-input-selected-dropdown-item {background-color: rgb(243, 243, 243);}
+div.token-input-dropdown ul li.token-input-dropdown-item, div.token-input-dropdown ul li.token-input-dropdown-item2 {background-color: rgb(255, 255, 255);padding: 6px 8px;cursor: pointer;font-size: 14px;}
+div.token-input-dropdown ul li {background-color: rgb(255, 255, 255);list-style-type: none;}
+div.token-input-dropdown ul li.token-input-dropdown-item, div.token-input-dropdown ul li.token-input-dropdown-item2:hover {background-color: rgb(243, 243, 243);}
+.dialog_content_sendTo .token-input-list {width: 545px;max-height: 90px;overflow: hidden;overflow-y: auto;}
+
+#contact-tag .jstree-default .jstree-wholerow-clicked,#ccontact-tag .jstree-default .jstree-wholerow-hovered {background: rgb(229, 229, 229);}
+#contact-tag .jstree-default .jstree-wholerow {height: 30px;}
+#contact-org.jstree-default .jstree-wholerow-clicked,#ccontact-tag.jstree-org .jstree-wholerow-hovered {background: rgb(229, 229, 229);}
+#contact-org.jstree-default .jstree-wholerow {height: 30px;}
+#token-input-js_tag_list:focus {box-shadow: none;-webkit-box-shadow: none;}
+
+
+.ui-resizable {
+	position: relative;
+}
+.ui-resizable-handle {
+	position: absolute;
+	font-size: 0.1px;
+	display: block;
+	-ms-touch-action: none;
+	touch-action: none;
+}
+.ui-resizable-disabled .ui-resizable-handle,
+.ui-resizable-autohide .ui-resizable-handle {
+	display: none;
+}
+.ui-resizable-n {
+	cursor: n-resize;
+	height: 7px;
+	width: 100%;
+	top: -5px;
+	left: 0;
+}
+.ui-resizable-s {
+	/*cursor: e-resize;*/
+	height: 7px;
+	width: 100%;
+	bottom: 0px;
+	left: 0;
+}
+.ui-resizable-e {
+	cursor: e-resize;
+	width: 7px;
+	right: 0px;
+	top: 0;
+	height: 100%;
+}
+.ui-resizable-w {
+	cursor: w-resize;
+	width: 7px;
+	left: -5px;
+	top: 0;
+	height: 100%;
+}
+.ui-resizable-se {
+	/*cursor: se-resize;
+	width: 12px;
+	height: 12px;
+	right: 1px;
+	bottom: 1px;*/
+}
+.ui-resizable-sw {
+	cursor: sw-resize;
+	width: 9px;
+	height: 9px;
+	left: -5px;
+	bottom: -5px;
+}
+.ui-resizable-nw {
+	cursor: nw-resize;
+	width: 9px;
+	height: 9px;
+	left: -5px;
+	top: -5px;
+}
+.ui-resizable-ne {
+	cursor: ne-resize;
+	width: 9px;
+	height: 9px;
+	right: -5px;
+	top: -5px;
+}

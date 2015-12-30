@@ -1,0 +1,75 @@
+﻿body {
+    height:100%;
+}
+ .error {
+    font-size: 12px;
+    color: rgb(255, 0, 0);
+    margin-top: -16px;
+}
+#PartNumberDiv {
+    margin-top:20%;
+    margin-left:16%;
+}
+#PartNameDiv {
+    margin-top:7%;
+    margin-left:8%;
+}
+#PriceDiv {
+    margin-top:7%;
+}
+#PartCommentDiv {
+    margin-top:7%;
+    margin-left:16%;
+}
+.PartNumber {
+    padding-top:3%;
+    color:#000 !important;
+    font-size:1.2rem;
+    float:left;
+}
+.PartName {
+    color:#000 !important;
+    font-size:1.2rem;
+    float:left;
+}
+.Price {
+    color:#000 !important;
+    font-size:1.2rem;
+    float:left;
+}
+.PartComment {
+    color:#000 !important;
+    font-size:1.2rem;
+    float:left;
+}
+#PartNumber {
+    width:50%;
+    border:2px solid gray;
+    color:#000;
+    text-align:center;
+    padding-right:10%;
+}
+#PartName {
+    width:50%;
+    border:2px solid gray;
+    color:#000;
+    text-align:center;
+    padding-right:10%;
+}
+#Price {
+    width:50%;
+    border:2px solid gray;
+    color:#000;
+    text-align:center;
+    padding-right:10%;
+}
+#PartComment {
+    width:50%;
+    height:10%;
+    color:#000;
+    padding-right:10%;
+}
+#btnBackPart {
+    height:40%;
+    margin-left:40%;
+}

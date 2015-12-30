@@ -1,0 +1,150 @@
+﻿@{
+    ViewBag.Title = "MessageBoardList";
+    ViewBag.subTitle = "留言管理";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var platid = Request["plat"];
+    //var Status = Qxun.UI.Background.App_Code.CreateForm.GetEnumNameByType(typeof(Qxun.App.Plugins.NemakCore.Public.Status), "Status");
+}
+<script src="@Url.Content("~/Scripts/jquery.form.js?v=")@ViewBag.Version" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/ZeroClipboard.js?v=")@ViewBag.Version" type="text/javascript"></script>
+
+@Html.Partial("_ListResource")
+<link href="@Url.Content("~/Content/daterangepicker/daterangepicker.css?v=")@ViewBag.Version" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/Scripts/jquery1.9-migrate.js?v=")@ViewBag.Version" type="text/javascript"></script>
+<script src="@Url.Content("~/Content/daterangepicker/daterangepicker.js?v=")@ViewBag.Version" type="text/javascript"></script>
+<script src="@Url.Content("~/Content/daterangepicker/moment.min.js?v=")@ViewBag.Version" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/ZeroClipboard.js?v=")@ViewBag.Version" type="text/javascript"></script>
+<div class="maincontentinner1">
+    <div id="Div12" class="dataTables_wrapper">
+        <div id="dyntable_length" class="dataTables_length">
+            @if (ViewBag.CopyUrl != null)
+            {
+                <a id="btnCopyTo" href="javascript:void(0)" target="_blank" type="button" class="btn btn-primary" style="margin-left: 5px;">
+                    @Html.Raw("复制留言链接")
+                </a>
+            }
+            <span style="float:right">
+                <div class="controls input-prepend">
+                    <span class="add-on1"><i class="icon-calendar"></i></span>
+                    <input type="text" name="date" id="MessageDate" class="input-large daterangepick valid"
+                           readonly="readonly" title="订单的起始和结束时间">
+                </div>
+                <input type="text" name="MessageContent" id="MessageContent" class="search" value="" style="color: gray" placeholder="请输入留言内容">
+                <button class="btn m-bottom-10" id="btnselect">查询</button>
+
+            </span>
+        </div>
+        <div class="dataTables_filter" id="dyntable_filter">
+        </div>
+        <table id="Table1" class="table table-bordered responsive dataTable">
+            <thead>
+                <tr>
+                    <th>
+                        客户姓名
+                    </th>
+                    <th>
+                        手机号
+                    </th>
+                    <th>
+                        留言标题
+                    </th>
+                    <th>
+                        留言内容
+                    </th>
+                    <th>
+                        留言时间
+                    </th>
+                    <th>
+                        操作
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+        <div class="dataTables_info" id="Div25">
+            &nbsp;
+        </div>
+        <div class="dataTables_paginate paging_bootstrap pagination" id="Div26">
+            <ul id="tableFoot"></ul>
+        </div>
+    </div>
+    <br>
+    <br>
+</div>
+<!--列表模板-->
+
+<script type="text/x-jquery-tmpl" id="replylist">
+
+    <tr class="gradeX odd" id="tr${Id}">
+        <td class=" ">
+            ${CustomerName}
+        </td>
+        <td class=" ">
+            ${TelPhone}
+        </td>
+        <td class=" ">
+            ${MessageTitle}
+        </td>
+        <td class=" ">
+            ${MessageContent}
+        </td>
+        <td class=" ">
+            ${formatDate(MessageDate)}
+        </td>
+        <td class=" ">
+            <a href="@Url.Action("MessageBoardInfo", "MessageBoard")@Html.Raw(@ViewBag.oQueryString)&id=${Id}" class="handleIcon btn-hide-open" title="查看"></a>
+        </td>
+    </tr>
+    <div id="dateail_${DealerId}"></div>
+
+</script>
+<script type="text/javascript">
+    var plat = jQuery.query.get("plat");
+    var opts = {
+        getListUrl: '@Url.Action("GetMessageBoardEntities", "MessageBoard")',
+        footUrl: '@Url.Content("~/Content/tmpl/foot1.htm")',
+        tableBodyId: "tableBody",
+        tableFootId: "tableFoot",
+        replyListId: "replylist",
+        pageSize: 15,
+        @*deleteUrl: '@Url.Action("DeleteUserListEntityById", "MasterData")',*@
+        itemId: "item-id",
+        cssClass: ".btn-del-open",
+        plat: plat,
+        checkBox: ""
+    };
+
+
+
+    $(function () {
+        //初始化列表数据
+        listClass.init(opts);
+        if ($("#btnCopyTo").length > 0) {
+            ZeroClipboard.setMoviePath('@Url.Content("~/Scripts/ZeroClipboard.swf?v=")@ViewBag.Version');
+            var clip = new ZeroClipboard.Client(); // 新建一个对象
+            clip.setHandCursor(true); // 设置鼠标为手型
+            clip.setText('@ViewBag.CopyUrl'.replace(/&amp;/g, "&")); // 设置要复制的文本。
+            clip.glue("btnCopyTo"); // 和上一句位置不可调换
+            clip.addEventListener("complete", function () {
+                alert("链接已成功复制到剪贴板，右键选择粘贴或按键盘快捷键“Ctrl+V“即可使用");
+            });
+        }
+        //搜索
+        $("#btnselect").click(function () {
+            var entity = new Object();
+            var messageTime = $("#MessageDate").val();
+            var messageContent = $.trim($("#MessageContent").val());
+            opts.getListUrl = '@Url.Action("GetMessageBoardEntities", "MessageBoard")?messageTime=' + messageTime + "&messageContent=" + messageContent;
+            listClass.init(opts);
+        });
+        //加载双日历
+        jQuery('#MessageDate').daterangepicker({
+            presetRanges: [
+                { text: 'My Range', dateStart: '@DateTime.Now', dateEnd: 'Today' }
+            ],
+            format: "YYYY-MM-DD"
+        });
+    })
+</script>
+<!--数据加载的提示-->
+<div id="load" class="tipsClass"></div>

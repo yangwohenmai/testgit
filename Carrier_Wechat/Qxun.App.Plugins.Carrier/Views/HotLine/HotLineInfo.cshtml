@@ -1,0 +1,216 @@
+﻿@{
+    ViewBag.Title = "400HotLineInfoList";
+    ViewBag.subTitle = "维修项工时管理";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var platid = Request["plat"];
+}
+<script src="@Url.Content("~/Scripts/jquery.form.js?v=")@ViewBag.Version" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/ZeroClipboard.js?v=")@ViewBag.Version" type="text/javascript"></script>
+
+@*<div class="tag mg-bottom-20 clr">
+    <div class="alert" style="width:700px"><span id="notice" style="font-weight:bold;"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="alert">你好，这是首次登陆,没有历史导入导出记录</span></div>
+</div>*@
+@Html.Partial("_ListResource")
+<link href="@Url.Content("~/Content/datetimepicker/bootstrap-datetimepicker.min.css?v=")@ViewBag.Version" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/Scripts/datetimepicker/bootstrap-datetimepicker.min.js?v=")@ViewBag.Version" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/datetimepicker/locales/bootstrap-datetimepicker.zh-CN.js?v=")@ViewBag.Version" type="text/javascript"></script>
+
+<div class="maincontentinner1">
+
+    <div id="Div12" class="dataTables_wrapper">
+        <div id="dyntable_length" class="dataTables_length">
+
+            <div class="btn-group">
+
+                <label>
+                    @*<a href="#importMember" class="btn btn-primary" data-toggle="modal">
+                        导入数据
+                    </a>
+                    <a href="#importMember" class="btn btn-primary" data-toggle="modal">
+                        全部导出
+                    </a>*@
+                    <a href="@Url.Action("AddInfo", "HotLine")@Html.Raw(@ViewBag.oQueryString)&type=new" class="btn btn-primary">
+                        新增呼叫单
+                    </a>
+                    @*<a href="@Url.Action("EditHotLine", "HotLine")@Html.Raw(@ViewBag.oQueryString)&type=repair" class="btn btn-primary">
+                        修改
+                    </a>
+                    <a href="@Url.Action("EditHotLine", "HotLine")@Html.Raw(@ViewBag.oQueryString)&type=change" class="btn btn-primary">
+                        转为工单
+                    </a>*@
+                    <a href="@Url.Action("AddInfo", "HotLine")@Html.Raw(@ViewBag.oQueryString)&type=repair" class="btn btn-primary">
+                        修改
+                    </a>
+                    <a href="@Url.Action("AddInfo", "HotLine")@Html.Raw(@ViewBag.oQueryString)&type=change" class="btn btn-primary">
+                        转为工单
+                    </a>
+                    <a class="btn btn-primary" id="btnBatchExport">
+                        导出
+                    </a>
+                </label>
+            </div>
+            <span style="float:right">
+                <input type="text" name="TicketNumber" id="TicketNumber" class="search" value="" style="color: gray" placeholder="请输入维修项名称" onkeyup="value=value.replace(/[\']+/, '') ">
+                <input type="text" name="RepairQueryNum" id="RepairQueryNum" class="search" value="" style="color: gray" placeholder="请输入维修项查询号" onkeyup="value=value.replace(/[\']+/, '') ">
+                <button class="btn m-bottom-10" id="btnselect">查询</button>
+            </span>
+        </div>
+        <div class="dataTables_filter" id="dyntable_filter">
+        </div>
+        <table id="Table1" class="table table-bordered responsive dataTable">
+            <thead>
+                <tr>
+                    <th>
+                        1
+                    </th>
+                    <th>
+                        2
+                    </th>
+                    <th>
+                        3
+                    </th>
+                    <th>
+                        4
+                    </th>
+                    <th>
+                        5
+                    </th>
+                    <th>
+                        6
+                    </th>
+                    <th>
+                        7
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+        <div class="dataTables_info" id="Div25">
+            &nbsp;
+        </div>
+        <div class="dataTables_paginate paging_bootstrap pagination" id="Div26">
+            <ul id="tableFoot"></ul>
+        </div>
+    </div>
+    <br>
+    <br>
+</div>
+<!--列表模板-->
+
+<script type="text/x-jquery-tmpl" id="replylist">
+
+    @*<tr class="gradeX odd" id="tr${DealerId}">
+            <td class=" ">
+                ${BPCode}
+            </td>
+            <td class=" ">
+                ${SiteName}
+            </td>
+            <td class=" ">
+                ${SiteManager}
+            </td>
+            <td class=" ">
+                ${Tel}
+            </td>
+            <td class=" ">
+                ${SiteAddress}
+            </td>
+            <td class=" ">
+                ${formatDate(EstablishmentTime)}
+            </td>
+            <td class=" ">
+                ${CompanyName}
+            </td>
+            <td class=" ">
+                ${SiteType}
+            </td>
+            <td class=" ">
+                ${SiteGrade}
+            </td>
+            <td class=" ">
+                ${LocalManager}
+            </td>
+        </tr>*@
+    <div id="dateail_${RepairId}"></div>
+
+</script>
+<script type="text/javascript">
+    @*var plat = jQuery.query.get("plat");
+        var opts = {
+            getListUrl: '@Url.Action("GetRepairPageList", "Repair")',
+            footUrl: '@Url.Content("~/Content/tmpl/foot1.htm")',
+            tableBodyId: "tableBody",
+            tableFootId: "tableFoot",
+            replyListId: "replylist",
+            pageSize: 15,
+        itemId: "item-id",
+        cssClass: ".btn-del-open",
+        plat: plat,
+        checkBox: ""
+    };*@
+    @*$(function () {
+        //初始化列表数据
+        listClass.init(opts);
+        //初始化导入记录
+        //init();
+        //搜索
+        $("#btnselect").click(function () {
+            var entity = new Object();
+            entity.RepairName = $("#RepairName").val();
+            entity.RepairQueryNum = $("#RepairQueryNum").val();
+            var searchJson = JSON.stringify(entity);
+            opts.getListUrl = '@Url.Action("GetRepairPageList", "Repair")?searchJson=' + searchJson;
+            listClass.init(opts);
+        })
+    })*@
+var plat = jQuery.query.get("plat");
+    var opts = {
+        getListUrl: '@Url.Action("GetUnitInformationPageList", "Unit")',
+        footUrl: '@Url.Content("~/Content/tmpl/foot1.htm")',
+        tableBodyId: "tableBody",
+        tableFootId: "tableFoot",
+        replyListId: "replylist",
+        pageSize: 15,
+        deleteUrl: '@Url.Action("DeleteUserListEntityById", "Unit")',
+        itemId: "item-id",
+        cssClass: ".btn-del-open",
+        plat: plat,
+        checkBox: ""
+    };
+
+    $(function () {
+        //初始化列表数据
+        //listClass.init(opts);
+        //初始化导入记录
+        //init();
+        //搜索
+        $("#btnBatchExport").click(function () {
+            var TicketNumber = $('#TicketNumber').val();
+            //var txtCompany = $('#txtCompany').val();
+            //var date = $("#date").val();
+            @*location.href = '@Url.Action("ExportUserinfoToExcel", "Lsh")?txtstate=' + txtstate +'&txtCompany=' + txtCompany + '&txtName=' + txtName + '&msgDate=' + date;*@
+            location.href = '@Url.Action("ExportHotLineInfoToExcel", "HotLine")?TicketNumber=' + TicketNumber;
+            return false;
+        });
+    })
+
+
+    @*function init() {
+        $.post("@Url.Action("Record", "Unit")@Html.Raw(ViewBag.oQueryString)", {}, function (data) {
+            //  if (data.IsSuccess) {
+            //alert("注册成功");
+            if (data.AllUploadRecord != null) {
+                var success = data.SuccessRecord;
+                var fail = data.FailRecord;
+                var time = formatDate(data.UploadTime).split(".")[0];
+                var all = data.AllUploadRecord;
+                var a = document.getElementById("alert");
+                var b = document.getElementById("notice");
+                a.innerHTML = "上次历史上传成功" + success + "条，失败" + fail + "条，总共上传" + all + "条，上传时间:" + time + ",现有总数据为：@ViewBag.TotalCount";
+                a.innerHTML = "上次上传时间为：" + time + "，总共上传" + all + "条数据，其中成功" + success + "条，失败" + fail + "条。"
+                b.innerHTML = "现有总数据条数为：@ViewBag.TotalCount 条。         "
+            }
+        });
+    }*@
+
+</script>

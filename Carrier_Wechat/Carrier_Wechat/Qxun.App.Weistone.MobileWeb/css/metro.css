@@ -1,0 +1,111 @@
+﻿body
+{
+    background-color: #363634;
+}
+.impression
+{
+    margin: 10px;
+}
+#dvReview .ip_1 a,#dvReview .ip_2 a
+{
+    text-decoration: none;
+    color: #ffffff;
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.2);
+    text-align: center;
+    font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica,serif;
+    font-weight: normal;
+}
+.impression h3
+{
+    font-size: 14px;
+    color: #909086;
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.2);
+    padding: 5px 0;
+}
+.ip_1
+{
+    display: -webkit-box;
+    height: 120px;
+    margin-bottom: 5px;
+}
+.ip_11
+{
+    margin-right: 5px;
+    -webkit-box-flex: 1;
+    background-color: #c93127;
+}
+.ip_12
+{
+    background-color: #00b6ee;
+    margin-right: 5px;
+}
+.ip_13
+{
+    background-color: #aadc3b;
+}
+.ip_2
+{
+    display: -webkit-box;
+    height: 80px;
+}
+.ip_21
+{
+    background-color: #fb641c;
+}
+.ip_22
+{
+    background-color: #695d8f;
+}
+.ip_23
+{
+    background-color: #8c5e7a;
+}
+.ip_24
+{
+    background-color: #eea200;
+}
+
+.ip_1 a, .ip_2 a
+{
+    color: #ffffff;
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.2);
+    text-align: center;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+.ip_2 a
+{
+    margin-right: 5px;
+}
+.is_p a:last-child
+{
+    margin-right: 0;
+}
+.ip_1 a span, .ip_2 a span
+{
+    display: block;
+    margin: 0 auto;
+    width: 35px; /*padding-top: 8px;*/
+    font-size: 16px;
+}
+.ip_user
+{
+    padding: 0 10px;
+}
+.ip_user em
+{
+    display: block;
+    width: 50px;
+    margin: 0 auto;
+    font-size: 12px;
+}
+.ip_user em::before
+{
+    content: "+";
+    display: block;
+    font-size: 50px;
+    line-height: 40px;
+}
+

@@ -1,0 +1,118 @@
+﻿@{
+    //var code = Request["code"];
+    //var id = Request["id"];
+    var platId = Request["r"];
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/css/materialize/css/materialize.min.css")" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/css/materialize/css/main.min.css")" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="@Url.Content("~/js/jquery-1.11.2.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/js/materialize/materialize.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/js/jquery.validate.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/js/Jquery.Query.js")"></script>
+    <title>CarrierWechat</title>
+    <style>
+        .error {
+            font-size: 12px;
+            color: rgb(255, 0, 0);
+            margin-top: -16px;
+        }
+        body {
+            height:100%;
+        }
+    </style>
+</head>
+<body>
+    <header id="header" class="page-topbar">
+        <!-- start header nav-->
+        <div class="navbar-fixed">
+            <nav class="cyan">
+                <div class="nav-wrapper">
+                    <h1 class="logo-wrapper">
+                        <a href="#!" class="brand-logo darken-1" style="margin:0;padding:0;line-height: 56px;">
+                            零件价格查询
+                        </a>
+                    </h1>
+                </div>
+            </nav>
+        </div>
+        <!-- end header nav-->
+    </header>
+    <div id="main">
+        <div class="wrapper">
+            <section id="content">
+                <div class="container">
+                    <div class="section">
+                        <div class="section">
+                            <div class="row">
+                                <div class="col s12 m12 l6">                                                                          
+                                     <div class="row">
+                                          <form class="col s12">                                                                                          
+                                              <label for="PartNumber" style="position:absolute;top:20%;left:16%;width:50%;height:5%;color:#000;font-size:1.2em">零件</label>
+                                                 <input type="text" name="PartNumber" id="PartNumber"  value="" style="position:absolute;top:20%;left:34%;width:50%;height:30px;border:2px solid gray;color:#000;text-align:center;" readonly="readonly">
+                                                 </br>
+                                                 </br>
+
+                                              <label for="PartName" style="position:absolute;top:30%;left:8%;width:50%;height:5%;color:#000;font-size:1.2em">零件名称</label>
+                                                 <input type="text" name="PartName" id="PartName" value="" style="position:absolute;top:30%;left:34%;width:50%;height:30px;border:2px solid gray;color:#000;text-align:center" readonly="readonly">
+                                                 </br>
+                                                 </br>
+
+                                              <label for="Price" style="position:absolute;top:40%;left:1%;width:50%;height:5%;color:#000;font-size:1.2em">建议含税零售</label>
+                                                 <input type="text" name="Price" id="Price" value="" style="position:absolute;top:40%;left:34%;width:50%;height:30px;border:2px solid gray;color:#000;text-align:center" readonly="readonly">
+                                                 </br>
+                                                 </br>
+                                              <label for="Comment" style="position:absolute;top:50%;left:28%;width:10%;height:5%;color:#000;font-size:1.2em">注：</label>
+                                              <div style="position:absolute;top:50%;left:34%;width:50%;height:10%;color:#000">此零售价仅指该零件材料费用，不涉及机组维修人工费、上门服务费等其它费用。</div>
+                                              @*<label for="c" style="position:absolute;top:50%;left:28%;width:10%;height:5%;color:#000;font-size:1.2em">注：</label>
+                                                 <input type="text" name="Comment" id="Comment" value="" style="position:absolute;top:50%;left:34%;width:50%;height:30px;border:2px solid gray;color:#000;text-align:center" readonly="readonly">*@
+                                                 </br>
+                                                 </br>
+
+                                                 <button class="btn m-bottom-10" id="btnBack" style="position:absolute;top:75%;left:40%;width:21%;height:5%;">返回</button>                                               
+                                         </form>
+                                     </div>                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            init();
+            $("#btnBack").click(function () {
+                var back = "@Url.Action("PartInfo", "PartInfo")@Html.Raw(ViewBag.oQueryString)";
+                location.href = back;
+                return false;//表单里的<button>标签定义的按钮会自动提交，返回false阻止其提交
+            })
+        })
+        //初始化页面元素
+        function init() {
+            var partNumber = $.query.get("PartNumber");
+            $.ajax({
+                url: "@Url.Action("GetPartInformationList", "PartInfo")@Html.Raw(ViewBag.oQueryString)&partNumber=" + partNumber,
+                data: {},
+                success: function (data) {
+                    if (data != null) {
+                        $("#PartNumber").val(data.ExtInfo.PartNumber);
+                        $("#PartName").val(data.ExtInfo.PartName);
+                        $("#Price").val(data.ExtInfo.Price + "元");
+                    }
+                }
+
+            });
+        }
+</script>
+   
+</body>
+</html>

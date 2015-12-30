@@ -1,0 +1,94 @@
+﻿@using Qxun.UI.Background.Config
+@using Qxun.UI.Background.App_Code
+@{ ViewBag.Title = "编辑零件信息";
+ ViewBag.subTitle = "零件信息管理";
+ Layout = "~/Views/Shared/_Layout.cshtml";
+ //如果要上传原尺寸图像，请将本参数赋值为"panorama"
+ ViewData["panorama"] = "panorama";
+ var platid = Request["plat"];
+ var formTitle = "编辑零件信息";
+ string content = "", value = "";
+
+ ViewBag.formlines = new FormLineConfig[] {
+       new FormLineConfig(){desc = "零件号",name = "PartNumber",
+           type = "input-text", tips = "<span class='maroon'>*</span>请填写零件号",vaildType = "required,maxlength:32",inputContent="",functionName="onkeyup",functionStr="value=value.replace(/[^\\d]/g,'')"},       
+       new FormLineConfig(){desc = "零件名称",name = "PartName",
+            type = "input-text", tips = "<span class='maroon'>*</span> 请填写零件具体名称",vaildType = "required,maxlength:32",inputContent="",functionStr=""} ,
+       new FormLineConfig(){desc = "零件价格",name = "Price",
+            type = "input-text", tips = "<span class='maroon'>*</span> 备注：此价格为建议零售价，仅包含零件本身的材料费用，不包括维修工时费等。",vaildType = "required",inputContent="",functionName="onkeyup",functionStr=""} ,
+       new FormLineConfig(){desc = "零件图像",name = "PartAvata",
+           type = "single-image", tips = "建议尺寸：88像素 * 88像素",vaildType = ""},
+   };
+ ViewBag.formsecondlines = new FormLineConfig[]{
+       new FormLineConfig(){desc = "",name = "PartId",
+            type = "input-hidden", tips = "",vaildType = "",inputContent = "",inputValue=""},
+       new FormLineConfig(){desc = "",name = "OpenId",
+            type = "input-hidden", tips = "",vaildType = "",inputContent = "",inputValue=""},
+       new FormLineConfig(){desc = "",name = "WeixinPlatId",
+            type = "input-hidden", tips = "",vaildType = "",inputContent = "",inputValue= Request.QueryString["plat"]}
+   };
+}
+@Html.Partial("_FormResource")
+@Html.Partial("_KindEditorResource")
+@Html.Partial("_DateTimePickerResource", new ViewDataDictionary() { { "className", "form_datetime" } })
+<div id="main">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="box">
+                    @Html.Partial("GoBackButton")
+                    <div class="box-title">
+                        <div class="span10">
+                            <h3>
+                                <i class="icon-edit"></i>@formTitle
+                            </h3>
+                        </div>
+                        <div class="span2">
+                        </div>
+                    </div>
+                    <div class="box-content">
+                        <form action="" method="post" class="form-horizontal form-validate" id="form1" name="form1">
+                            @(new CreateForm().CreateFormBody(ViewBag.formlines))
+
+                            @(new CreateForm().CreateFormBody(ViewBag.formsecondlines, false))
+                            @Html.Partial("CreateFormFoot")
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var id = jQuery.query.get("id");
+    var opts = {
+        primaryKeyId: id,
+        getFormDataUrl: '@Url.Action("GetPartInformationEntityById", "Part")?id=' + id,
+        postFormDataUrl: '@Url.Action("InsertOrUpdatePartInformationEntity", "Part")',
+        returnUrl: '@Url.Action("PartInformation", "Part")@Html.Raw(@ViewBag.oQueryString)',
+        validateOpts: {
+            rules: {
+                @(new CreateForm().CreateFormValid(ViewBag.formlines))
+            }
+        }
+    };
+
+    formClass.extFunction.validateFun = function () {
+        if (imgEntity.ResourceUrl === undefined || imgEntity.ResourceUrl === "") {
+            imgEntity.showError(false, "请上传零件图片");
+            return false;
+        }
+        else {
+            imgEntity.showError(true);
+            return true;
+        }        
+    };
+
+    formClass.extFunction.serializeFormFun = function (json) {
+        var jsondata = { "json": json, "plat": jQuery.query.get("plat") };
+        return jsondata;
+    };
+    $(function () {
+        formClass.init(opts);
+    });
+</script>

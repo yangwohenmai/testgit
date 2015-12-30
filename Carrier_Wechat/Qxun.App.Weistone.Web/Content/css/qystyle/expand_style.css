@@ -1,0 +1,121 @@
+﻿.form-control{height: 32px;}
+.space{margin-left: 10px;}
+.m-b-20{margin-bottom: 20px;}
+.fileinput-button{position: relative;overflow: hidden;}
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  transform: translate(-300px, 0) scale(4);
+  font-size: 23px;
+  direction: ltr;
+  cursor: pointer;
+}
+.fileupload-buttonbar .btn,
+.fileupload-buttonbar .toggle {margin-bottom: 5px;}
+.files .progress {width: 200px;}
+.vco-loading {
+  position: fixed;
+  display:table;
+  text-align:center;
+  min-width:100px;
+  top:200px;
+  height:100%;  
+  left: 50%;
+  margin-left:-14px;
+  z-index: 88;
+}
+.vco-loading-icon {
+  display:block;
+  background-repeat:no-repeat;
+  vertical-align:middle;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+  background-image:url(../../images/qyimages/loading.gif?v3.4);
+  width:28px;
+  height:28px;
+}
+.vco-message p{
+  text-align:center;
+  font-size:11px;
+  line-height:13px;
+  text-transform:uppercase;
+  margin-top:7.5px;
+  margin-bottom:7.5px;
+}
+
+.t-col-0{width:0}.t-col-1{width:1%}.t-col-2{width:2%}
+.t-col-3{width:3%}.t-col-4{width:4%}.t-col-5{width:5%}.t-col-6{width:6%}.t-col-7{width:7%}.t-col-8{width:8%}.t-col-9{width:9%}
+.t-col-10{width:10%}.t-col-11{width:11%}.t-col-12{width:12%}.t-col-13{width:13%}.t-col-14{width:14%}.t-col-15{width:15%}
+.t-col-16{width:16%}.t-col-17{width:17%}.t-col-18{width:18%}.t-col-19{width:19%}.t-col-20{width:20%}.t-col-21{width:21%}
+.t-col-22{width:22%}.t-col-23{width:23%}.t-col-24{width:24%}.t-col-25{width:25%}.t-col-26{width:26%}.t-col-27{width:27%}
+.t-col-28{width:28%}.t-col-29{width:29%}.t-col-30{width:30%}.t-col-31{width:31%}.t-col-32{width:32%}.t-col-33{width:33%}
+.t-col-34{width:34%}.t-col-35{width:35%}.t-col-36{width:36%}.t-col-37{width:37%}.t-col-38{width:38%}.t-col-39{width:39%}
+.t-col-40{width:40%}.t-col-41{width:41%}.t-col-42{width:42%}.t-col-43{width:43%}.t-col-44{width:44%}.t-col-45{width:45%}
+.t-col-46{width:46%}.t-col-47{width:47%}.t-col-48{width:48%}.t-col-49{width:49%}.t-col-50{width:50%}.t-col-51{width:51%}
+.t-col-52{width:52%}.t-col-53{width:53%}.t-col-54{width:54%}.t-col-55{width:55%}.t-col-56{width:56%}.t-col-57{width:57%}
+.t-col-58{width:58%}.t-col-59{width:59%}.t-col-60{width:60%}.t-col-61{width:61%}.t-col-62{width:62%}.t-col-63{width:63%}
+.t-col-64{width:64%}.t-col-65{width:65%}.t-col-66{width:66%}.t-col-67{width:67%}.t-col-68{width:68%}.t-col-69{width:69%}
+.t-col-70{width:70%}.t-col-71{width:71%}.t-col-72{width:72%}.t-col-73{width:73%}.t-col-74{width:74%}.t-col-75{width:75%}
+.t-col-76{width:76%}.t-col-77{width:77%}.t-col-78{width:78%}.t-col-79{width:79%}.t-col-80{width:80%}.t-col-81{width:81%}
+.t-col-82{width:82%}.t-col-83{width:83%}.t-col-84{width:84%}.t-col-85{width:85%}.t-col-86{width:86%}.t-col-87{width:87%}
+.t-col-88{width:88%}.t-col-89{width:89%}.t-col-90{width:90%}.t-col-91{width:91%}.t-col-92{width:92%}.t-col-93{width:93%}
+.t-col-94{width:94%}.t-col-95{width:95%}.t-col-96{width:96%}.t-col-97{width:97%}.t-col-98{width:98%}.t-col-99{width:99%}
+.t-col-100{width:100%}
+.font12{font-size:12px!important;}
+td.nowrap,.nowrap td,th.nowrap,.nowrap th,table thead th{white-space:nowrap !important;}
+table thead th,td{text-align:center; vertical-align: middle!important;}
+.table{background-color: #fff;}
+.dl-horizontal dt,.dl-horizontal dd{min-height: 30px;line-height: 30px;}
+.dl-horizontal h3{margin: 0;padding:0;}
+.dl-horizontal blockquote{margin:3px 0;padding: 0 10px;font-size: 12px;}
+.progress-bar{line-height: 12px;}
+.form-horizontal table .checkbox {padding-top: 4px;}
+
+/***
+Responsive & Scrollable Tables
+***/
+
+.table-scrollable {width: 100%;overflow-x: auto;overflow-y: hidden;border: 1px solid #dddddd;margin: 10px 0 !important;}
+.table-scrollable > .table {  width: 100% !important;margin: 0 !important; margin-bottom: 0;background-color: #fff;}
+.table-scrollable > .table > thead > tr > th,
+.table-scrollable > .table > tbody > tr > th,
+.table-scrollable > .table > tfoot > tr > th,
+.table-scrollable > .table > thead > tr > td,
+.table-scrollable > .table > tbody > tr > td,
+.table-scrollable > .table > tfoot > tr > td {white-space: nowrap;}
+.table-scrollable > .table-bordered {border: 0;}
+.table-scrollable > .table-bordered > thead > tr > th:first-child,
+.table-scrollable > .table-bordered > tbody > tr > th:first-child,
+.table-scrollable > .table-bordered > tfoot > tr > th:first-child,
+.table-scrollable > .table-bordered > thead > tr > td:first-child,
+.table-scrollable > .table-bordered > tbody > tr > td:first-child,
+.table-scrollable > .table-bordered > tfoot > tr > td:first-child {border-left: 0;}
+.table-scrollable > .table-bordered > thead > tr > th:last-child,
+.table-scrollable > .table-bordered > tbody > tr > th:last-child,
+.table-scrollable > .table-bordered > tfoot > tr > th:last-child,
+.table-scrollable > .table-bordered > thead > tr > td:last-child,
+.table-scrollable > .table-bordered > tbody > tr > td:last-child,
+.table-scrollable > .table-bordered > tfoot > tr > td:last-child {border-right: 0;}
+.table-scrollable > .table-bordered > thead > tr:last-child > th,
+.table-scrollable > .table-bordered > tbody > tr:last-child > th,
+.table-scrollable > .table-bordered > tfoot > tr:last-child > th,
+.table-scrollable > .table-bordered > thead > tr:last-child > td,
+.table-scrollable > .table-bordered > tbody > tr:last-child > td,
+.table-scrollable > .table-bordered > tfoot > tr:last-child > td {border-bottom: 0;}
+#list table th, #list table td {white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+#list .JCLRgrips{position:inherit !important;}
+.step-part{width:177px;height:35px;float:left;background:url(../../images/qyimages/step_img.png) no-repeat;margin-left:10px}
+.step-part strong{float:left;width:38px;height:35px;line-height:35px;text-align:center;font-size:14px;font-weight:bold;}
+.step-part span{float:left;width:123px;text-align:center;height:35px;line-height:35px;}
+.step-line{height:35px;}
+.step-part-pointer{cursor:pointer}
+.step-part-current{color:#67cea6;font-weight:bold}
+.step-part-small{width:146px;background-image:url(../../images/qyimages/step_small.png)}
+.step-part-small span{width:92px;}
+.step-content .thumbnail{background-color:#f0f0f0}
+.end{width: 163px;}

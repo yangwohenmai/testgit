@@ -1,0 +1,186 @@
+﻿.spanUserDetailError
+{
+
+}
+.red
+    {
+        margin-left: 5px;
+    }
+    .stdform label.error
+    {
+        margin-left: 20px;
+        display: inline-block;
+        color: Red;
+    }
+.spanIntegral
+{
+    font-size:14px;
+    display:inline-block;
+    vertical-align:middle;    
+}    
+.divFont
+{
+    font-weight:400;
+}
+.membershipDivFont
+{
+    font-size:small;
+}
+.img-preview {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.accordion_child {
+	padding:15px;
+	background:#EEE;
+}
+.accordion_child .xiangqing{
+	color: #797979;
+	line-height:18px;
+	font-size:12px;
+}
+/*********/
+#card {
+    background-position: 0 0, 0 0;
+}
+
+
+.cardcenter {
+    margin: 22px auto 0;
+    position: relative;
+}
+#card .card{
+	margin: 0 auto;
+	position: relative;
+	height: 159px;
+	text-align: left;
+	max-width: 267px;
+}
+.cardbg{
+	width: 100%;
+	position:absolute;
+	border-radius: 8px;
+	-webkit-border-radius:8px;
+	-moz-border-radius:8px;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+	-moz-box-shadow:0 0 4px rgba(0, 0, 0, 0.6);
+	-webkit-box-shadow:0 0 8px rgba(0, 0, 0, 0.6);
+	top:0;
+	left:0;
+	z-index:1;
+}
+.card .logo {
+	max-height:70px;
+	max-width:170px;
+	position:absolute;
+	top:8px;
+	left:5px;
+	z-index:2;
+}
+#card .msk{
+	display: inline-block;
+    position: absolute;
+	width:320px;
+	height:115px;
+	top:78px;
+	left:0;
+	z-index:3;
+	-webkit-background-size:320px 128px;
+	background-size:320px 128px;
+}
+#card .card h1 {
+	position:absolute;
+	right:10px;
+	top:7px;
+	text-shadow:0 1px rgba(255, 255, 255, 0.2);
+	color:#000000;
+	font-size:11px;
+	line-height:25px;
+	text-align:right;
+	font-weight: normal;
+	z-index:2;
+}
+#card .card h2 {
+	position:absolute;
+	top:3px;
+	right:8px;
+	font-size:9px;
+	line-height:22px;
+	text-align:right;
+	color:#EDD3BA;
+	text-shadow:1px 1px #A69079;
+}
+#card .card .verify {
+	display:inline-block;
+	height:40px;
+	top:105px;
+	right:12px;
+	text-align:right;
+	line-height:24px;
+	color:#000000;
+	font-size:15px;
+	text-shadow:0 1px rgba(255, 255, 255, 0.2);
+	z-index:2;
+}
+#card .card .verify span {
+	display:inline-block;
+	text-align:left;
+}
+#card .card .verify em {
+	display:block;
+	line-height:13px;
+	font-size:10px;
+	font-weight:normal;
+	font-style:normal;
+}
+.pdo {
+	position:absolute;
+	top:0;
+	left:0;
+	display:inline-block;
+}
+
+#card .explain {
+    line-height: 36px;
+    text-align: center;
+	margin:0 auto; padding:0;
+}
+#card .explain span {
+	font-size:14px;
+	color:#646464;
+	text-shadow:0 1px #fff;
+	display:inline-block;
+	background-size:13px 14.5px;
+}
+#card .explain2 {
+    line-height: 22px;
+    margin:30px auto 10px;
+    padding: 0 40px;
+    text-align: center;
+}
+#card .explain2 span {
+	color: #888888;
+    display: inline-block;
+    font-size: 12px;
+    margin-top: 22px;
+    text-shadow: 0 1px #FFFFFF;
+}
+
+.spanCss1
+{
+    font-size: small;
+}
+.spanCss2
+{
+    font-size: xx-small;
+}
+.imgSize
+{
+    max-height:15px;
+    max-width:15px;
+}

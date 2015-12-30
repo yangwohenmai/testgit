@@ -1,0 +1,156 @@
+﻿@{
+    ViewBag.Title = "RepairInfoList";
+    ViewBag.subTitle = "维修项工时管理";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var platid = Request["plat"];
+}
+<script src="@Url.Content("~/Scripts/jquery.form.js?v=")@ViewBag.Version" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/ZeroClipboard.js?v=")@ViewBag.Version" type="text/javascript"></script>
+
+<div class="tag mg-bottom-20 clr">
+    <div class="alert" style="width:700px"><span id="notice" style="font-weight:bold;"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="alert">你好，这是首次登陆,没有历史导入导出记录</span></div>
+</div>
+@Html.Partial("_ListResource")
+<link href="@Url.Content("~/Content/datetimepicker/bootstrap-datetimepicker.min.css?v=")@ViewBag.Version" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/Scripts/datetimepicker/bootstrap-datetimepicker.min.js?v=")@ViewBag.Version" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/datetimepicker/locales/bootstrap-datetimepicker.zh-CN.js?v=")@ViewBag.Version" type="text/javascript"></script>
+
+<div class="maincontentinner1">
+
+    <div id="Div12" class="dataTables_wrapper">
+        <div id="dyntable_length" class="dataTables_length">
+
+            <div class="btn-group">
+
+                <label>
+                    <a href="#importMember" class="btn btn-primary" data-toggle="modal">
+                        导入数据
+                    </a>
+                    <a href="#importMember" class="btn btn-primary" data-toggle="modal">
+                        全部导出
+                    </a>
+                    <a href="#importMember" class="btn btn-primary" data-toggle="modal">
+                        ERP导出
+                    </a>
+                </label>
+            </div>
+            <span style="float:right">
+                <input type="text" name="RepairName" id="RepairName" class="search" value="" style="color: gray" placeholder="请输入维修项名称" onkeyup="value=value.replace(/[\']+/, '') ">
+                <input type="text" name="RepairQueryNum" id="RepairQueryNum" class="search" value="" style="color: gray" placeholder="请输入维修项查询号" onkeyup="value=value.replace(/[\']+/, '') ">
+                <button class="btn m-bottom-10" id="btnselect">查询</button>
+
+            </span>
+        </div>
+        <div class="dataTables_filter" id="dyntable_filter">
+        </div>
+        <table id="Table1" class="table table-bordered responsive dataTable">
+            <thead>
+                <tr>
+                    <th>
+                        维修项编号
+                    </th>                  
+                    <th>
+                        维修项查询号
+                    </th>
+                    <th>
+                        维修项名称
+                    </th>
+                    <th>
+                        维修项工时
+                    </th>
+                    <th>
+                        维修项机组型号
+                    </th>
+                    <th>
+                        维修项机组编号
+                    </th>
+                    <th>
+                        维修项机组号
+                    </th>                   
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+        <div class="dataTables_info" id="Div25">
+            &nbsp;
+        </div>
+        <div class="dataTables_paginate paging_bootstrap pagination" id="Div26">
+            <ul id="tableFoot"></ul>
+        </div>
+    </div>
+    <br>
+    <br>
+</div>
+<!--列表模板-->
+
+<script type="text/x-jquery-tmpl" id="replylist">
+
+    @*<tr class="gradeX odd" id="tr${DealerId}">
+        <td class=" ">
+            ${BPCode}
+        </td>
+        <td class=" ">
+            ${SiteName}
+        </td>
+        <td class=" ">
+            ${SiteManager}
+        </td>
+        <td class=" ">
+            ${Tel}
+        </td>
+        <td class=" ">
+            ${SiteAddress}
+        </td>
+        <td class=" ">
+            ${formatDate(EstablishmentTime)}
+        </td>
+        <td class=" ">
+            ${CompanyName}
+        </td>
+        <td class=" ">
+            ${SiteType}
+        </td>
+        <td class=" ">
+            ${SiteGrade}
+        </td>
+        <td class=" ">
+            ${LocalManager}
+        </td>
+    </tr>*@
+    <div id="dateail_${RepairId}"></div>
+
+</script>
+<script type="text/javascript">
+        var plat = jQuery.query.get("plat");
+        var opts = {
+            getListUrl: '@Url.Action("GetRepairPageList", "Repair")',
+            footUrl: '@Url.Content("~/Content/tmpl/foot1.htm")',
+            tableBodyId: "tableBody",
+            tableFootId: "tableFoot",
+            replyListId: "replylist",
+            pageSize: 15,
+        itemId: "item-id",
+        cssClass: ".btn-del-open",
+        plat: plat,
+        checkBox: ""
+    };
+    @*$(function () {
+        //初始化列表数据
+        listClass.init(opts);
+        //初始化导入记录
+        //init();
+        //搜索
+        $("#btnselect").click(function () {
+            var entity = new Object();
+            entity.RepairName = $("#RepairName").val();
+            entity.RepairQueryNum = $("#RepairQueryNum").val();
+            var searchJson = JSON.stringify(entity);
+            opts.getListUrl = '@Url.Action("GetRepairPageList", "Repair")?searchJson=' + searchJson;
+            listClass.init(opts);
+        })
+    })*@
+
+
+
+
+</script>

@@ -1,0 +1,162 @@
+﻿*
+{
+    padding:0; 
+    margin:0;
+}
+body 
+{
+	width: 100%;
+    font-family:微软雅黑,黑体;
+}
+a{
+	text-decoration:none;
+}
+img
+{
+    border:0;
+}
+.container
+{
+	max-width: 640px;
+	margin: auto;
+}
+/******************banner条开始********************/
+.box_swipe{
+    overflow:hidden;
+    position:relative;
+    visibility: visible;
+}
+.box_swipe ul{
+    -webkit-padding-start: 0px;
+}
+.bannerstyle
+{
+    width: 100%;
+    display: block;
+}
+.telstyle
+{
+    position:absolute;top:0;right:0;
+}
+.teldiv
+{
+    position: relative;margin-top: 50%;float: right;
+}
+/******************banner条结束********************/
+/******************分类开始********************/
+.categorystyle
+{
+    position:fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 640px;
+	margin: auto;
+	
+}
+.categoryul
+{
+    list-style:none;
+}
+.categoryul li
+{ 
+    float:left;
+    width:33.3%;
+    text-align:center;
+    margin-top:20px;
+}
+.categoryul li img
+{
+    vertical-align:middle;
+    width: 20%;
+}
+.categoryul li a
+{
+    text-decoration:none;
+}
+.line
+{
+    background: url(../../../images/home/home77/line.jpg) no-repeat right center;
+}
+.categoryul li div
+{
+    color:White;
+    margin-top:5px;    
+white-space: nowrap;
+word-break: break-all;
+overflow: hidden;
+text-overflow: ellipsis;
+width: 100%;
+}
+.menuul
+{
+    list-style:none;
+}
+.menuul>li
+{ 
+    float:left;
+    width:25%;
+    margin-top:20px;
+    text-align:center;
+}
+.menuul>li img
+{
+    vertical-align:middle;
+    margin-top:10px;
+    margin-bottom:10px;
+    width: 20%;
+}
+.menuul>li a
+{
+    text-decoration:none;
+}
+.menu_font{
+    text-align:left;
+    position:absolute;
+    list-style:none;
+    z-index:3;
+    background-color:black;
+    border-radius: 5px;
+    width: 150px;
+}
+.menu_font.hidden{
+    display:none;
+}
+.menu_font li:first-of-type {
+    border-top: 0;
+}
+.menu_font li:last-of-type {
+    border-bottom: 0;
+}
+.menu_font li
+{
+    border-top: 1px solid rgb(64, 72, 75);
+    border-bottom: 1px solid rgb(0, 6, 9);
+}
+.menu_font li a
+{
+    margin-left:15px;
+    color:White;
+    line-height:45px;
+}
+
+.divbg
+{
+    position:absolute;z-index:1;left: 0;right: 0;bottom: 0;
+}
+.menubg
+{
+    position:absolute;z-index:1;left: 0;right: 0;bottom: 0;
+}
+.menustyle
+{
+    position:relative;z-index:1
+}
+/******************分类结束********************/
+
+
+.clearfix
+{
+    float: none;
+    clear: both;
+}

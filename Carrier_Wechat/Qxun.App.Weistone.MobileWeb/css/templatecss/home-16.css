@@ -1,0 +1,30 @@
+.body{
+	max-width:640px;
+	margin:auto;
+	min-height:100%;
+	background-color:#f4f4f4;
+	position:relative;
+	background:#0f0e0c;
+}
+
+.list_font{
+    margin:10px 5px;
+    overflow:hidden;
+}
+.list_font li{
+	background-color:#352E29;
+}
+.list_font li:hover
+{
+    background-image:url(../../images/hover19hover.png)
+}
+.list_font li a{
+	color:#fff;
+}
+
+.link_tel{
+    background-color:#2f2f2f;
+}
+footer a {
+color: White!important;
+}

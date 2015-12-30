@@ -1,0 +1,94 @@
+﻿
+html, body, nav, ul, li, h2, h3, figure {
+	padding: 0px;
+	margin: 0px;
+}
+body {
+	min-width: 320px;
+	font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+	color: #000;
+	background: #f5f5f5;
+	overflow-x: hidden;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-text-size-adjust: none;
+	-moz-user-select: none;
+	background-color:#F1E8E1;
+}
+img {
+	border: none
+}
+a {
+	color: #000;
+	text-decoration: none;
+}
+li {
+	list-style-type: none;
+}
+footer {
+	margin-top: -50px;
+	line-height: 27px;
+	text-align: center;
+	font-size: 12px;
+}
+.connect a {
+	padding: 0 18px;
+}
+a.phone {
+	color: #0E68D5;
+}
+.versions a {
+	height: 12px;
+	line-height: 12px;
+	padding: 0 18px;
+	border-right: 1px solid #000;
+}
+.connect a:last-child, .versions a:last-child {
+	border-right: none;
+}
+
+.box {
+
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.box li {
+	position: relative;
+	float: left;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	width:30%;
+}
+.box h2 {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	font: 500 14px/1 "Microsoft Yahei";
+	color: #fff;
+}
+h2 a:link, h2 a:visited {
+	color: #fff;
+}
+.m h2 {
+	color: #FE9B19;
+	top: 75px;
+	left: 50%;
+	margin-left: -28px;
+}
+.gift {
+	margin: auto;
+	width: 80px;
+	height: 80px;
+	border-radius: 70px;
+	border: 2px solid #f5f5f5;
+}
+.gift img{
+	width: 80px;
+	height: 80px;
+	border-radius: 70px;
+}
+

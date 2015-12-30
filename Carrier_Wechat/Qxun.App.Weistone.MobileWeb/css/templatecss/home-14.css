@@ -1,0 +1,42 @@
+.body{
+	max-width:640px;
+	margin:auto;
+	min-height:100%;
+	background-color:#CAB9A5;
+	position:relative;
+}
+.list_font{
+    margin:10px 5px;
+    overflow:hidden;
+}
+.list_font li{
+	width:33.3%!important;
+	background-color:#704F43;
+}
+.list_font li:nth-child(2n){
+	background-color:#fff;
+}
+.list_font li:nth-child(2n) a{
+	color:#704F43;
+}
+
+.list_font li p{
+	text-align:left;
+	text-indent:15px;
+	height: 38px;
+    overflow: hidden;
+}
+
+.list_font div:first-child{
+	text-align:right;
+	
+}
+/*margin-top: 26px;*/
+.link_tel{
+    background-color:#2e81a9;
+}
+.typeIcon
+{
+    padding-right: 6px;
+    font-size: 40px;
+}

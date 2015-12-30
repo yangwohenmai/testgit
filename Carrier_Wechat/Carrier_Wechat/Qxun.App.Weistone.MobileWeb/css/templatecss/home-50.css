@@ -1,0 +1,111 @@
+﻿.body{
+	max-width:640px;
+	margin:auto;
+	min-height:100%;
+	background-color:#e1e0de;
+	position:relative;
+}
+
+.body{
+	display:block;
+	background-size:100% 100%;
+	-webkit-box-sizing: border-box;
+	padding:10px;
+	background-color:#b62b23;
+}
+.section_body{
+	background:url(../../images/home50.jpg) repeat-x center 0;
+	-webkit-background-size:100%;
+}
+
+
+.list_uls{
+	margin: auto;
+	width:270px;
+	height:270px;
+}
+
+.list_uls li{
+	width:270px;
+	height:270px;
+	overflow: hidden;
+}
+
+.list_uls li a{
+	display:inline-block;
+	height:100px;
+	-webkit-box-sizing:border-box;
+	background:#b62b23;
+	overflow:hidden;
+	font-size:30px;
+	color:#fff;
+	position:relative;
+	float:left;
+	width:70px;
+	height:70px;
+	border-radius:90px;
+	margin:10px;
+	float:left;
+	text-align:center;
+}
+/*.list_uls li a:nth-of-type(2){background:rgba(58, 121, 126,0.90);}
+.list_uls li a:nth-of-type(3){background:rgba(58, 121, 126,0.96);}
+
+.list_uls li a:nth-of-type(4){background:rgba(58, 121, 126,0.75);}
+.list_uls li a:nth-of-type(5){background:rgba(58, 121, 126,0.8);}
+.list_uls li a:nth-of-type(6){background:rgba(58, 121, 126,0.89);}
+
+.list_uls li a:nth-of-type(7){background:rgba(58, 121, 126,0.7);}
+.list_uls li a:nth-of-type(8){background:rgba(58, 121, 126,0.76);}
+.list_uls li a:nth-of-type(9){background:rgba(58, 121, 126,0.83);}*/
+
+
+
+.list_uls li a label{
+	display:block;
+	position: absolute;
+	bottom:10px;
+	width:100%;
+	text-align:center;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	padding: 0 5px;
+	overflow: hidden;
+	-webkit-box-sizing:border-box;
+}
+.list_uls li a small{
+	display:block;
+	font-size:14px;
+}
+
+.list_uls li a span[class*="icon"]{
+	position: absolute;
+	top: 10px;
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+.nav_for_list_ul{
+	padding:10px;
+	text-align: center;
+}
+.nav_for_list_ul li{
+	display: inline-block;
+	width:8px;
+	height:8px;
+	border-radius: 10px;
+	background:#dd6f63;
+	margin:3px;
+}
+.nav_for_list_ul li.on{
+	background:#b62b23;
+}
+
+footer .copy{
+	line-height:25px;
+	display: block;
+	color:#ffffff;
+	text-align:center;
+
+}

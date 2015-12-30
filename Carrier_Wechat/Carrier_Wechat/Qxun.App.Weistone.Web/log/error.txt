@@ -1,0 +1,585 @@
+2015-12-08 10:36:46,675 [7684] WARN  ErrorLogger - The view 'UnitInformation' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/MasterData/UnitInformation.aspx
+~/Views/MasterData/UnitInformation.ascx
+~/Views/Shared/UnitInformation.aspx
+~/Views/Shared/UnitInformation.ascx
+~/Views/MasterData/UnitInformation.cshtml
+~/Views/MasterData/UnitInformation.vbhtml
+~/Views/Shared/UnitInformation.cshtml
+~/Views/Shared/UnitInformation.vbhtml
+System.InvalidOperationException: The view 'UnitInformation' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/MasterData/UnitInformation.aspx
+~/Views/MasterData/UnitInformation.ascx
+~/Views/Shared/UnitInformation.aspx
+~/Views/Shared/UnitInformation.ascx
+~/Views/MasterData/UnitInformation.cshtml
+~/Views/MasterData/UnitInformation.vbhtml
+~/Views/Shared/UnitInformation.cshtml
+~/Views/Shared/UnitInformation.vbhtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-08 10:37:17,712 [4368] WARN  ErrorLogger - The view 'UnitInformation' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/MasterData/UnitInformation.aspx
+~/Views/MasterData/UnitInformation.ascx
+~/Views/Shared/UnitInformation.aspx
+~/Views/Shared/UnitInformation.ascx
+~/Views/MasterData/UnitInformation.cshtml
+~/Views/MasterData/UnitInformation.vbhtml
+~/Views/Shared/UnitInformation.cshtml
+~/Views/Shared/UnitInformation.vbhtml
+System.InvalidOperationException: The view 'UnitInformation' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/MasterData/UnitInformation.aspx
+~/Views/MasterData/UnitInformation.ascx
+~/Views/Shared/UnitInformation.aspx
+~/Views/Shared/UnitInformation.ascx
+~/Views/MasterData/UnitInformation.cshtml
+~/Views/MasterData/UnitInformation.vbhtml
+~/Views/Shared/UnitInformation.cshtml
+~/Views/Shared/UnitInformation.vbhtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-21 16:31:46,048 [6404] WARN  ErrorLogger - The view 'ExportUserinfoToExcel' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Unit/ExportUserinfoToExcel.aspx
+~/Views/Unit/ExportUserinfoToExcel.ascx
+~/Views/Shared/ExportUserinfoToExcel.aspx
+~/Views/Shared/ExportUserinfoToExcel.ascx
+~/Views/Unit/ExportUserinfoToExcel.cshtml
+~/Views/Unit/ExportUserinfoToExcel.vbhtml
+~/Views/Shared/ExportUserinfoToExcel.cshtml
+~/Views/Shared/ExportUserinfoToExcel.vbhtml
+System.InvalidOperationException: The view 'ExportUserinfoToExcel' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Unit/ExportUserinfoToExcel.aspx
+~/Views/Unit/ExportUserinfoToExcel.ascx
+~/Views/Shared/ExportUserinfoToExcel.aspx
+~/Views/Shared/ExportUserinfoToExcel.ascx
+~/Views/Unit/ExportUserinfoToExcel.cshtml
+~/Views/Unit/ExportUserinfoToExcel.vbhtml
+~/Views/Shared/ExportUserinfoToExcel.cshtml
+~/Views/Shared/ExportUserinfoToExcel.vbhtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-22 11:22:55,803 [7040] WARN  ErrorLogger - The view 'ExportUserinfoToExcel' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Unit/ExportUserinfoToExcel.aspx
+~/Views/Unit/ExportUserinfoToExcel.ascx
+~/Views/Shared/ExportUserinfoToExcel.aspx
+~/Views/Shared/ExportUserinfoToExcel.ascx
+~/Views/Unit/ExportUserinfoToExcel.cshtml
+~/Views/Unit/ExportUserinfoToExcel.vbhtml
+~/Views/Shared/ExportUserinfoToExcel.cshtml
+~/Views/Shared/ExportUserinfoToExcel.vbhtml
+System.InvalidOperationException: The view 'ExportUserinfoToExcel' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Unit/ExportUserinfoToExcel.aspx
+~/Views/Unit/ExportUserinfoToExcel.ascx
+~/Views/Shared/ExportUserinfoToExcel.aspx
+~/Views/Shared/ExportUserinfoToExcel.ascx
+~/Views/Unit/ExportUserinfoToExcel.cshtml
+~/Views/Unit/ExportUserinfoToExcel.vbhtml
+~/Views/Shared/ExportUserinfoToExcel.cshtml
+~/Views/Shared/ExportUserinfoToExcel.vbhtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-22 11:26:33,721 [3508] WARN  ErrorLogger - The view 'ExportUserinfoToExcel' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Unit/ExportUserinfoToExcel.aspx
+~/Views/Unit/ExportUserinfoToExcel.ascx
+~/Views/Shared/ExportUserinfoToExcel.aspx
+~/Views/Shared/ExportUserinfoToExcel.ascx
+~/Views/Unit/ExportUserinfoToExcel.cshtml
+~/Views/Unit/ExportUserinfoToExcel.vbhtml
+~/Views/Shared/ExportUserinfoToExcel.cshtml
+~/Views/Shared/ExportUserinfoToExcel.vbhtml
+System.InvalidOperationException: The view 'ExportUserinfoToExcel' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Unit/ExportUserinfoToExcel.aspx
+~/Views/Unit/ExportUserinfoToExcel.ascx
+~/Views/Shared/ExportUserinfoToExcel.aspx
+~/Views/Shared/ExportUserinfoToExcel.ascx
+~/Views/Unit/ExportUserinfoToExcel.cshtml
+~/Views/Unit/ExportUserinfoToExcel.vbhtml
+~/Views/Shared/ExportUserinfoToExcel.cshtml
+~/Views/Shared/ExportUserinfoToExcel.vbhtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-22 11:35:34,011 [10420] WARN  ErrorLogger - The view 'ExportUserinfoToExcelERP' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Unit/ExportUserinfoToExcelERP.aspx
+~/Views/Unit/ExportUserinfoToExcelERP.ascx
+~/Views/Shared/ExportUserinfoToExcelERP.aspx
+~/Views/Shared/ExportUserinfoToExcelERP.ascx
+~/Views/Unit/ExportUserinfoToExcelERP.cshtml
+~/Views/Unit/ExportUserinfoToExcelERP.vbhtml
+~/Views/Shared/ExportUserinfoToExcelERP.cshtml
+~/Views/Shared/ExportUserinfoToExcelERP.vbhtml
+System.InvalidOperationException: The view 'ExportUserinfoToExcelERP' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Unit/ExportUserinfoToExcelERP.aspx
+~/Views/Unit/ExportUserinfoToExcelERP.ascx
+~/Views/Shared/ExportUserinfoToExcelERP.aspx
+~/Views/Shared/ExportUserinfoToExcelERP.ascx
+~/Views/Unit/ExportUserinfoToExcelERP.cshtml
+~/Views/Unit/ExportUserinfoToExcelERP.vbhtml
+~/Views/Shared/ExportUserinfoToExcelERP.cshtml
+~/Views/Shared/ExportUserinfoToExcelERP.vbhtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-22 13:58:18,737 [6540] WARN  ErrorLogger - The view 'ExportUserinfoToExcelERP' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Unit/ExportUserinfoToExcelERP.aspx
+~/Views/Unit/ExportUserinfoToExcelERP.ascx
+~/Views/Shared/ExportUserinfoToExcelERP.aspx
+~/Views/Shared/ExportUserinfoToExcelERP.ascx
+~/Views/Unit/ExportUserinfoToExcelERP.cshtml
+~/Views/Unit/ExportUserinfoToExcelERP.vbhtml
+~/Views/Shared/ExportUserinfoToExcelERP.cshtml
+~/Views/Shared/ExportUserinfoToExcelERP.vbhtml
+System.InvalidOperationException: The view 'ExportUserinfoToExcelERP' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Unit/ExportUserinfoToExcelERP.aspx
+~/Views/Unit/ExportUserinfoToExcelERP.ascx
+~/Views/Shared/ExportUserinfoToExcelERP.aspx
+~/Views/Shared/ExportUserinfoToExcelERP.ascx
+~/Views/Unit/ExportUserinfoToExcelERP.cshtml
+~/Views/Unit/ExportUserinfoToExcelERP.vbhtml
+~/Views/Shared/ExportUserinfoToExcelERP.cshtml
+~/Views/Shared/ExportUserinfoToExcelERP.vbhtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-22 13:58:42,416 [7848] WARN  ErrorLogger - The view 'ExportUserinfoToExcel' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Unit/ExportUserinfoToExcel.aspx
+~/Views/Unit/ExportUserinfoToExcel.ascx
+~/Views/Shared/ExportUserinfoToExcel.aspx
+~/Views/Shared/ExportUserinfoToExcel.ascx
+~/Views/Unit/ExportUserinfoToExcel.cshtml
+~/Views/Unit/ExportUserinfoToExcel.vbhtml
+~/Views/Shared/ExportUserinfoToExcel.cshtml
+~/Views/Shared/ExportUserinfoToExcel.vbhtml
+System.InvalidOperationException: The view 'ExportUserinfoToExcel' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Unit/ExportUserinfoToExcel.aspx
+~/Views/Unit/ExportUserinfoToExcel.ascx
+~/Views/Shared/ExportUserinfoToExcel.aspx
+~/Views/Shared/ExportUserinfoToExcel.ascx
+~/Views/Unit/ExportUserinfoToExcel.cshtml
+~/Views/Unit/ExportUserinfoToExcel.vbhtml
+~/Views/Shared/ExportUserinfoToExcel.cshtml
+~/Views/Shared/ExportUserinfoToExcel.vbhtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-23 14:57:23,239 [8184] WARN  ErrorLogger - The view 'ExportUserinfoToExcel' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Part/ExportUserinfoToExcel.aspx
+~/Views/Part/ExportUserinfoToExcel.ascx
+~/Views/Shared/ExportUserinfoToExcel.aspx
+~/Views/Shared/ExportUserinfoToExcel.ascx
+~/Views/Part/ExportUserinfoToExcel.cshtml
+~/Views/Part/ExportUserinfoToExcel.vbhtml
+~/Views/Shared/ExportUserinfoToExcel.cshtml
+~/Views/Shared/ExportUserinfoToExcel.vbhtml
+System.InvalidOperationException: The view 'ExportUserinfoToExcel' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Part/ExportUserinfoToExcel.aspx
+~/Views/Part/ExportUserinfoToExcel.ascx
+~/Views/Shared/ExportUserinfoToExcel.aspx
+~/Views/Shared/ExportUserinfoToExcel.ascx
+~/Views/Part/ExportUserinfoToExcel.cshtml
+~/Views/Part/ExportUserinfoToExcel.vbhtml
+~/Views/Shared/ExportUserinfoToExcel.cshtml
+~/Views/Shared/ExportUserinfoToExcel.vbhtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-23 14:57:29,461 [9640] WARN  ErrorLogger - The view 'ExportUserinfoToExcelERP' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Part/ExportUserinfoToExcelERP.aspx
+~/Views/Part/ExportUserinfoToExcelERP.ascx
+~/Views/Shared/ExportUserinfoToExcelERP.aspx
+~/Views/Shared/ExportUserinfoToExcelERP.ascx
+~/Views/Part/ExportUserinfoToExcelERP.cshtml
+~/Views/Part/ExportUserinfoToExcelERP.vbhtml
+~/Views/Shared/ExportUserinfoToExcelERP.cshtml
+~/Views/Shared/ExportUserinfoToExcelERP.vbhtml
+System.InvalidOperationException: The view 'ExportUserinfoToExcelERP' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Part/ExportUserinfoToExcelERP.aspx
+~/Views/Part/ExportUserinfoToExcelERP.ascx
+~/Views/Shared/ExportUserinfoToExcelERP.aspx
+~/Views/Shared/ExportUserinfoToExcelERP.ascx
+~/Views/Part/ExportUserinfoToExcelERP.cshtml
+~/Views/Part/ExportUserinfoToExcelERP.vbhtml
+~/Views/Shared/ExportUserinfoToExcelERP.cshtml
+~/Views/Shared/ExportUserinfoToExcelERP.vbhtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-24 13:36:29,437 [7632] WARN  ErrorLogger - The view 'ExportUserinfoToExcel' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Dealer/ExportUserinfoToExcel.aspx
+~/Views/Dealer/ExportUserinfoToExcel.ascx
+~/Views/Shared/ExportUserinfoToExcel.aspx
+~/Views/Shared/ExportUserinfoToExcel.ascx
+~/Views/Dealer/ExportUserinfoToExcel.cshtml
+~/Views/Dealer/ExportUserinfoToExcel.vbhtml
+~/Views/Shared/ExportUserinfoToExcel.cshtml
+~/Views/Shared/ExportUserinfoToExcel.vbhtml
+System.InvalidOperationException: The view 'ExportUserinfoToExcel' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Dealer/ExportUserinfoToExcel.aspx
+~/Views/Dealer/ExportUserinfoToExcel.ascx
+~/Views/Shared/ExportUserinfoToExcel.aspx
+~/Views/Shared/ExportUserinfoToExcel.ascx
+~/Views/Dealer/ExportUserinfoToExcel.cshtml
+~/Views/Dealer/ExportUserinfoToExcel.vbhtml
+~/Views/Shared/ExportUserinfoToExcel.cshtml
+~/Views/Shared/ExportUserinfoToExcel.vbhtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-24 14:13:10,902 [5772] WARN  ErrorLogger - The view 'ExportUserinfoToExcel' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Dealer/ExportUserinfoToExcel.aspx
+~/Views/Dealer/ExportUserinfoToExcel.ascx
+~/Views/Shared/ExportUserinfoToExcel.aspx
+~/Views/Shared/ExportUserinfoToExcel.ascx
+~/Views/Dealer/ExportUserinfoToExcel.cshtml
+~/Views/Dealer/ExportUserinfoToExcel.vbhtml
+~/Views/Shared/ExportUserinfoToExcel.cshtml
+~/Views/Shared/ExportUserinfoToExcel.vbhtml
+System.InvalidOperationException: The view 'ExportUserinfoToExcel' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Dealer/ExportUserinfoToExcel.aspx
+~/Views/Dealer/ExportUserinfoToExcel.ascx
+~/Views/Shared/ExportUserinfoToExcel.aspx
+~/Views/Shared/ExportUserinfoToExcel.ascx
+~/Views/Dealer/ExportUserinfoToExcel.cshtml
+~/Views/Dealer/ExportUserinfoToExcel.vbhtml
+~/Views/Shared/ExportUserinfoToExcel.cshtml
+~/Views/Shared/ExportUserinfoToExcel.vbhtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-24 17:27:58,399 [11084] WARN  ErrorLogger - The view 'ExportDealerinfoToExcel' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Dealer/ExportDealerinfoToExcel.aspx
+~/Views/Dealer/ExportDealerinfoToExcel.ascx
+~/Views/Shared/ExportDealerinfoToExcel.aspx
+~/Views/Shared/ExportDealerinfoToExcel.ascx
+~/Views/Dealer/ExportDealerinfoToExcel.cshtml
+~/Views/Dealer/ExportDealerinfoToExcel.vbhtml
+~/Views/Shared/ExportDealerinfoToExcel.cshtml
+~/Views/Shared/ExportDealerinfoToExcel.vbhtml
+System.InvalidOperationException: The view 'ExportDealerinfoToExcel' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Dealer/ExportDealerinfoToExcel.aspx
+~/Views/Dealer/ExportDealerinfoToExcel.ascx
+~/Views/Shared/ExportDealerinfoToExcel.aspx
+~/Views/Shared/ExportDealerinfoToExcel.ascx
+~/Views/Dealer/ExportDealerinfoToExcel.cshtml
+~/Views/Dealer/ExportDealerinfoToExcel.vbhtml
+~/Views/Shared/ExportDealerinfoToExcel.cshtml
+~/Views/Shared/ExportDealerinfoToExcel.vbhtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-25 09:21:51,091 [8188] WARN  ErrorLogger - The view 'ExportDealerinfoToExcel' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Dealer/ExportDealerinfoToExcel.aspx
+~/Views/Dealer/ExportDealerinfoToExcel.ascx
+~/Views/Shared/ExportDealerinfoToExcel.aspx
+~/Views/Shared/ExportDealerinfoToExcel.ascx
+~/Views/Dealer/ExportDealerinfoToExcel.cshtml
+~/Views/Dealer/ExportDealerinfoToExcel.vbhtml
+~/Views/Shared/ExportDealerinfoToExcel.cshtml
+~/Views/Shared/ExportDealerinfoToExcel.vbhtml
+System.InvalidOperationException: The view 'ExportDealerinfoToExcel' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Dealer/ExportDealerinfoToExcel.aspx
+~/Views/Dealer/ExportDealerinfoToExcel.ascx
+~/Views/Shared/ExportDealerinfoToExcel.aspx
+~/Views/Shared/ExportDealerinfoToExcel.ascx
+~/Views/Dealer/ExportDealerinfoToExcel.cshtml
+~/Views/Dealer/ExportDealerinfoToExcel.vbhtml
+~/Views/Shared/ExportDealerinfoToExcel.cshtml
+~/Views/Shared/ExportDealerinfoToExcel.vbhtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-25 17:04:48,983 [7892] WARN  ErrorLogger - The view 'RepairInfo' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/HotLine/RepairInfo.aspx
+~/Views/HotLine/RepairInfo.ascx
+~/Views/Shared/RepairInfo.aspx
+~/Views/Shared/RepairInfo.ascx
+~/Views/HotLine/RepairInfo.cshtml
+~/Views/HotLine/RepairInfo.vbhtml
+~/Views/Shared/RepairInfo.cshtml
+~/Views/Shared/RepairInfo.vbhtml
+System.InvalidOperationException: The view 'RepairInfo' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/HotLine/RepairInfo.aspx
+~/Views/HotLine/RepairInfo.ascx
+~/Views/Shared/RepairInfo.aspx
+~/Views/Shared/RepairInfo.ascx
+~/Views/HotLine/RepairInfo.cshtml
+~/Views/HotLine/RepairInfo.vbhtml
+~/Views/Shared/RepairInfo.cshtml
+~/Views/Shared/RepairInfo.vbhtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-25 17:06:56,262 [11536] WARN  ErrorLogger - The view 'RepairInfo' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/HotLine/RepairInfo.aspx
+~/Views/HotLine/RepairInfo.ascx
+~/Views/Shared/RepairInfo.aspx
+~/Views/Shared/RepairInfo.ascx
+~/Views/HotLine/RepairInfo.cshtml
+~/Views/HotLine/RepairInfo.vbhtml
+~/Views/Shared/RepairInfo.cshtml
+~/Views/Shared/RepairInfo.vbhtml
+System.InvalidOperationException: The view 'RepairInfo' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/HotLine/RepairInfo.aspx
+~/Views/HotLine/RepairInfo.ascx
+~/Views/Shared/RepairInfo.aspx
+~/Views/Shared/RepairInfo.ascx
+~/Views/HotLine/RepairInfo.cshtml
+~/Views/HotLine/RepairInfo.vbhtml
+~/Views/Shared/RepairInfo.cshtml
+~/Views/Shared/RepairInfo.vbhtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-28 16:10:31,622 [9996] WARN  ErrorLogger - DataSet 不支持 System.Nullable<>。
+System.NotSupportedException: DataSet 不支持 System.Nullable<>。
+   在 System.Data.DataColumn..ctor(String columnName, Type dataType, String expr, MappingType type)
+   在 System.Data.DataColumnCollection.Add(String columnName, Type type)
+   在 CarrierCore.Services.HotLineBll.ExportHotLineInfoInit(String[]& headers, String[]& keyFields, IQueryable& rows, Expression`1 whereLambda) 位置 e:\Carrier_Wechat\Carrier_Wechat\CarrierCore\Services\HotLineBll.cs:行号 32
+   在 Qxun.App.Plugins.Carrier.Controllers.HotLineController.ExportHotLineInfoToExcel(String TicketNumber) 位置 e:\Carrier_Wechat\Carrier_Wechat\Qxun.App.Plugins.Carrier\Controllers\HotLineController.cs:行号 59
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.ActionInvocation.InvokeSynchronousActionMethod()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-29 09:55:38,422 [9452] WARN  ErrorLogger - The view 'ExportUnitinfoToExcel' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Unit/ExportUnitinfoToExcel.aspx
+~/Views/Unit/ExportUnitinfoToExcel.ascx
+~/Views/Shared/ExportUnitinfoToExcel.aspx
+~/Views/Shared/ExportUnitinfoToExcel.ascx
+~/Views/Unit/ExportUnitinfoToExcel.cshtml
+~/Views/Unit/ExportUnitinfoToExcel.vbhtml
+~/Views/Shared/ExportUnitinfoToExcel.cshtml
+~/Views/Shared/ExportUnitinfoToExcel.vbhtml
+System.InvalidOperationException: The view 'ExportUnitinfoToExcel' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Unit/ExportUnitinfoToExcel.aspx
+~/Views/Unit/ExportUnitinfoToExcel.ascx
+~/Views/Shared/ExportUnitinfoToExcel.aspx
+~/Views/Shared/ExportUnitinfoToExcel.ascx
+~/Views/Unit/ExportUnitinfoToExcel.cshtml
+~/Views/Unit/ExportUnitinfoToExcel.vbhtml
+~/Views/Shared/ExportUnitinfoToExcel.cshtml
+~/Views/Shared/ExportUnitinfoToExcel.vbhtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-29 09:56:48,291 [8624] ERROR ErrorLogger - 名为“机组类型”的列已属于此 DataTable。
+System.Data.DuplicateNameException: 名为“机组类型”的列已属于此 DataTable。
+   在 System.Data.DataColumnCollection.RegisterColumnName(String name, DataColumn column)
+   在 System.Data.DataColumnCollection.BaseAdd(DataColumn column)
+   在 System.Data.DataColumnCollection.AddAt(Int32 index, DataColumn column)
+   在 System.Data.DataColumnCollection.Add(String columnName)
+   在 Qxun.Util.CSVHelper.ReadCsv(HttpPostedFileBase file) 位置 d:\工作文件夹\SVNLocal\QEMM_WechatOfficialAccountPlatform\Qxun.Util\CSVHelper.cs:行号 38
+   在 Qxun.App.Plugins.CarrierCore.Services.UnitInformationBll.BatImportFromFile(HttpPostedFileBase file, ViewWeixinPlat weixinPlat) 位置 e:\Carrier_Wechat\Carrier_Wechat\CarrierCore\Services\UnitInformationBll.cs:行号 60
+2015-12-29 09:57:38,171 [6552] ERROR ErrorLogger - 名为“机组类型”的列已属于此 DataTable。
+System.Data.DuplicateNameException: 名为“机组类型”的列已属于此 DataTable。
+   在 System.Data.DataColumnCollection.RegisterColumnName(String name, DataColumn column)
+   在 System.Data.DataColumnCollection.BaseAdd(DataColumn column)
+   在 System.Data.DataColumnCollection.AddAt(Int32 index, DataColumn column)
+   在 System.Data.DataColumnCollection.Add(String columnName)
+   在 Qxun.Util.CSVHelper.ReadCsv(HttpPostedFileBase file) 位置 d:\工作文件夹\SVNLocal\QEMM_WechatOfficialAccountPlatform\Qxun.Util\CSVHelper.cs:行号 38
+   在 Qxun.App.Plugins.CarrierCore.Services.UnitInformationBll.BatImportFromFile(HttpPostedFileBase file, ViewWeixinPlat weixinPlat) 位置 e:\Carrier_Wechat\Carrier_Wechat\CarrierCore\Services\UnitInformationBll.cs:行号 60
+2015-12-29 10:06:37,631 [8972] WARN  ErrorLogger - The view 'ExportUnitinfoToExcel' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Unit/ExportUnitinfoToExcel.aspx
+~/Views/Unit/ExportUnitinfoToExcel.ascx
+~/Views/Shared/ExportUnitinfoToExcel.aspx
+~/Views/Shared/ExportUnitinfoToExcel.ascx
+~/Views/Unit/ExportUnitinfoToExcel.cshtml
+~/Views/Unit/ExportUnitinfoToExcel.vbhtml
+~/Views/Shared/ExportUnitinfoToExcel.cshtml
+~/Views/Shared/ExportUnitinfoToExcel.vbhtml
+System.InvalidOperationException: The view 'ExportUnitinfoToExcel' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Unit/ExportUnitinfoToExcel.aspx
+~/Views/Unit/ExportUnitinfoToExcel.ascx
+~/Views/Shared/ExportUnitinfoToExcel.aspx
+~/Views/Shared/ExportUnitinfoToExcel.ascx
+~/Views/Unit/ExportUnitinfoToExcel.cshtml
+~/Views/Unit/ExportUnitinfoToExcel.vbhtml
+~/Views/Shared/ExportUnitinfoToExcel.cshtml
+~/Views/Shared/ExportUnitinfoToExcel.vbhtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)

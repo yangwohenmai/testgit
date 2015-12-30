@@ -1,0 +1,114 @@
+﻿@{
+    //var code = Request["code"];
+    //var id = Request["id"];
+    var platId = Request["r"];
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/css/materialize/css/materialize.min.css")" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/css/materialize/css/main.min.css")" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="@Url.Content("~/js/jquery-1.11.2.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/js/materialize/materialize.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/js/jquery.validate.js")"></script>
+
+    <title>CarrierWechat</title>
+    <style>
+        .error {
+            font-size: 12px;
+            color: rgb(255, 0, 0);
+            margin-top: -16px;
+        }
+        body {
+            height:100%
+        }
+       #PartNumber:focus {
+            border-bottom: 0px solid transparent;
+            box-shadow: 0 0px 0 0 #26a69a;
+        }
+    </style>
+</head>
+<body>  
+    <header id="header" class="page-topbar">
+        <!-- start header nav-->
+        <div class="navbar-fixed">
+            <nav class="cyan">
+                <div class="nav-wrapper">
+                    <h1 class="logo-wrapper">
+                        <a href="#!" class="brand-logo darken-1" style="margin:0;padding:0;line-height: 56px;">
+                            零件价格查询
+                        </a>
+                    </h1>
+                </div>
+            </nav>
+        </div>
+        <!-- end header nav-->
+    </header>  
+    <div id="main">
+        <div class="wrapper">
+            <section id="content">
+                <div class="container">
+                    <div class="section">
+                        <div class="section">
+                            <div class="row">
+                                <div class="col s12 m12 l6">
+                                       @*<h4 class="header2">零件价格</h4>*@                                      
+                                        <div class="row">
+                                            <div class="col s12" id="form1" name="form1">                                                                                         
+                                                <div class="row" style="border:2px solid gray;position:absolute;top:26%;left: 19%;width: 68%;height: 11%;font-size: 141%;text-align:center;line-height: 4em;">
+                                                    请输入您需要查询的零件号
+                                                </div>
+                                                <span style="float:right">
+                                                    <input type="text" name="PartNumber" id="PartNumber" @*class="search"*@ value="" style="border:1px solid gray;color: gray;position:absolute;top: 42%;left: 17%;width: 66%;height: 5%;border-radius:7px" placeholder="请输入零件号" onkeyup="value=value.replace(/[\']+/, '') ">
+                                                    <button class="btn m-bottom-10" id="btnQuery" style="position:absolute;top: 70%;left:20%;width: 21%;height: 5%;border-radius:6px">查询</button>
+                                                    <button class="btn m-bottom-10" type="button" id="btnReset" style="position:absolute;top: 70%;left:61%;width: 21%;height: 5%;border-radius:6px">重置</button>
+                                                </span>                                              
+                                            </div>
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+    $(function () {
+        //搜索
+        $("#btnQuery").click(function () {
+            var entity = new Object();
+            entity.PartNumber = $("#PartNumber").val();
+            var searchJson = JSON.stringify(entity);
+            if (entity.PartNumber != "") {
+                $.ajax({
+                    url: "@Url.Action("GetPartInformationList", "PartInfo")@Html.Raw(ViewBag.oQueryString)&partNumber=" + entity.PartNumber,
+                    data: {},
+                    success: function (data) {
+                        if (!data.IsSuccess) {
+                            alert("您查找的零件号不存在");
+                            //return false;
+                        }
+                        else {
+                            var checkresult = "@Url.Action("CheckResult", "PartInfo")@Html.Raw(ViewBag.oQueryString)&PartNumber=" + data.ExtInfo.PartNumber;
+                            location.href = checkresult;//实现页面的跳转
+                        }
+                    }
+                });
+            }
+            else
+                return false;
+        })
+        $("#btnReset").click(function () {
+            $("#PartNumber").val("");
+        })
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+﻿@{
+    var mobiles = ViewData["mobiles"]; //手机号码文本框Id
+    int min_resend_second = 60;
+    if (System.Configuration.ConfigurationManager.AppSettings["SMSResendTime"] != null)
+    {
+        min_resend_second = int.Parse(System.Configuration.ConfigurationManager.AppSettings["SMSResendTime"]);
+    }
+}
+<input type="button" id="btn" value="免费获取" style="width:50%" />
+<span id="smsMessage" style="float: none;display: inline;font-size: 11px;color: #ff0000;text-align: left;padding: 0;width: auto;margin-left: 20px;" class="error"></span>
+<script type="text/javascript">
+    var wait = @min_resend_second;
+    function time(o) {
+        if (wait == 0) {
+            o.removeAttribute("disabled");
+            o.value = "免费获取";
+            $("#smsMessage").html("")
+            wait = @min_resend_second;
+        } else {
+            o.setAttribute("disabled", true);
+            //o.value = wait + "秒后可以重新发送";
+            $("#smsMessage").html(wait + "秒后可以重新发送");
+            wait--;
+            setTimeout(function () {
+                time(o)
+            },
+                    1000)
+        }
+    }
+    function sendSMS(o) {
+        if ($("#@mobiles").val() == "")
+        {
+            alert("请填写手机号码");
+            return false;
+        }
+        $.ajax({
+            url: '@Url.Action("SendSMS","SMS")@Html.Raw(ViewBag.oQueryString)',
+            data: {
+                mobiles: $("#@mobiles").val()
+            },
+            type: "post",
+            dataType: "json",
+            cache: false,
+            async: false,
+            success: function (jData) {
+                if (jData.IsSuccess) {
+                    time(o);
+                } else {
+                    alert(jData.ErrorMsg);
+                }
+            },
+            error: function (jData) {
+
+            }
+        });
+    }
+
+    document.getElementById("btn").onclick = function () { sendSMS(this); }
+</script> 

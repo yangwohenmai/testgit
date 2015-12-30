@@ -1,0 +1,183 @@
+﻿.weibo-icon{background:url("../Images/icon.png") no-repeat; background-position:0px 85px; width:15px;height:15px;display:inline-block;}
+.weibo-icon-lady{background-position:0px -85px;vertical-align: middle;}
+.weibo-icon-star{background-position:0px -67px;vertical-align: middle;}
+.weibo-icon-person{background-position:0px 0px;vertical-align: middle;}
+.weibo-icon-enterprise{background-position:0px -25px;vertical-align: middle;}
+.weibo-icon-vip{background-position:0px -103px;vertical-align: middle;}
+.weibo-icon-male{background-position:0px -120px;vertical-align: middle;}
+.weibo-icon-female{background-position:0px -137px;vertical-align: middle;}
+.char
+{ 
+    float: left;
+    margin-top:10px;
+    margin-bottom:100px;
+    margin-right:20px;
+}
+.charHead 
+{
+    border-bottom:1px solid #cdcdcd;
+	float:left;
+	display:inline;
+	padding-bottom:1px;
+	margin-bottom:20px;
+	width:100%;
+}
+.charHead p {
+    font-size:14px;
+	color:#323232;
+	border-left:5px solid #08c;
+	height:21px;
+	line-height:23px;
+	padding-left:7px;
+	float:left;
+}
+
+.weibo-list ul, .userlist-body ul {
+font: 14px/1 Tahoma,Geneva,sans-serif;
+border-left: 1px solid #e4e4e4;
+border-right: 1px solid #e4e4e4;
+border-top: 1px solid #e4e4e4;
+padding: 0;
+margin: 0;
+}
+.weibo-list li, .userlist-body li  {
+list-style-type: none;
+border-bottom: 1px solid #e4e4e4;
+padding: 15px;
+color: #707070;
+}
+.weibo-list .user-pic, .userlist-body .user-pic, .hongren-info .user-pic {
+float: left;
+}
+.weibo-list .content {
+margin-left: 68px;
+}
+.weibo-list .content .strong {
+font-weight: 400;
+font-size: 14px;
+padding-bottom: 5px;
+}
+.weibo-list .content .feed {
+line-height: 25px;
+padding-top: 8px;
+}
+.weibo-list .weibo {
+line-height: 20px;
+padding-bottom: 12px;
+max-width:900px;
+}
+.weibo-list .area {
+    font-size: 13px;
+}
+.weibo-list .weibo-info {
+font-size: 12px;
+height: 25px;
+line-height: 25px;
+color: #B4B4B4;
+}
+
+.userlist-body .content 
+{  
+font-size: 12px;
+margin-left: 98px;
+max-width:900px;
+}
+.userlist-body .content strong {
+font-weight: bold;
+font-size: 14px;
+padding-bottom: 4px;
+}
+.userlist-body .content p 
+{
+line-height: 17px;
+color: #666;
+}
+.userlist-body .user-pic img{
+width:80px;
+height:80px;
+}
+
+.userlist-body .user-pic .small{
+width:60px;
+height:60px;
+}
+
+.chart .userlist-body .tiny
+{
+    overflow-y: scroll;
+    max-height:240px;
+}
+
+.userlist-body .tiny .content {  
+font-size: 12px;
+margin-left: 52px;
+max-width:200px;
+}
+
+.userlist-body .tiny .user-pic img{
+width:40px;
+height:40px;
+}
+
+.userlist-body .tiny ul {
+border-left: 0px;
+border-right: 0px;
+border-top: 0px;
+}
+.userlist-body .tiny li  {
+border-bottom: 0px;
+}
+
+.hongren-info .user-pic img{
+width:40px;
+height:40px;
+}
+.hongren-info .content 
+{  
+font-size: 12px;
+margin-left: 52px;
+max-width:400px;
+}
+.hongren-info .content .info{
+display:block;
+overflow:hidden;
+height:17px;
+}
+.hongren-info .content strong {
+font-weight: bold;
+font-size: 14px;
+padding-bottom: 4px;
+}
+
+.modal-frame {
+position: fixed;
+top: 10%;
+left: 10%;
+right: 10%;
+width:auto;
+margin: 0;
+}
+.modal-frame-body {
+position: relative;
+max-height: 500px;
+padding: 15px;
+overflow-y: auto;
+}
+.widget-main .chart{  
+height: 250px;
+padding: 0px; 
+position: relative;
+}
+.widget-box.transparent .tab-pane .widget-body {
+border: 1px solid #CCC;
+background-color: transparent;
+}
+.weibo-keyword .keyword-condition strong{
+background: url(/images/icon-line.png) no-repeat 0 center;
+padding-left: 48px;
+}
+#chart_keyword{  
+height: 300px;
+padding: 0px; 
+position: relative;
+}

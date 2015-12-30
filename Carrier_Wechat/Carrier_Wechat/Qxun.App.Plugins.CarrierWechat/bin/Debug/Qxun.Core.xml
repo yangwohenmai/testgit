@@ -1,0 +1,2331 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Qxun.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Qxun.Core.Attributes.AuthoritySessionKeyAttribute">
+            <summary>
+            根据Session校验是否有权限访问Model的特性
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.Attributes.AuthoritySessionKeyAttribute.#ctor(System.String,System.String,System.String)">
+            <summary>
+            根据Session校验是否有权限访问Model的特性
+            </summary>
+            <param name="AuthoritySessionType">Session中进行权限校验数据类型</param>
+            <param name="AuthoritySessionKeyName">Session中进行权限校验的字段名称，对应数据库字段不可为可空字段</param>
+            <param name="AlternativeAuthoritySessionKeyName">Session中进行权限校验的备选字段名称，对应数据库字段可为可空字段</param>
+        </member>
+        <member name="P:Qxun.Core.Attributes.AuthoritySessionKeyAttribute.AuthoritySessionType">
+            <summary>
+            Session中进行权限校验数据类型
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Attributes.AuthoritySessionKeyAttribute.AuthoritySessionKeyName">
+            <summary>
+            Session中进行权限校验的字段名称，对应数据库字段不可为可空字段
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Attributes.AuthoritySessionKeyAttribute.AlternativeAuthoritySessionKeyName">
+            <summary>
+            Session中进行权限校验的备选字段名称，对应数据库字段可为可空字段
+            </summary>
+        </member>
+        <member name="T:Qxun.Core.Attributes.ActionAuthorityAttribute">
+            <summary>
+            Action和Controller的权限标记
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Attributes.ActionAuthorityAttribute.Desc">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Attributes.ActionAuthorityAttribute.Name">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Attributes.ActionAuthorityAttribute.Controller">
+            <summary>
+            controller名称
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Attributes.ActionAuthorityAttribute.Action">
+            <summary>
+            action名称
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Attributes.ActionAuthorityAttribute.IsVerify">
+            <summary>
+            是否校验
+            </summary>
+        </member>
+        <member name="T:Qxun.Core.Attributes.MenuAttribute">
+            <summary>
+            菜单显示位置
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.Attributes.MenuAttribute.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            菜单显示位置
+            </summary>
+            <param name="navBarMenu">所属顶部导航栏名称</param>
+            <param name="name">菜单名称</param>
+            <param name="index">显示顺序</param>
+        </member>
+        <member name="M:Qxun.Core.Attributes.MenuAttribute.#ctor(System.String,System.String,System.Int32,System.Boolean,System.String,System.String)">
+            <summary>
+            菜单显示位置
+            </summary>
+            <param name="navBarMenu">所属顶部导航栏名称</param>
+            <param name="isRemovable">是否可移除的功能插件</param>
+            <param name="name">菜单名称</param>
+            <param name="index">显示顺序</param>
+            <param name="imageSrc">图标地址</param>
+            <param name="desc">描述</param>
+            <param name="customCssClass">自定义CSS样式</param>
+        </member>
+        <member name="M:Qxun.Core.Attributes.MenuAttribute.#ctor(System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String)">
+            <summary>
+            菜单显示位置
+            </summary>
+            <param name="navBarMenu">所属顶部导航栏名称</param>
+            <param name="isRemovable">是否可移除的功能插件</param>
+            <param name="name">菜单名称</param>
+            <param name="index">显示顺序</param>
+            <param name="imageSrc">图标地址</param>
+            <param name="desc">描述</param>
+            <param name="customCssClass">自定义CSS样式</param>
+        </member>
+        <member name="M:Qxun.Core.Attributes.MenuAttribute.#ctor(System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.Object)">
+            <summary>
+            菜单显示位置
+            </summary>
+            <param name="navBarMenu">所属顶部导航栏名称</param>
+            <param name="isRemovable">是否可移除的功能插件</param>
+            <param name="name">菜单名称</param>
+            <param name="index">显示顺序</param>
+            <param name="imageSrc">图标地址</param>
+            <param name="desc">描述</param>
+            <param name="customCssClass">自定义CSS样式</param>
+            <param name="objExt">用于控制功能是否有权限显示，
+            如：企业号群发，只有企业号才能看到，此时需要在MenuAttribute构造函数的最后一个参数传入PlatType.Weixin
+            如：自定义菜单，未认证订阅号无权限，此时需要在MenuAttribute构造函数的最后一个参数传入WeiXinAccountType.UnautherizedRss
+            </param>
+        </member>
+        <member name="P:Qxun.Core.Attributes.MenuAttribute.NavBarMenu">
+            <summary>
+            所属顶部导航栏名称
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Attributes.MenuAttribute.Name">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Attributes.MenuAttribute.ImageSrc">
+            <summary>
+            图标地址
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Attributes.MenuAttribute.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Attributes.MenuAttribute.CustomCssClass">
+            <summary>
+            自定义CSS样式
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Attributes.MenuAttribute.Index">
+            <summary>
+            显示顺序
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Attributes.MenuAttribute.ControllerName">
+            <summary>
+            controller名称
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Attributes.MenuAttribute.ActionName">
+            <summary>
+            action名称
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Attributes.MenuAttribute.IsVerifyAuthority">
+            <summary>
+            是否校验权限
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Attributes.MenuAttribute.IsRemovable">
+             <summary>
+            是否可移除的功能插件
+             </summary>
+        </member>
+        <member name="P:Qxun.Core.Attributes.MenuAttribute.ObjExt">
+            <summary>
+            用于控制功能是否有权限显示
+            </summary>
+        </member>
+        <member name="T:Qxun.Core.Attributes.NestedClassTestAttribute">
+            <summary>
+            需要校验嵌套类
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Attributes.NestedClassTestAttribute.IsCheckProp">
+            <summary>
+            是否校验属性
+            </summary>
+        </member>
+        <member name="T:Qxun.Core.Attributes.ModelLogicalDelKeyAttribute">
+            <summary>
+            Model逻辑删除字段特性
+            </summary>
+            <typeparam name="S">Model状态枚举</typeparam>
+        </member>
+        <member name="M:Qxun.Core.Attributes.ModelLogicalDelKeyAttribute.#ctor(System.String,System.Type,System.String,System.String)">
+            <summary>
+            Model逻辑删除字段特性
+            </summary>
+            <param name="modelStateKeyName">逻辑删除字段名称</param>
+            <param name="stateEnumType">状态枚举类型</param>
+            <param name="normalState">正常状态</param>
+            <param name="deletedState">已删除状态</param>
+        </member>
+        <member name="P:Qxun.Core.Attributes.ModelLogicalDelKeyAttribute.StateEnumType">
+            <summary>
+            已删除状态
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Attributes.ModelLogicalDelKeyAttribute.DeletedState">
+            <summary>
+            已删除状态
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Attributes.ModelLogicalDelKeyAttribute.NormalState">
+            <summary>
+            正常状态
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Attributes.ModelLogicalDelKeyAttribute.ModelLogicalDelKeyName">
+            <summary>
+            逻辑删除字段名称
+            </summary>
+        </member>
+        <member name="T:Qxun.Core.Attributes.EditAuthoritySessionKeyAttribute">
+            <summary>
+            根据Session校验是否有权限新增、修改、删除Model的特性
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.Attributes.EditAuthoritySessionKeyAttribute.#ctor(System.String,System.String,System.String)">
+            <summary>
+            根据Session校验是否有权限新增、修改、删除Model的特性
+            </summary>
+            <param name="AuthoritySessionType">Session中进行权限校验数据类型</param>
+            <param name="AuthoritySessionKeyName">Session中进行权限校验的字段名称，对应数据库字段不可为可空字段</param>
+            <param name="AlternativeAuthoritySessionKeyName">Session中进行权限校验的备选字段名称，对应数据库字段可为可空字段</param>
+        </member>
+        <member name="T:Qxun.Core.Attributes.QueryAuthoritySessionKeyAttribute">
+            <summary>
+            根据Session校验是否有权限查询Model的特性
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.Attributes.QueryAuthoritySessionKeyAttribute.#ctor(System.String,System.String,System.String)">
+            <summary>
+            根据Session校验是否有权限查询Model的特性
+            </summary>
+            <param name="AuthoritySessionType">Session中进行权限校验数据类型</param>
+            <param name="AuthoritySessionKeyName">Session中进行权限校验的字段名称，对应数据库字段不可为可空字段</param>
+            <param name="AlternativeAuthoritySessionKeyName">Session中进行权限校验的备选字段名称，对应数据库字段可为可空字段</param>
+        </member>
+        <member name="T:Qxun.Core.Attributes.ReferenceOtherModelAttribute">
+            <summary>
+            标记字段引用其他Model主键的特性
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.Attributes.ReferenceOtherModelAttribute.#ctor(System.String,System.String,System.Type,System.String,System.String)">
+            <summary>
+            标记字段引用其他Model主键的特性
+            </summary>
+            <param name="otherModel">被引用的Model</param>
+            <param name="thisModelIdKey">存放引用的Model主键的字段名称</param>
+            <param name="referenceModelEnumType">所有引用到的Model的枚举类型</param>
+            <param name="thisModelTypeKey">存放引用的Model类型的字段名称</param>
+            <param name="customExpressionMethordName">生成检查被引用的Model中的实例是否被当前Model引用的自定义表达式的方法名称</param>
+        </member>
+        <member name="P:Qxun.Core.Attributes.ReferenceOtherModelAttribute.OtherModel">
+            <summary>
+            被引用的Model
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Attributes.ReferenceOtherModelAttribute.ThisModelIdKey">
+            <summary>
+            存放引用的Model主键的字段名称
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Attributes.ReferenceOtherModelAttribute.ReferenceModelEnumType">
+            <summary>
+            所有引用到的Model的枚举类型
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Attributes.ReferenceOtherModelAttribute.ThisModelTypeKey">
+            <summary>
+            存放引用的Model类型的字段名称
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Attributes.ReferenceOtherModelAttribute.CustomExpressionMethordName">
+            <summary>
+            生成检查被引用的Model中的实例是否被当前Model引用的自定义表达式的方法名称
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Common.BaseReponseResult.ErrorMsg">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Common.BaseReponseResult.ResponseCode">
+            <summary>
+            响应结果
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Common.BaseReponseResult.ExtInfo">
+            <summary>
+            扩展信息
+            </summary>
+        </member>
+        <member name="T:Qxun.Core.Common.CSVResult">
+            <summary>
+            返回CSV文件
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.Common.CSVResult.#ctor(System.String,System.IO.StringWriter)">
+            <summary>
+            CSV文件
+            </summary>
+            <param name="result">CSV文件名</param>
+            <param name="result">CSV文件内容</param>
+        </member>
+        <member name="P:Qxun.Core.Common.EntityValidationResult.ErrorMsg">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.Common.ValidationHelper.ValidateEntity``1(``0,System.Boolean)">
+            <summary>
+            校验
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+            <param name="isCheckProp">是否对属性进行查找NestedClassTestAttribute
+            校验中包含嵌套类属性需要校验建议true，否则false
+            </param>
+            <returns></returns>
+        </member>
+        <member name="P:Qxun.Core.Common.ImgResource.ImgPath">
+            <summary>
+            图片路径
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Common.ImgResource.Img">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Common.ImgResource.ImgId">
+            <summary>
+            图片Id
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Common.ImgResource.IsInnerImg">
+            <summary>
+            是否为站内图片
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.Common.OrginalUploadImgFile.UploadImg(System.Drawing.Image,System.String,System.String)">
+            <summary>
+            上传图片
+            </summary>
+            <param name="image"></param>
+            <param name="catalog"> </param>
+            <param name="imageType">图片后缀 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Common.OrginalUploadImgFile.DeleteImg(System.String)">
+            <summary>
+            删除图片
+            </summary>
+            <param name="fileVirPath">虚拟路径</param>
+        </member>
+        <member name="T:Qxun.Core.Common.RemoteServer">
+            <summary>
+            Manage communication between the proxy server and the remote server
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.Common.RemoteServer.#ctor(System.Web.HttpContext,System.String)">
+            <summary>
+            Initialize the communication with the Remote Server
+            </summary>
+            <param name="context">Context</param>
+            <param name="remoteUrl"> </param>
+        </member>
+        <member name="M:Qxun.Core.Common.RemoteServer.GetRequest">
+            <summary>
+            Create a request the remote server
+            </summary>
+            <returns>Request to send to the server</returns>
+        </member>
+        <member name="M:Qxun.Core.Common.RemoteServer.GetResponse(System.Net.HttpWebRequest)">
+            <summary>
+            Send the request to the remote server and return the response
+            </summary>
+            <param name="request">Request to send to the server</param>
+            <returns>Response received from the remote server or null if page not found</returns>
+        </member>
+        <member name="M:Qxun.Core.Common.RemoteServer.GetResponseStreamBytes(System.Net.HttpWebResponse)">
+            <summary>
+            Return the response in bytes array format
+            </summary>
+            <param name="response">Response received from the remote server</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Common.RemoteServer.SetContextCookies(System.Net.HttpWebResponse)">
+            <summary>
+            Set cookies received from remote server to response of navigator
+            </summary>
+            <param name="response">Response received from the remote server</param>
+        </member>
+        <member name="P:Qxun.Core.Common.RemoteServer.RemoteUrl">
+            <summary>
+            跳转URL
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.Common.ResultHelper.Query``2(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Boolean)">
+            <summary>
+            条件查询
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TS"></typeparam>
+            <param name="source"></param>
+            <param name="whereLambda">搜索过滤条件语句</param>
+            <param name="orderByLambda">排序字段</param>
+            <param name="isAsc">是否升序排列</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Common.ResultHelper.GetListViewResponseResult``2(System.Linq.IQueryable{``0},System.Int32,System.Int32)">
+            <summary>
+            将任意类型转换为返回给前端的ListViewResponseResult
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source"></param>
+            <param name="pageIndex">页号，从1开始</param>
+            <param name="PageSize">每页显示条数</param>
+            <returns></returns>
+        </member>
+        <member name="T:Qxun.Core.Common.ReverseProxy">
+            <summary>
+            Handler all Client's requests and deliver the web site
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.Common.ReverseProxy.ProcessRequest(System.Web.HttpContext)">
+            <summary>
+            Method calls when client request the server
+            </summary>
+            <param name="context">HTTP context for client</param>
+        </member>
+        <member name="P:Qxun.Core.Common.ReverseProxy.RemoteUrl">
+            <summary>
+            远程地址
+            </summary>
+        </member>
+        <member name="T:Qxun.Core.Common.SuccessResponseResult">
+            <summary>
+            返回bool结果
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Common.SuccessResponseResult.IsSuccess">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.Common.UploadImgFile.UploadImg(System.Drawing.Image,System.String,System.String)">
+            <summary>
+            上传图片
+            </summary>
+            <param name="image"></param>
+            <param name="catalog">用户ID,需要传递真实的Id而非加密之后的Id</param>
+            <param name="imageType">图片后缀 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Common.UploadImgFile.GetImgRootUrl(System.String)">
+            <summary>
+            获取图片空间根路径
+            </summary>
+            <param name="catalog">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Common.UploadImgFile.GetImgRootPath(System.String)">
+            <summary>
+            获取图片空间根目录
+            </summary>
+            <param name="catalog">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Common.UploadImgFile.DeleteImg(System.String)">
+            <summary>
+            删除图片
+            </summary>
+            <param name="fileVirPath">虚拟路径</param>
+        </member>
+        <member name="T:Qxun.Core.Common.ExcelResult">
+            <summary>
+            返回EXCEL文件
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.Common.ExcelResult.#ctor(System.String,NPOI.SS.UserModel.IWorkbook)">
+            <summary>
+            EXCEL文件
+            </summary>
+            <param name="fileName">EXCEL文件名</param>
+            <param name="result">EXCEL文件内容</param>
+        </member>
+        <member name="F:Qxun.Core.Global.plugins">
+            <summary>
+            插件配置文件节点
+            </summary>
+        </member>
+        <member name="F:Qxun.Core.Global._allPluginsAssembly">
+            <summary>
+            配置文件中所有Plugin节点列出的插件
+            </summary>
+        </member>
+        <member name="F:Qxun.Core.Global._allRewritePluginsActions">
+            <summary>
+            所有插件中重写的Action，根据配置文件Plugin节点中插件加载顺序覆盖，多个插件都重写了同一Action，以最后加载的插件中的重写Action为准
+            </summary>
+        </member>
+        <member name="F:Qxun.Core.Global._allMenus">
+            <summary>
+            菜单配置
+            </summary>
+        </member>
+        <member name="F:Qxun.Core.Global._allPluginSelector">
+            <summary>
+            插件选择器
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.Global.RegisterAllPluginsAssembly">
+            <summary>
+            加载web.config中自定义节点pluginSetting中的所有插件程序集
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.Global.RegisterAllPluginsRoute">
+            <summary>
+            注册重写的ACTION路由
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.Global.GetAllPluginsAssembly">
+            <summary>
+            获取配置文件中所有Plugin节点列出的插件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Global.GetAllPluginsRewriteActions">
+            <summary>
+            获取所有插件中重写的Action，根据配置文件Plugin节点中插件加载顺序覆盖，多个插件都重写了同一Action，以最后加载的插件中的重写Action为准
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Global.GetAllMenu">
+            <summary>
+            获取菜单配置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Global.GetPluginSelector">
+            <summary>
+            获取自定义页面配置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Qxun.Core.PluginRewriteAction">
+            <summary>
+            插件重写的Action
+            </summary>
+        </member>
+        <member name="T:Qxun.Core.Selector.IPluginSelector">
+            <summary>
+            插件选择器接口定义
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.Selector.IPluginSelector.GetMobileUrl(System.String)">
+            <summary>
+            获取手机网页地址
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Qxun.Core.Selector.IPluginSelector.PluginName">
+            <summary>
+            插件名称（用于插件是否具有权限访问）
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Selector.IPluginSelector.Name">
+            <summary>
+            插件选择器名称
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Selector.IPluginSelector.Index">
+            <summary>
+            插件选择器排序索引，升序排列
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Selector.IPluginSelector.Type">
+            <summary>
+            插件选择器类型
+            </summary>
+        </member>
+        <member name="T:Qxun.Core.Models.BaseModel">
+            <summary>
+            实体模型基类
+            </summary>
+        </member>
+        <member name="T:Qxun.Core.Models.IModel">
+            <summary>
+            数据模型接口
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.Models.BaseModel.ToViewModel``1">
+            <summary>
+            将Model转换为ViewModel
+            </summary>
+            <typeparam name="V"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Models.BaseModel.ToModel``1">
+            <summary>
+            将ViewModel转换为Model
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Models.BaseModel.DesEncodeKey(System.Int32)">
+            <summary>
+            加密主外键
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Models.BaseModel.DesDecodeKey(System.String)">
+            <summary>
+            解密主外键
+            </summary>
+            <param name="encodedKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Models.BaseModel.DesEncodeNullableKey(System.Nullable{System.Int32})">
+            <summary>
+            加密可空主外键
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Models.BaseModel.DesDecodeNullableKey(System.String)">
+            <summary>
+            解密主外键
+            </summary>
+            <param name="encodedKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Models.BaseModel.PrimaryKeyFunc``1">
+            <summary>
+            获取选择主键的Linq，如p=>p.Id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Qxun.Core.Models.BaseModel.PrimaryKeyName">
+            <summary>
+            获取主键名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Qxun.Core.Models.BaseModel.AuthoritySessionKeys">
+            <summary>
+            根据Session校验是否有权限访问Model的特性集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Qxun.Core.Models.BaseModel.ForeignKeysName">
+            <summary>
+            获取外键列表
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Models.BaseModel.ModelLogicalDelKey">
+            <summary>
+            逻辑删除字段
+            </summary>
+        </member>
+        <member name="T:Qxun.Core.Models.IViewModel">
+            <summary>
+            视图模型接口
+            </summary>
+        </member>
+        <member name="T:Qxun.Core.Repositories.BaseLogicalDelRepository`2">
+            <summary>
+            逻辑删除仓储基类，用于数据访问
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Qxun.Core.Repositories.BasePhysicalDelRepository`2">
+            <summary>
+            物理删除仓储基类，用于数据访问
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Qxun.Core.Repositories.IRepository`2.GetEntityId(`0)">
+            <summary>
+            获取实体的主键
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.IRepository`2.GetEntityById(System.Int32)">
+            <summary>
+            根据主键获取实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.IRepository`2.GetEntity(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            根据查询条件获取实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.IRepository`2.GetEntity(System.Func{`1,System.Linq.IQueryable{`0}})">
+            <summary>
+            通过Linq查询获取单个实体
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="linq"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.IRepository`2.GetEntitiesByFId(System.Int32)">
+            <summary>
+            根据外键获取多个实体
+            </summary>
+            <param name="fId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.IRepository`2.GetEntities(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            根据查询条件获取多个实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.IRepository`2.GetEntities(System.Func{`1,System.Linq.IQueryable{`0}})">
+            <summary>
+            通过Linq查询获取多个实体
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="linq"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.IRepository`2.ExistEntity(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            是否存在满足条件的实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.IRepository`2.ExistEntity(System.Func{`1,System.Linq.IQueryable{`0}})">
+            <summary>
+            是否存在满足条件的实体
+            </summary>
+            <param name="linq">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.IRepository`2.InsertEntity(`0)">
+            <summary>
+            插入实体
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.IRepository`2.InsertEntities(System.Collections.Generic.List{`0})">
+            <summary>
+            批量插入实体
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.IRepository`2.UpdateEntity(`0)">
+            <summary>
+            修改实体
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.IRepository`2.UpdateEntities(System.Collections.Generic.List{`0})">
+            <summary>
+            批量修改实体
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.IRepository`2.DeleteEntity(System.Int32)">
+            <summary>
+            删除实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.IRepository`2.DeleteEntities(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            根据条件批量删除实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.IRepository`2.ExecuteLinqQueryableHelper``1(System.Func{`1,System.Linq.IQueryable{``0}})">
+            <summary>
+            执行Linq查询[Supports multi-table queries]
+            </summary>
+            <typeparam name="TE"></typeparam>
+            <param name="linq"></param>
+            <returns>返回查询集合</returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.IRepository`2.ExecuteLinqHelper``1(System.Func{`1,System.Linq.IQueryable{``0}})">
+            <summary>
+            执行Linq查询[Supports multi-table queries]
+            </summary>
+            <typeparam name="TE"></typeparam>
+            <param name="linq"></param>
+            <returns>返回单个实体</returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.IRepository`2.CheckEntityAuthorityKey(System.Collections.Generic.Dictionary{Qxun.Core.Attributes.AuthoritySessionKeyAttribute,System.Collections.Generic.Dictionary{System.String,System.Object}},System.Int32)">
+            <summary>
+            根据Session校验是否有权限访问主键对应的实体
+            </summary>
+            <param name="authoritySessionKeys">用于校验的特性及对应Session中的值的集合</param>
+            <param name="id">前端传入主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.IRepository`2.CheckEntitiesAuthorityKey(System.Collections.Generic.Dictionary{Qxun.Core.Attributes.AuthoritySessionKeyAttribute,System.Collections.Generic.Dictionary{System.String,System.Object}},System.Linq.IQueryable{`0})">
+            <summary>
+            根据Session校验是否有权限访问实体集合
+            </summary>
+            <param name="authoritySessionKeys">用于校验的特性及对应Session中的值的集合</param>
+            <param name="entities">查询结果</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.IRepository`2.CheckEntityAuthorityKey(System.Collections.Generic.Dictionary{Qxun.Core.Attributes.AuthoritySessionKeyAttribute,System.Collections.Generic.Dictionary{System.String,System.Object}},`0)">
+            <summary>
+            根据Session校验是否有权限访问实体
+            </summary>
+            <param name="authoritySessionKeys">用于校验的特性及对应Session中的值的集合</param>
+            <param name="entity">实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.IRepository`2.CheckCustomizeEntitiesAuthorityKey``1(System.Collections.Generic.Dictionary{Qxun.Core.Attributes.AuthoritySessionKeyAttribute,System.Collections.Generic.Dictionary{System.String,System.Object}},System.Linq.IQueryable{``0})">
+            <summary>
+            根据Session校验是否有权限访问实体集合
+            </summary>
+            <param name="authoritySessionKeys">用于校验的特性及对应Session中的值的集合</param>
+            <param name="entities">查询结果</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.IRepository`2.CheckCustomizeEntityAuthorityKey``1(System.Collections.Generic.Dictionary{Qxun.Core.Attributes.AuthoritySessionKeyAttribute,System.Collections.Generic.Dictionary{System.String,System.Object}},``0)">
+            <summary>
+            根据Session校验是否有权限访问实体
+            </summary>
+            <param name="authoritySessionKeys">用于校验的特性及对应Session中的值的集合</param>
+            <param name="entity">实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.IsExistSubEntities(System.Int32)">
+            <summary>
+            判断外键为该表主键的子表是否有记录存在
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.IsExistSubEntities(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            判断外键为该表主键的子表是否有记录存在
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.GetGlobalModelReferenceInfo">
+            <summary>
+            获取所有Model之间的相互引用情况，引用其他Model的Model的仓储类与Model定义必须在同一程序集
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.AddModelReferencedInfo(System.String,System.Type,System.Type,System.String,System.Type,System.String,System.String,System.String)">
+            <summary>
+            添加Model的引用情况
+            </summary>
+            <param name="dllPath">Model所在程序集</param>
+            <param name="modelRepositoryType">Model仓储类类型</param>
+            <param name="modelType">Model类型</param>
+            <param name="thisModelIdKey">存放引用的Model主键的字段名称</param>
+            <param name="referenceModelEnumType">所有引用到的Model的枚举类型</param>
+            <param name="thisModelTypeKey">存放引用的Model类型的字段名称</param>
+            <param name="customExpressionMethordName">生成检查被引用的Model中的实例是否被当前Model引用的自定义表达式的方法名称</param>
+            <param name="referencedModel">引用的其他Model的名称</param>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.GetEntityId(`0)">
+            <summary>
+            获取实体的主键
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.GetEntityById(System.Int32)">
+            <summary>
+            根据主键获取实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.GetEntity(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            根据查询条件获取实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.GetEntity(System.Func{`1,System.Linq.IQueryable{`0}})">
+            <summary>
+            通过Linq查询获取单个实体
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="linq"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.GetEntitiesByFId(System.Int32)">
+            <summary>
+            根据外键获取多个实体
+            </summary>
+            <param name="fId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.GetEntities(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            根据查询条件获取多个实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.GetEntities(System.Func{`1,System.Linq.IQueryable{`0}})">
+            <summary>
+            通过Linq查询获取多个实体
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="linq"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.ExistEntity(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            是否存在满足条件的实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.ExistEntity(System.Func{`1,System.Linq.IQueryable{`0}})">
+            <summary>
+            是否存在满足条件的实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.InsertEntity(`0)">
+            <summary>
+            插入实体
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.InsertEntities(System.Collections.Generic.List{`0})">
+            <summary>
+            批量插入实体
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.UpdateEntity(`0)">
+            <summary>
+            修改实体
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.UpdateEntities(System.Collections.Generic.List{`0})">
+            <summary>
+            批量修改实体
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.UpdateEntity(System.Int32,System.Action{`0})">
+            <summary>
+            修改实体部分字段
+            </summary>
+            <param name="id"></param>
+            <param name="updateAction">更新方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.UpdateEntities(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Action{`0})">
+            <summary>
+            根据条件批量修改实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <param name="updateAction">更新方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.DeleteEntities(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            根据条件批量删除实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.DeleteEntity(System.Int32)">
+            <summary>
+            删除实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns> 
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.ExecuteLinqQueryableHelper``1(System.Func{`1,System.Linq.IQueryable{``0}})">
+            <summary>
+            执行Linq查询[Supports multi-table queries]
+            </summary>
+            <typeparam name="TE"></typeparam>
+            <param name="linq"></param>
+            <returns>返回查询集合</returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.ExecuteLinqHelper``1(System.Func{`1,System.Linq.IQueryable{``0}})">
+            <summary>
+            执行Linq查询[Supports multi-table queries]
+            </summary>
+            <typeparam name="TE"></typeparam>
+            <param name="linq"></param>
+            <returns>返回单个实体</returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.CheckEntityAuthorityKey(System.Collections.Generic.Dictionary{Qxun.Core.Attributes.AuthoritySessionKeyAttribute,System.Collections.Generic.Dictionary{System.String,System.Object}},System.Int32)">
+            <summary>
+            根据Session校验是否有权限访问主键对应的实体
+            </summary>
+            <param name="authoritySessionKeys">用于校验的特性及对应Session中的值的集合</param>
+            <param name="id">前端传入主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.CheckEntitiesAuthorityKey(System.Collections.Generic.Dictionary{Qxun.Core.Attributes.AuthoritySessionKeyAttribute,System.Collections.Generic.Dictionary{System.String,System.Object}},System.Linq.IQueryable{`0})">
+            <summary>
+            根据Session校验是否有权限访问实体集合
+            </summary>
+            <param name="authoritySessionKeys">用于校验的特性及对应Session中的值的集合</param>
+            <param name="entities">查询结果</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.CheckEntityAuthorityKey(System.Collections.Generic.Dictionary{Qxun.Core.Attributes.AuthoritySessionKeyAttribute,System.Collections.Generic.Dictionary{System.String,System.Object}},`0)">
+            <summary>
+            根据Session校验是否有权限访问实体
+            </summary>
+            <param name="authoritySessionKeys">用于校验的特性及对应Session中的值的集合</param>
+            <param name="entity">实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.CheckCustomizeEntitiesAuthorityKey``1(System.Collections.Generic.Dictionary{Qxun.Core.Attributes.AuthoritySessionKeyAttribute,System.Collections.Generic.Dictionary{System.String,System.Object}},System.Linq.IQueryable{``0})">
+            <summary>
+            根据Session校验是否有权限访问实体集合
+            </summary>
+            <param name="authoritySessionKeys">用于校验的特性及对应Session中的值的集合</param>
+            <param name="entities">查询结果</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.CheckCustomizeEntityAuthorityKey``1(System.Collections.Generic.Dictionary{Qxun.Core.Attributes.AuthoritySessionKeyAttribute,System.Collections.Generic.Dictionary{System.String,System.Object}},``0)">
+            <summary>
+            根据Session校验是否有权限访问实体
+            </summary>
+            <param name="authoritySessionKeys">用于校验的特性及对应Session中的值的集合</param>
+            <param name="entity">实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BasePhysicalDelRepository`2.CheckEntityAuthorityKeyLambda``1(System.Collections.Generic.Dictionary{Qxun.Core.Attributes.AuthoritySessionKeyAttribute,System.Collections.Generic.Dictionary{System.String,System.Object}})">
+            <summary>
+            根据Session校验是否有权限访问实体的Lambda表达式
+            </summary>
+            <param name="authoritySessionKeys">用于校验的特性及对应Session中的值的集合</param>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseLogicalDelRepository`2.GetEntityById(System.Int32)">
+            <summary>
+            根据主键获取实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseLogicalDelRepository`2.GetEntity(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            根据查询条件获取实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseLogicalDelRepository`2.GetEntity(System.Func{`1,System.Linq.IQueryable{`0}})">
+            <summary>
+            通过Linq查询获取单个实体
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="linq"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseLogicalDelRepository`2.GetEntitiesByFId(System.Int32)">
+            <summary>
+            根据外键获取多个实体
+            </summary>
+            <param name="fId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseLogicalDelRepository`2.GetEntities(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            根据查询条件获取多个实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseLogicalDelRepository`2.GetEntities(System.Func{`1,System.Linq.IQueryable{`0}})">
+            <summary>
+            通过Linq查询获取多个实体
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="linq"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseLogicalDelRepository`2.ExistEntity(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            是否存在满足条件的实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseLogicalDelRepository`2.ExistEntity(System.Func{`1,System.Linq.IQueryable{`0}})">
+            <summary>
+            是否存在满足条件的实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseLogicalDelRepository`2.InsertEntity(`0)">
+            <summary>
+            插入实体
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseLogicalDelRepository`2.InsertEntities(System.Collections.Generic.List{`0})">
+            <summary>
+            批量插入实体
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseLogicalDelRepository`2.UpdateEntity(`0)">
+            <summary>
+            修改实体
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseLogicalDelRepository`2.UpdateEntities(System.Collections.Generic.List{`0})">
+            <summary>
+            批量修改实体
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseLogicalDelRepository`2.UpdateEntity(System.Int32,System.Action{`0})">
+            <summary>
+            修改实体部分字段
+            </summary>
+            <param name="id"></param>
+            <param name="updateAction">更新方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseLogicalDelRepository`2.UpdateEntities(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Action{`0})">
+            <summary>
+            根据条件批量修改实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <param name="updateAction">更新方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseLogicalDelRepository`2.DeleteEntities(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            根据条件批量删除实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseLogicalDelRepository`2.DeleteEntity(System.Int32)">
+            <summary>
+            删除实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns> 
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseLogicalDelRepository`2.AddNotDeletedStatePredicate(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            添加状态标志不等于删除的条件
+            </summary>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseLogicalDelRepository`2.GetModelLogicalKeyValue(`0)">
+            <summary>
+            获取实体逻辑删除字段的值
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseLogicalDelRepository`2.SetModelLogicalKeyValue(`0,System.Int16)">
+            <summary>
+            设置实体逻辑删除字段的值
+            </summary>
+            <param name="entity"></param>
+            <param name="state"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Qxun.Core.Repositories.BaseLogicalDelRepository`2.NotDeletedStateExpression">
+            <summary>
+            实体逻辑删除字段的值不是已删除的表达式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Qxun.Core.Repositories.BaseLogicalDelRepository`2.DeletedState">
+            <summary>
+            实体逻辑删除字段的已删除状态值
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Repositories.BaseLogicalDelRepository`2.NormalState">
+            <summary>
+            实体逻辑删除字段的正常状态值
+            </summary>
+        </member>
+        <member name="T:Qxun.Core.Repositories.DbHepler`2">
+            <summary>
+            仓储基类，用于数据访问
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Qxun.Core.Repositories.DbHepler`2.CurrentDbContext">
+            <summary>
+            EF上下文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.DbHepler`2.LoadEntityByKey(System.Int32)">
+            <summary>
+            根据主键查询单个实体
+            </summary>
+            <param name="id">主键的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.DbHepler`2.LoadEntity(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            查询单个实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.DbHepler`2.LoadEntities(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            查询实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.DbHepler`2.LoadEntity(System.Func{`1,System.Linq.IQueryable{`0}})">
+            <summary>
+            执行Linq查询
+            </summary>
+            <param name="linq"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.DbHepler`2.AddEntity(`0)">
+            <summary>
+            新增实体
+            </summary>
+            <param name="entity">实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.DbHepler`2.AddEntities(System.Collections.Generic.List{`0})">
+            <summary>
+            批量新增实体
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.DbHepler`2.UpdateEntity(`0,System.Boolean)">
+            <summary>
+            修改实体
+            </summary>
+            <param name="entity">实体</param>
+            <param name="isSaveChage">是否保存改变 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.DbHepler`2.UpdateEntities(System.Collections.Generic.List{`0})">
+            <summary>
+            批量修改实体
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.DbHepler`2.UpdateEntities(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Action{`0})">
+            <summary>
+            根据条件批量修改实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <param name="updateAction">更新方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.DbHepler`2.DeleteEntity(`0)">
+            <summary>
+            删除实体
+            </summary>
+            <param name="entity">实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.DbHepler`2.DeleteEntities(System.Collections.Generic.List{`0})">
+            <summary>
+            批量删除实体
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.DbHepler`2.DeleteEntities(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            根据条件批量删除实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.DbHepler`2.ExecuteLinq``1(System.Func{`1,System.Linq.IQueryable{``0}})">
+            <summary>
+            执行Linq查询
+            </summary>
+            <typeparam name="TE"></typeparam>
+            <param name="linq"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Qxun.Core.Repositories.BaseRepository`2">
+            <summary>
+            仓储基类，用于数据访问
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseRepository`2.GetEntityId(`0)">
+            <summary>
+            获取实体的主键
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseRepository`2.GetEntityById(System.Int32)">
+            <summary>
+            根据主键获取实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseRepository`2.GetEntity(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            根据查询条件获取实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseRepository`2.GetEntity(System.Func{`1,System.Linq.IQueryable{`0}})">
+            <summary>
+            通过Linq查询获取单个实体
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="linq"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseRepository`2.GetEntitiesByFId(System.Int32)">
+            <summary>
+            根据外键获取多个实体
+            </summary>
+            <param name="fId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseRepository`2.GetEntities(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            根据查询条件获取多个实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseRepository`2.GetEntities(System.Func{`1,System.Linq.IQueryable{`0}})">
+            <summary>
+            通过Linq查询获取多个实体
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="linq"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseRepository`2.ExistEntity(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            是否存在满足条件的实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseRepository`2.ExistEntity(System.Func{`1,System.Linq.IQueryable{`0}})">
+            <summary>
+            是否存在满足条件的实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseRepository`2.InsertEntity(`0)">
+            <summary>
+            插入实体
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseRepository`2.InsertEntities(System.Collections.Generic.List{`0})">
+            <summary>
+            批量插入实体
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseRepository`2.UpdateEntity(`0)">
+            <summary>
+            修改实体
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseRepository`2.UpdateEntities(System.Collections.Generic.List{`0})">
+            <summary>
+            批量修改实体
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseRepository`2.DeleteEntities(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            根据条件批量删除实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseRepository`2.DeleteEntity(System.Int32)">
+            <summary>
+            删除实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns> 
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseRepository`2.ExecuteLinqQueryableHelper``1(System.Func{`1,System.Linq.IQueryable{``0}})">
+            <summary>
+            执行Linq查询[Supports multi-table queries]
+            </summary>
+            <typeparam name="TE"></typeparam>
+            <param name="linq"></param>
+            <returns>返回查询集合</returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseRepository`2.ExecuteLinqHelper``1(System.Func{`1,System.Linq.IQueryable{``0}})">
+            <summary>
+            执行Linq查询[Supports multi-table queries]
+            </summary>
+            <typeparam name="TE"></typeparam>
+            <param name="linq"></param>
+            <returns>返回单个实体</returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseRepository`2.CheckEntityAuthorityKey(System.Collections.Generic.Dictionary{Qxun.Core.Attributes.AuthoritySessionKeyAttribute,System.Collections.Generic.Dictionary{System.String,System.Object}},System.Int32)">
+            <summary>
+            根据Session校验是否有权限访问主键对应的实体
+            </summary>
+            <param name="authoritySessionKeys">用于校验的特性及对应Session中的值的集合</param>
+            <param name="id">前端传入主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseRepository`2.CheckEntitiesAuthorityKey(System.Collections.Generic.Dictionary{Qxun.Core.Attributes.AuthoritySessionKeyAttribute,System.Collections.Generic.Dictionary{System.String,System.Object}},System.Linq.IQueryable{`0})">
+            <summary>
+            根据Session校验是否有权限访问实体集合
+            </summary>
+            <param name="authoritySessionKeys">用于校验的特性及对应Session中的值的集合</param>
+            <param name="entities">查询结果</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseRepository`2.CheckEntityAuthorityKey(System.Collections.Generic.Dictionary{Qxun.Core.Attributes.AuthoritySessionKeyAttribute,System.Collections.Generic.Dictionary{System.String,System.Object}},`0)">
+            <summary>
+            根据Session校验是否有权限访问实体
+            </summary>
+            <param name="authoritySessionKeys">用于校验的特性及对应Session中的值的集合</param>
+            <param name="entity">实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseRepository`2.CheckCustomizeEntitiesAuthorityKey``1(System.Collections.Generic.Dictionary{Qxun.Core.Attributes.AuthoritySessionKeyAttribute,System.Collections.Generic.Dictionary{System.String,System.Object}},System.Linq.IQueryable{``0})">
+            <summary>
+            根据Session校验是否有权限访问实体集合
+            </summary>
+            <param name="authoritySessionKeys">用于校验的特性及对应Session中的值的集合</param>
+            <param name="entities">查询结果</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.BaseRepository`2.CheckCustomizeEntityAuthorityKey``1(System.Collections.Generic.Dictionary{Qxun.Core.Attributes.AuthoritySessionKeyAttribute,System.Collections.Generic.Dictionary{System.String,System.Object}},``0)">
+            <summary>
+            根据Session校验是否有权限访问实体
+            </summary>
+            <param name="authoritySessionKeys">用于校验的特性及对应Session中的值的集合</param>
+            <param name="entity">实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Repositories.DbContextFactory`1.GetCurrentDbContext">
+            <summary>
+            实现对EF上下文实例进行管理，保证线程内唯一
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Qxun.Core.Repositories.DbContextExt">
+            <summary>
+            DbContext扩展
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.Repositories.DbContextExt.TryDetach(System.Data.Entity.DbContext,System.Object)">
+            <summary>
+            判断传入的对象是否已附加到当前实体数据对象中，如果已附加则从实体数据对象中移除
+            </summary>
+            <param name="context">实体数据对象</param>
+            <param name="entity">对象</param>
+        </member>
+        <member name="T:Qxun.Core.Repositories.GlobalModelReferenceInfo">
+            <summary>
+            记录所有Model之间的相互引用情况，引用其他Model的Model的仓储类与Model定义必须在同一程序集
+            </summary>
+        </member>
+        <member name="F:Qxun.Core.Repositories.GlobalModelReferenceInfo.ModelReferencedInfos">
+            <summary>
+            所有Model之间的相互引用情况列表
+            </summary>
+        </member>
+        <member name="T:Qxun.Core.Repositories.ModelReferencedInfo">
+            <summary>
+            Model被引用情况
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Repositories.ModelReferencedInfo.ModelName">
+            <summary>
+            被引用的Model名称
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Repositories.ModelReferencedInfo.ReferenceModelInfos">
+            <summary>
+            引用该Model的所有Model的信息
+            </summary>
+        </member>
+        <member name="T:Qxun.Core.Repositories.ReferenceModelInfo">
+            <summary>
+            引用其他Model的Model的信息
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Repositories.ReferenceModelInfo.ModelType">
+            <summary>
+            Model的类型
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Repositories.ReferenceModelInfo.ThisModelIdKey">
+            <summary>
+            存放引用的Model主键的字段名称
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Repositories.ReferenceModelInfo.ReferenceModelEnumType">
+            <summary>
+            所有引用到的Model的枚举类型
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Repositories.ReferenceModelInfo.ThisModelTypeKey">
+            <summary>
+            存放引用的Model类型的字段名称
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Repositories.ReferenceModelInfo.CustomExpressionMethordName">
+            <summary>
+            生成检查被引用的Model中的实例是否被当前Model引用的自定义表达式的方法名称
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Repositories.ReferenceModelInfo.AssemblyPath">
+            <summary>
+            该Model所在程序集路径
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Repositories.ReferenceModelInfo.RepositoryType">
+            <summary>
+            该Model仓储类
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Section.PluginSection.assembly">
+            <summary>
+            程序集
+            </summary>
+        </member>
+        <member name="P:Qxun.Core.Section.PluginSection.isVerify">
+            <summary>
+            是否验证版本
+            </summary>
+        </member>
+        <member name="T:Qxun.Core.Selector.SelectorType">
+            <summary>
+            插件选择器类型
+            </summary>
+        </member>
+        <member name="F:Qxun.Core.Selector.SelectorType.InputContent">
+            <summary>
+            输入内容
+            </summary>
+        </member>
+        <member name="F:Qxun.Core.Selector.SelectorType.Material">
+            <summary>
+            素材
+            </summary>
+        </member>
+        <member name="F:Qxun.Core.Selector.SelectorType.SingleFunction">
+            <summary>
+            绑定整个功能（如微官网）
+            </summary>
+        </member>
+        <member name="F:Qxun.Core.Selector.SelectorType.MultipleFunction">
+            <summary>
+            绑定单个活动（如微预约）
+            </summary>
+        </member>
+        <member name="T:Qxun.Core.Services.BaseServiceValidate">
+            <summary>
+            校验方法类
+            </summary>
+        </member>
+        <member name="F:Qxun.Core.Services.BaseServiceValidate._validateList">
+            <summary>
+            校验方法列表
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseServiceValidate.ClearError">
+            <summary>
+            清除错误信息
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseServiceValidate.Error(System.String,Qxun.Core.Common.ResponseCode)">
+            <summary>
+            设置错误信息
+            </summary>
+            <param name="errorMessage">错误信息</param>
+            <param name="errorCode">错误代码</param>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseServiceValidate.ToSuccessResponseResult">
+            <summary>
+            将错误信息转换为返回给前端的SuccessResponseResult
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseServiceValidate.ToSuccessResponseResult``1(``0)">
+            <summary>
+             将任意类型转换为返回给前端的SuccessResponseResult
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseServiceValidate.Validate">
+            <summary>
+            执行校验方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseServiceValidate.AddValidate(System.Func{System.Boolean})">
+            <summary>
+            添加函数执行前的校验方法
+            </summary>
+            <param name="validate">校验方法</param>
+        </member>
+        <member name="M:Qxun.Core.Services.IService`4.GetEntitiesByFId``1(System.Int32,System.Int32,System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Boolean)">
+            <summary>
+            单表分页查询
+            </summary>
+            <typeparam name="TS"></typeparam>
+            <param name="pageIndex">页号，从1开始</param>
+            <param name="pageSize">每页显示记录数</param>
+            <param name="fId">外键</param>
+            <param name="whereLambda">搜索过滤条件语句</param>
+            <param name="orderByLambda">排序字段</param>
+            <param name="isAsc">是否升序排列</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.IService`4.GetEntitiesByFId``1(System.Int32,System.Int32,System.String,System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Boolean)">
+            <summary>
+            单表分页查询
+            </summary>
+            <typeparam name="TS"></typeparam>
+            <param name="pageIndex">页号，从1开始</param>
+            <param name="pageSize">每页显示记录数</param>
+            <param name="fId">外键</param>
+            <param name="orderByLambda">排序字段</param>
+            <param name="isAsc">是否升序排列</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.IService`4.GetEntityId(`1)">
+            <summary>
+            获取实体的主键
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.IService`4.GetEntityById(System.String)">
+            <summary>
+            获取实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.IService`4.GetEntitiesByFId(System.String)">
+            <summary>
+            根据外键获取实体集合
+            </summary>
+            <param name="fid">外键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.IService`4.GetEntitiesByFId``1(System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Boolean)">
+            <summary>
+            根据外键获取实体集合
+            </summary>
+            <param name="fid">外键</param>      
+            <param name="whereLambda">搜索过滤条件语句</param>
+            <param name="orderByLambda">排序字段</param>
+            <param name="isAsc">是否升序排列</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.IService`4.DeleteEntity(System.String)">
+            <summary>
+            删除实体
+            </summary>
+            <param name="id">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.IService`4.InsertEntity(System.String)">
+            <summary>
+            新增实体
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.IService`4.InsertEntity(`1)">
+            <summary>
+            新增实体
+            </summary>
+            <param name="entity"></param>
+            <param name="extInfo">额外信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.IService`4.UpdateEntity(System.String)">
+            <summary>
+            修改实体
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.IService`4.UpdateEntity(`1)">
+            <summary>
+            修改实体
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.IService`4.UpdateEntity(System.String,System.Action{`1})">
+            <summary>
+            修改实体
+            </summary>
+            <param name="id">主键</param>
+            <param name="updateAction">更新方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.IService`4.InsertOrUpdateEntity(System.String)">
+            <summary>
+            跟据主键新增或修改实体
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.IService`4.InsertOrUpdateEntity(`1)">
+            <summary>
+            跟据主键新增或修改实体
+            </summary>
+            <param name="entity">实体</param>
+            <returns>SuccessResponseResult</returns>
+        </member>
+        <member name="F:Qxun.Core.Services.BaseService`4._repository">
+            <summary>
+            Repository实例
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.AuthoritySessionKeys``1">
+            <summary>
+            用于校验的特性及对应Session中的值的集合
+            </summary>
+            <typeparam name="TA">根据Session校验是否有权限访问Model的特性的类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.GetEntitiesByFId``1(System.Int32,System.Int32,System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Boolean)">
+            <summary>
+            单表分页查询
+            </summary>
+            <typeparam name="TS"></typeparam>
+            <param name="pageIndex">页号，从1开始</param>
+            <param name="pageSize">每页显示记录数</param>
+            <param name="fId">外键</param>
+            <param name="whereLambda">搜索过滤条件语句</param>
+            <param name="orderByLambda">排序字段</param>
+            <param name="isAsc">是否升序排列</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.GetEntitiesByFId``1(System.Int32,System.Int32,System.String,System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Boolean)">
+            <summary>
+            单表分页查询
+            </summary>
+            <typeparam name="TS"></typeparam>
+            <param name="pageIndex">页号，从1开始</param>
+            <param name="pageSize">每页显示记录数</param>
+            <param name="fId">外键</param>
+            <param name="orderByLambda">排序字段</param>
+            <param name="isAsc">是否升序排列</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.GetEntityId(`1)">
+            <summary>
+            获取实体的主键
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.GetEntityById(System.String)">
+            <summary>
+            获取实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.GetEntitiesByFId(System.String)">
+            <summary>
+            根据外键获取实体集合
+            </summary>
+            <param name="fid">外键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.GetEntitiyByFId(System.String)">
+            <summary>
+            根据外键获取实体
+            </summary>
+            <param name="fid">外键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.GetEntitiesByFId``1(System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Boolean)">
+            <summary>
+            根据外键获取实体集合
+            </summary>
+            <param name="fid">外键</param>      
+            <param name="whereLambda">搜索过滤条件语句</param>
+            <param name="orderByLambda">排序字段</param>
+            <param name="isAsc">是否升序排列</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.DeleteEntity(System.String)">
+            <summary>
+            删除实体
+            </summary>
+            <param name="id">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.InsertEntity(System.String)">
+            <summary>
+            新增实体
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.InsertEntity(`1)">
+            <summary>
+            新增实体
+            </summary>
+            <param name="entity"></param>
+            <param name="extInfo">额外信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.UpdateEntity(System.String)">
+            <summary>
+            修改实体
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.UpdateEntity(`1)">
+            <summary>
+            修改实体
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.UpdateEntity(System.String,System.Action{`1})">
+            <summary>
+            修改实体
+            </summary>
+            <param name="id">主键</param>
+            <param name="updateAction">更新方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.InsertOrUpdateEntity(System.String)">
+            <summary>
+            跟据主键新增或修改实体
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.InsertOrUpdateEntity(`1)">
+            <summary>
+            跟据主键新增或修改实体
+            </summary>
+            <param name="entity">实体</param>
+            <returns>SuccessResponseResult</returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.IsIdHasValue(System.String)">
+            <summary>
+            Id是否不为空或0
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.GetEncodedId(System.Int32)">
+            <summary>
+            获取加密后的ID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.GetById(System.String)">
+            <summary>
+            根据主键获取实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            根据查询条件获取实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.Get(System.Func{`2,System.Linq.IQueryable{`0}})">
+            <summary>
+            通过Linq查询获取单个实体
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="linq"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.GetByFId(System.String)">
+            <summary>
+            根据外键获取多个实体
+            </summary>
+            <param name="fId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.GetByIdList(System.Collections.Generic.List{System.String})">
+            <summary>
+            获取ID列表对应的所有实体
+            </summary>
+            <param name="idList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.GetByFIdList(System.Collections.Generic.List{System.String})">
+            <summary>
+            获取FID列表对应的所有实体
+            </summary>
+            <param name="idList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.GetByIdOrFidList(System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            获取ID或FID列表对应的所有实体
+            </summary>
+            <param name="idOrFidList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.GetMany(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            根据查询条件获取多个实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.GetMany(System.Func{`2,System.Linq.IQueryable{`0}})">
+            <summary>
+            通过Linq查询获取多个实体
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="linq"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.GetManyByFId``1(System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Boolean)">
+            <summary>
+            根据外键获取多个实体
+            </summary>
+            <param name="fId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.GetMany``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Boolean)">
+            <summary>
+            根据查询条件获取多个实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.GetMany``1(System.Func{`2,System.Linq.IQueryable{`0}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Boolean)">
+            <summary>
+            通过Linq查询获取多个实体
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="linq"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.GetManyByFId``1(System.String,System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Boolean)">
+            <summary>
+            根据外键获取多个实体
+            </summary>
+            <param name="fId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.GetMany``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Boolean)">
+            <summary>
+            根据查询条件获取多个实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.GetMany``1(System.Func{`2,System.Linq.IQueryable{`0}},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Boolean)">
+            <summary>
+            通过Linq查询获取多个实体
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="linq"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.Exist(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            是否存在满足条件的实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.Exist(System.Func{`2,System.Linq.IQueryable{`0}})">
+            <summary>
+            是否存在满足条件的实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.GetJQueryDatatables(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},Mvc.JQuery.Datatables.DataTablesParam)">
+            <summary>
+            根据查询条件获取JQueryDatatables查询结果
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <param name="dataTableParam">JQueryDatatables查询条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.GetJQueryDatatables``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},Mvc.JQuery.Datatables.DataTablesParam,System.Func{`1,``0})">
+            <summary>
+            根据查询条件获取JQueryDatatables查询结果
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <param name="dataTableParam">JQueryDatatables查询条件</param>
+            <param name="transform">a transform for custom column rendering e.g. to do a custom date row => new { CreatedDate = row.CreatedDate.ToString("dd MM yy") } </param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.GetJQueryDatatables(System.Func{`2,System.Linq.IQueryable{`0}},Mvc.JQuery.Datatables.DataTablesParam)">
+            <summary>
+            根据查询条件获取JQueryDatatables查询结果
+            </summary>
+            <param name="linq">查询方法</param>
+            <param name="dataTableParam">JQueryDatatables查询条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.GetJQueryDatatables``1(System.Func{`2,System.Linq.IQueryable{`0}},Mvc.JQuery.Datatables.DataTablesParam,System.Func{`1,``0})">
+            <summary>
+            根据查询条件获取JQueryDatatables查询结果
+            </summary>
+            <param name="linq">查询方法</param>
+            <param name="dataTableParam">JQueryDatatables查询条件</param>
+            <param name="transform">a transform for custom column rendering e.g. to do a custom date row => new { CreatedDate = row.CreatedDate.ToString("dd MM yy") } </param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.Insert(`1)">
+            <summary>
+            插入实体
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.Insert(System.Collections.Generic.List{`1})">
+            <summary>
+            批量插入实体
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.Update(`1)">
+            <summary>
+            修改实体
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.Update(System.Collections.Generic.List{`1})">
+            <summary>
+            批量修改实体
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.Update(System.String,System.Action{`1})">
+            <summary>
+            修改实体部分字段
+            </summary>
+            <param name="id">主键</param>
+            <param name="updateAction">更新方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.Update(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Action{`1})">
+            <summary>
+            根据条件批量修改实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <param name="updateAction">更新方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.Delete(System.String)">
+            <summary>
+            删除实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.Delete(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            根据条件批量删除实体
+            </summary>
+            <param name="predicate">查询条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.ExecuteLinqQueryableHelper``2(System.Func{`2,System.Linq.IQueryable{``0}})">
+            <summary>
+            执行Linq查询[Supports multi-table queries]
+            </summary>
+            <typeparam name="TE"></typeparam>
+            <param name="linq"></param>
+            <returns>返回查询集合</returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.ExecuteLinqQueryableHelper``3(System.Func{`2,System.Linq.IQueryable{``0}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,``2}},System.Boolean)">
+            <summary>
+            执行Linq查询[Supports multi-table queries]
+            </summary>
+            <typeparam name="TE"></typeparam>
+            <param name="linq"></param>
+            <returns>返回查询集合</returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.ExecuteLinqQueryableHelper``3(System.Func{`2,System.Linq.IQueryable{``0}},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,``2}},System.Boolean)">
+            <summary>
+            执行Linq查询[Supports multi-table queries]
+            </summary>
+            <typeparam name="TE"></typeparam>
+            <param name="linq"></param>
+            <returns>返回查询集合</returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.ExecuteLinqHelper``2(System.Func{`2,System.Linq.IQueryable{``0}})">
+            <summary>
+            执行Linq查询[Supports multi-table queries]
+            </summary>
+            <typeparam name="TE"></typeparam>
+            <param name="linq"></param>
+            <returns>返回单个实体</returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.TransactionHelper``1(System.Func{``0})">
+            <summary>
+            事务提交统一调用方法
+            </summary>
+            <param name="func"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.ThreadHelper(System.Action{System.Object},System.Object)">
+            <summary>
+            开启新线程异步执行
+            </summary>
+            <param name="action"></param>
+            <param name="obj">包含该线程过程的数据的对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.JsonToEntity(System.String,`1@)">
+            <summary>
+            Json转换为Entity
+            </summary>
+            <param name="json"></param>
+            <param name="entity"></param>
+            <param name="result">操作结果</param>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.ValidateCurrentResult(`0)">
+            <summary>
+            按Entity定义的校验特性进行校验
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.ValidateNull(`1)">
+            <summary>
+            校验实体是否为空
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.ValidateEntity(`0)">
+            <summary>
+            前端传入的实体按Entity定义的校验特性进行校验
+            </summary>
+            <param name="json"></param>
+            <param name="entity"></param>
+            <param name="result">校验结果</param>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.CheckEntityAuthorityKey``1(System.Int32)">
+            <summary>
+            根据Session校验是否有权限访问主键对应的实体（对修改、删除操作，除了对传入实体做Session校验，还需校验数据库是否存在实体），确保只能获取或操作属于用户自己或下级的数据
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.CheckEntityAuthorityKey``1(`0)">
+            <summary>
+            根据Session校验是否有权限访问实体（对修改、删除操作，除了对传入实体做Session校验，还需校验数据库是否存在实体），确保只能获取或操作属于用户自己或下级的数据
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.CheckEntitiesAuthorityKey``1(System.Linq.IQueryable{`0})">
+            <summary>
+            根据Session校验是否有权限访问实体集合（对修改、删除操作，除了对传入实体做Session校验，还需校验数据库是否存在实体），确保只能获取或操作属于用户自己或下级的数据
+            </summary>
+            <param name="entities">实体集合</param>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.CheckCustomizeEntityAuthorityKey``2(``0)">
+            <summary>
+            根据Session校验是否有权限访问实体（仅对传入实体做Session校验，不校验数据库是否存在实体），确保只能获取或操作属于用户自己或下级的数据
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.CheckCustomizeEntitiesAuthorityKey``2(System.Linq.IQueryable{``0})">
+            <summary>
+            根据Session校验是否有权限访问实体集合（仅对传入实体做Session校验，不校验数据库是否存在实体），确保只能获取或操作属于用户自己或下级的数据
+            </summary>
+            <param name="entities">实体集合</param>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.DesEncodeKey(System.Int32)">
+            <summary>
+            加密主外键
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.DesEncodeNullableKey(System.Nullable{System.Int32})">
+            <summary>
+            加密可空主外键
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.DesDecodeKey(System.String)">
+            <summary>
+            解密主外键
+            </summary>
+            <param name="encodedKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.BaseService`4.DesDecodeNullableKey(System.String)">
+            <summary>
+            解密可空类型外键
+            </summary>
+            <param name="encodedKey"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Qxun.Core.Services.BaseService`4.SessionNames">
+            <summary>
+            用于校验的Session名称数组
+            </summary>
+        </member>
+        <member name="T:Qxun.Core.Common.ResponseCode">
+            <summary>
+            响应结果
+            </summary>
+        </member>
+        <member name="F:Qxun.Core.Common.ResponseCode.Success">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="F:Qxun.Core.Common.ResponseCode.FailOperate">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="F:Qxun.Core.Common.ResponseCode.FailValidate">
+            <summary>
+            验证失败
+            </summary>
+        </member>
+        <member name="F:Qxun.Core.Common.ResponseCode.FailJsonParse">
+            <summary>
+            Json解析失败
+            </summary>
+        </member>
+        <member name="F:Qxun.Core.Common.ResponseCode.InnerException">
+            <summary>
+            内部异常
+            </summary>
+        </member>
+        <member name="F:Qxun.Core.Common.ResponseCode.NoData">
+            <summary>
+            未获取到数据
+            </summary>
+        </member>
+        <member name="T:Qxun.Core.Services.ServiceHelper">
+            <summary>
+            Service帮助类
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.Services.ServiceHelper.CreateThread(System.Action{System.Object},System.Object)">
+            <summary>
+            开启新线程异步执行
+            </summary>
+            <param name="action"></param>
+            <param name="obj">包含该线程过程的数据的对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.Services.ServiceHelper.Transaction``1(System.Func{``0})">
+            <summary>
+            事务提交统一调用方法
+            </summary>
+            <param name="func"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

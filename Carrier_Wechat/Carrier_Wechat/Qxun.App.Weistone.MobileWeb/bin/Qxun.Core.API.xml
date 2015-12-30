@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Qxun.Core.API</name>
+    </assembly>
+    <members>
+        <member name="M:Qxun.Core.API.APIUtility.SignVerify(System.Uri,Qxun.Core.API.IAPIFilter)">
+            <summary>
+            验证参数
+            </summary>
+            <param name="requestUrl">请求的url</param>
+            <returns>验证是否通过</returns>
+        </member>
+        <member name="M:Qxun.Core.API.APIUtility.SignTopRequest(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String)">
+            <summary>
+            获取所有参数排序并和secret进行加密
+            </summary>
+            <param name="parameters">get、post参数</param>
+            <param name="appSecret">appSecret</param>
+            <param name="SignMethod">加密方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Core.API.APIUtility.ExcuteException(System.Web.HttpException,Qxun.Core.API.APIErrorException,System.String)">
+            <summary>
+            处理异常
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.API.APIUtility.CheckParametersV1(System.Collections.Generic.IDictionary{System.String,System.String},System.Boolean,Qxun.Core.API.IAPIFilter)">
+            <summary>
+            校验协议级请求参数
+            </summary>
+            <param name="filterContext"></param>
+            <param name="developSignBll"></param>
+            <param name="parameters">接收到的参数</param>
+            <param name="isSuccess">是否校验成功</param>
+        </member>
+        <member name="M:Qxun.Core.API.APIUtility.ResponseEnd(System.String,System.String)">
+            <summary>
+            返回错误消息
+            </summary>
+            <param name="errcode"></param>
+            <param name="errmsg"></param>
+        </member>
+        <member name="M:Qxun.Core.API.IAPIFilter.IsExistAppId(System.String)">
+            <summary>
+            是否存在此Appid
+            </summary>
+        </member>
+        <member name="M:Qxun.Core.API.IAPIFilter.GetAppSecret(System.String)">
+            <summary>
+            通过appid获得AppSecret
+            </summary>
+        </member>
+    </members>
+</doc>

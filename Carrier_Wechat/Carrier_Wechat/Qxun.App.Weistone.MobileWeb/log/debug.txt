@@ -1,0 +1,552 @@
+2015-12-03 10:30:38,396 [6436] INFO  DebugLogger - Home|Index|GET||Ajax: False|Action Executing|{"plat":null}
+2015-12-03 10:30:38,461 [6436] DEBUG DebugLogger - Home|Index|GET||Ajax: False|View rendering|
+2015-12-03 10:30:38,513 [6436] DEBUG DebugLogger - Home|Index|GET||Ajax: False|View rendered|Result: {"Content":null,"ContentEncoding":null,"ContentType":null}
+2015-12-03 10:30:39,137 [8520] INFO  DebugLogger - Account|Login|GET||Ajax: False|Action Executing|{}
+2015-12-03 10:30:39,149 [8520] DEBUG DebugLogger - Account|Login|GET||Ajax: False|Action Executed|
+2015-12-03 10:30:39,150 [8520] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendering|
+2015-12-03 10:30:39,678 [8520] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendered|Result: {"MasterName":"","Model":null,"TempData":{},"View":null,"ViewBag":{"Version":"V3.0.0"},"ViewData":{"Version":"V3.0.0"},"ViewEngineCollection":[{"AreaMasterLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaPartialViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"FileExtensions":["cshtml","vbhtml"],"MasterLocationFormats":["~/Mobile/Views/Shared/{0}.cshtml"],"PartialViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"],"ViewLocationCache":{},"ViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"]}],"ViewName":"Login"}
+2015-12-03 10:30:39,736 [8520] WARN  DebugLogger - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+System.InvalidOperationException: The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-03 10:31:00,546 [6436] INFO  DebugLogger - Account|Login|GET||Ajax: False|Action Executing|{}
+2015-12-03 10:31:00,547 [6436] DEBUG DebugLogger - Account|Login|GET||Ajax: False|Action Executed|
+2015-12-03 10:31:00,547 [6436] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendering|
+2015-12-03 10:31:00,642 [6436] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendered|Result: {"MasterName":"","Model":null,"TempData":{},"View":null,"ViewBag":{"Version":"V3.0.0"},"ViewData":{"Version":"V3.0.0"},"ViewEngineCollection":[{"AreaMasterLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaPartialViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"FileExtensions":["cshtml","vbhtml"],"MasterLocationFormats":["~/Mobile/Views/Shared/{0}.cshtml"],"PartialViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"],"ViewLocationCache":{},"ViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"]}],"ViewName":"Login"}
+2015-12-03 10:31:00,699 [6436] WARN  DebugLogger - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+System.InvalidOperationException: The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-23 10:19:09,356 [6308] INFO  DebugLogger - Home|Index|GET||Ajax: False|Action Executing|{"plat":null}
+2015-12-23 10:19:09,457 [6308] DEBUG DebugLogger - Home|Index|GET||Ajax: False|View rendering|
+2015-12-23 10:19:09,507 [6308] DEBUG DebugLogger - Home|Index|GET||Ajax: False|View rendered|Result: {"Content":null,"ContentEncoding":null,"ContentType":null}
+2015-12-23 10:19:10,121 [936] INFO  DebugLogger - Account|Login|GET||Ajax: False|Action Executing|{}
+2015-12-23 10:19:10,134 [936] DEBUG DebugLogger - Account|Login|GET||Ajax: False|Action Executed|
+2015-12-23 10:19:10,134 [936] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendering|
+2015-12-23 10:19:10,645 [936] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendered|Result: {"MasterName":"","Model":null,"TempData":{},"View":null,"ViewBag":{"Version":"V3.0.0"},"ViewData":{"Version":"V3.0.0"},"ViewEngineCollection":[{"AreaMasterLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaPartialViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"FileExtensions":["cshtml","vbhtml"],"MasterLocationFormats":["~/Mobile/Views/Shared/{0}.cshtml"],"PartialViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"],"ViewLocationCache":{},"ViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"]}],"ViewName":"Login"}
+2015-12-23 10:19:10,704 [936] WARN  DebugLogger - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+System.InvalidOperationException: The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-23 10:19:38,438 [4016] INFO  DebugLogger - Account|Login|GET||Ajax: False|Action Executing|{}
+2015-12-23 10:19:38,438 [4016] DEBUG DebugLogger - Account|Login|GET||Ajax: False|Action Executed|
+2015-12-23 10:19:38,438 [4016] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendering|
+2015-12-23 10:19:38,521 [4016] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendered|Result: {"MasterName":"","Model":null,"TempData":{},"View":null,"ViewBag":{"Version":"V3.0.0"},"ViewData":{"Version":"V3.0.0"},"ViewEngineCollection":[{"AreaMasterLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaPartialViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"FileExtensions":["cshtml","vbhtml"],"MasterLocationFormats":["~/Mobile/Views/Shared/{0}.cshtml"],"PartialViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"],"ViewLocationCache":{},"ViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"]}],"ViewName":"Login"}
+2015-12-23 10:19:38,580 [4016] WARN  DebugLogger - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+System.InvalidOperationException: The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-23 10:19:40,391 [6308] INFO  DebugLogger - Account|Login|GET||Ajax: False|Action Executing|{}
+2015-12-23 10:19:40,391 [6308] DEBUG DebugLogger - Account|Login|GET||Ajax: False|Action Executed|
+2015-12-23 10:19:40,392 [6308] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendering|
+2015-12-23 10:19:40,483 [6308] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendered|Result: {"MasterName":"","Model":null,"TempData":{},"View":null,"ViewBag":{"Version":"V3.0.0"},"ViewData":{"Version":"V3.0.0"},"ViewEngineCollection":[{"AreaMasterLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaPartialViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"FileExtensions":["cshtml","vbhtml"],"MasterLocationFormats":["~/Mobile/Views/Shared/{0}.cshtml"],"PartialViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"],"ViewLocationCache":{},"ViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"]}],"ViewName":"Login"}
+2015-12-23 10:19:40,544 [6308] WARN  DebugLogger - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+System.InvalidOperationException: The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-23 10:19:41,669 [6200] INFO  DebugLogger - Account|Login|GET||Ajax: False|Action Executing|{}
+2015-12-23 10:19:41,669 [6200] DEBUG DebugLogger - Account|Login|GET||Ajax: False|Action Executed|
+2015-12-23 10:19:41,670 [6200] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendering|
+2015-12-23 10:19:41,759 [6200] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendered|Result: {"MasterName":"","Model":null,"TempData":{},"View":null,"ViewBag":{"Version":"V3.0.0"},"ViewData":{"Version":"V3.0.0"},"ViewEngineCollection":[{"AreaMasterLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaPartialViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"FileExtensions":["cshtml","vbhtml"],"MasterLocationFormats":["~/Mobile/Views/Shared/{0}.cshtml"],"PartialViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"],"ViewLocationCache":{},"ViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"]}],"ViewName":"Login"}
+2015-12-23 10:19:41,815 [6200] WARN  DebugLogger - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+System.InvalidOperationException: The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-23 10:19:42,870 [6308] INFO  DebugLogger - Account|Login|GET||Ajax: False|Action Executing|{}
+2015-12-23 10:19:42,870 [6308] DEBUG DebugLogger - Account|Login|GET||Ajax: False|Action Executed|
+2015-12-23 10:19:42,870 [6308] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendering|
+2015-12-23 10:19:42,960 [6308] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendered|Result: {"MasterName":"","Model":null,"TempData":{},"View":null,"ViewBag":{"Version":"V3.0.0"},"ViewData":{"Version":"V3.0.0"},"ViewEngineCollection":[{"AreaMasterLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaPartialViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"FileExtensions":["cshtml","vbhtml"],"MasterLocationFormats":["~/Mobile/Views/Shared/{0}.cshtml"],"PartialViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"],"ViewLocationCache":{},"ViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"]}],"ViewName":"Login"}
+2015-12-23 10:19:43,015 [6308] WARN  DebugLogger - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+System.InvalidOperationException: The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-23 10:20:34,779 [7956] INFO  DebugLogger - Home|Index|GET||Ajax: False|Action Executing|{"plat":null}
+2015-12-23 10:20:34,863 [7956] DEBUG DebugLogger - Home|Index|GET||Ajax: False|View rendering|
+2015-12-23 10:20:34,901 [7956] DEBUG DebugLogger - Home|Index|GET||Ajax: False|View rendered|Result: {"Content":null,"ContentEncoding":null,"ContentType":null}
+2015-12-23 10:20:35,363 [8116] INFO  DebugLogger - Account|Login|GET||Ajax: False|Action Executing|{}
+2015-12-23 10:20:35,397 [8116] DEBUG DebugLogger - Account|Login|GET||Ajax: False|Action Executed|
+2015-12-23 10:20:35,397 [8116] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendering|
+2015-12-23 10:20:35,856 [8116] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendered|Result: {"MasterName":"","Model":null,"TempData":{},"View":null,"ViewBag":{"Version":"V3.0.0"},"ViewData":{"Version":"V3.0.0"},"ViewEngineCollection":[{"AreaMasterLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaPartialViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"FileExtensions":["cshtml","vbhtml"],"MasterLocationFormats":["~/Mobile/Views/Shared/{0}.cshtml"],"PartialViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"],"ViewLocationCache":{},"ViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"]}],"ViewName":"Login"}
+2015-12-23 10:20:35,909 [8116] WARN  DebugLogger - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+System.InvalidOperationException: The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-23 10:20:39,647 [7772] INFO  DebugLogger - Account|Login|GET||Ajax: False|Action Executing|{}
+2015-12-23 10:20:39,648 [7772] DEBUG DebugLogger - Account|Login|GET||Ajax: False|Action Executed|
+2015-12-23 10:20:39,648 [7772] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendering|
+2015-12-23 10:20:39,733 [7772] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendered|Result: {"MasterName":"","Model":null,"TempData":{},"View":null,"ViewBag":{"Version":"V3.0.0"},"ViewData":{"Version":"V3.0.0"},"ViewEngineCollection":[{"AreaMasterLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaPartialViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"FileExtensions":["cshtml","vbhtml"],"MasterLocationFormats":["~/Mobile/Views/Shared/{0}.cshtml"],"PartialViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"],"ViewLocationCache":{},"ViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"]}],"ViewName":"Login"}
+2015-12-23 10:20:39,790 [7772] WARN  DebugLogger - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+System.InvalidOperationException: The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-23 10:20:40,982 [936] INFO  DebugLogger - Account|Login|GET||Ajax: False|Action Executing|{}
+2015-12-23 10:20:41,021 [936] DEBUG DebugLogger - Account|Login|GET||Ajax: False|Action Executed|
+2015-12-23 10:20:41,021 [936] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendering|
+2015-12-23 10:20:41,112 [936] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendered|Result: {"MasterName":"","Model":null,"TempData":{},"View":null,"ViewBag":{"Version":"V3.0.0"},"ViewData":{"Version":"V3.0.0"},"ViewEngineCollection":[{"AreaMasterLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaPartialViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"FileExtensions":["cshtml","vbhtml"],"MasterLocationFormats":["~/Mobile/Views/Shared/{0}.cshtml"],"PartialViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"],"ViewLocationCache":{},"ViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"]}],"ViewName":"Login"}
+2015-12-23 10:20:41,169 [936] WARN  DebugLogger - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+System.InvalidOperationException: The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-23 10:20:42,740 [7772] INFO  DebugLogger - Account|Login|GET||Ajax: False|Action Executing|{}
+2015-12-23 10:20:42,740 [7772] DEBUG DebugLogger - Account|Login|GET||Ajax: False|Action Executed|
+2015-12-23 10:20:42,740 [7772] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendering|
+2015-12-23 10:20:42,827 [7772] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendered|Result: {"MasterName":"","Model":null,"TempData":{},"View":null,"ViewBag":{"Version":"V3.0.0"},"ViewData":{"Version":"V3.0.0"},"ViewEngineCollection":[{"AreaMasterLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaPartialViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"FileExtensions":["cshtml","vbhtml"],"MasterLocationFormats":["~/Mobile/Views/Shared/{0}.cshtml"],"PartialViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"],"ViewLocationCache":{},"ViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"]}],"ViewName":"Login"}
+2015-12-23 10:20:42,882 [7772] WARN  DebugLogger - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+System.InvalidOperationException: The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-23 10:24:27,708 [5608] INFO  DebugLogger - Home|Index|GET||Ajax: False|Action Executing|{"plat":null}
+2015-12-23 10:24:27,782 [5608] DEBUG DebugLogger - Home|Index|GET||Ajax: False|View rendering|
+2015-12-23 10:24:27,819 [5608] DEBUG DebugLogger - Home|Index|GET||Ajax: False|View rendered|Result: {"Content":null,"ContentEncoding":null,"ContentType":null}
+2015-12-23 10:24:28,280 [7980] INFO  DebugLogger - Account|Login|GET||Ajax: False|Action Executing|{}
+2015-12-23 10:24:28,289 [7980] DEBUG DebugLogger - Account|Login|GET||Ajax: False|Action Executed|
+2015-12-23 10:24:28,289 [7980] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendering|
+2015-12-23 10:24:28,702 [7980] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendered|Result: {"MasterName":"","Model":null,"TempData":{},"View":null,"ViewBag":{"Version":"V3.0.0"},"ViewData":{"Version":"V3.0.0"},"ViewEngineCollection":[{"AreaMasterLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaPartialViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"FileExtensions":["cshtml","vbhtml"],"MasterLocationFormats":["~/Mobile/Views/Shared/{0}.cshtml"],"PartialViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"],"ViewLocationCache":{},"ViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"]}],"ViewName":"Login"}
+2015-12-23 10:24:28,759 [7980] WARN  DebugLogger - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+System.InvalidOperationException: The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-23 10:24:35,390 [7980] INFO  DebugLogger - Account|Login|GET||Ajax: False|Action Executing|{}
+2015-12-23 10:24:35,390 [7980] DEBUG DebugLogger - Account|Login|GET||Ajax: False|Action Executed|
+2015-12-23 10:24:35,390 [7980] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendering|
+2015-12-23 10:24:35,477 [7980] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendered|Result: {"MasterName":"","Model":null,"TempData":{},"View":null,"ViewBag":{"Version":"V3.0.0"},"ViewData":{"Version":"V3.0.0"},"ViewEngineCollection":[{"AreaMasterLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaPartialViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"FileExtensions":["cshtml","vbhtml"],"MasterLocationFormats":["~/Mobile/Views/Shared/{0}.cshtml"],"PartialViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"],"ViewLocationCache":{},"ViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"]}],"ViewName":"Login"}
+2015-12-23 10:24:35,529 [7980] WARN  DebugLogger - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+System.InvalidOperationException: The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-23 10:24:57,282 [6632] INFO  DebugLogger - Account|Login|GET||Ajax: False|Action Executing|{}
+2015-12-23 10:24:57,283 [6632] DEBUG DebugLogger - Account|Login|GET||Ajax: False|Action Executed|
+2015-12-23 10:24:57,283 [6632] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendering|
+2015-12-23 10:24:57,371 [6632] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendered|Result: {"MasterName":"","Model":null,"TempData":{},"View":null,"ViewBag":{"Version":"V3.0.0"},"ViewData":{"Version":"V3.0.0"},"ViewEngineCollection":[{"AreaMasterLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaPartialViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"FileExtensions":["cshtml","vbhtml"],"MasterLocationFormats":["~/Mobile/Views/Shared/{0}.cshtml"],"PartialViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"],"ViewLocationCache":{},"ViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"]}],"ViewName":"Login"}
+2015-12-23 10:24:57,427 [6632] WARN  DebugLogger - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+System.InvalidOperationException: The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-23 10:25:04,023 [7120] INFO  DebugLogger - Account|Login|GET||Ajax: False|Action Executing|{}
+2015-12-23 10:25:04,024 [7120] DEBUG DebugLogger - Account|Login|GET||Ajax: False|Action Executed|
+2015-12-23 10:25:04,024 [7120] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendering|
+2015-12-23 10:25:04,119 [7120] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendered|Result: {"MasterName":"","Model":null,"TempData":{},"View":null,"ViewBag":{"Version":"V3.0.0"},"ViewData":{"Version":"V3.0.0"},"ViewEngineCollection":[{"AreaMasterLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaPartialViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"FileExtensions":["cshtml","vbhtml"],"MasterLocationFormats":["~/Mobile/Views/Shared/{0}.cshtml"],"PartialViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"],"ViewLocationCache":{},"ViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"]}],"ViewName":"Login"}
+2015-12-23 10:25:04,177 [7120] WARN  DebugLogger - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+System.InvalidOperationException: The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-23 10:25:05,197 [8428] INFO  DebugLogger - Account|Login|GET||Ajax: False|Action Executing|{}
+2015-12-23 10:25:05,198 [8428] DEBUG DebugLogger - Account|Login|GET||Ajax: False|Action Executed|
+2015-12-23 10:25:05,198 [8428] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendering|
+2015-12-23 10:25:05,281 [8428] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendered|Result: {"MasterName":"","Model":null,"TempData":{},"View":null,"ViewBag":{"Version":"V3.0.0"},"ViewData":{"Version":"V3.0.0"},"ViewEngineCollection":[{"AreaMasterLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaPartialViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"FileExtensions":["cshtml","vbhtml"],"MasterLocationFormats":["~/Mobile/Views/Shared/{0}.cshtml"],"PartialViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"],"ViewLocationCache":{},"ViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"]}],"ViewName":"Login"}
+2015-12-23 10:25:05,337 [8428] WARN  DebugLogger - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+System.InvalidOperationException: The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-23 10:25:06,294 [7120] INFO  DebugLogger - Account|Login|GET||Ajax: False|Action Executing|{}
+2015-12-23 10:25:06,295 [7120] DEBUG DebugLogger - Account|Login|GET||Ajax: False|Action Executed|
+2015-12-23 10:25:06,295 [7120] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendering|
+2015-12-23 10:25:06,378 [7120] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendered|Result: {"MasterName":"","Model":null,"TempData":{},"View":null,"ViewBag":{"Version":"V3.0.0"},"ViewData":{"Version":"V3.0.0"},"ViewEngineCollection":[{"AreaMasterLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaPartialViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"FileExtensions":["cshtml","vbhtml"],"MasterLocationFormats":["~/Mobile/Views/Shared/{0}.cshtml"],"PartialViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"],"ViewLocationCache":{},"ViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"]}],"ViewName":"Login"}
+2015-12-23 10:25:06,432 [7120] WARN  DebugLogger - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+System.InvalidOperationException: The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-23 10:25:07,419 [6948] INFO  DebugLogger - Account|Login|GET||Ajax: False|Action Executing|{}
+2015-12-23 10:25:07,419 [6948] DEBUG DebugLogger - Account|Login|GET||Ajax: False|Action Executed|
+2015-12-23 10:25:07,419 [6948] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendering|
+2015-12-23 10:25:07,500 [6948] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendered|Result: {"MasterName":"","Model":null,"TempData":{},"View":null,"ViewBag":{"Version":"V3.0.0"},"ViewData":{"Version":"V3.0.0"},"ViewEngineCollection":[{"AreaMasterLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaPartialViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"FileExtensions":["cshtml","vbhtml"],"MasterLocationFormats":["~/Mobile/Views/Shared/{0}.cshtml"],"PartialViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"],"ViewLocationCache":{},"ViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"]}],"ViewName":"Login"}
+2015-12-23 10:25:07,556 [6948] WARN  DebugLogger - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+System.InvalidOperationException: The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-23 10:25:08,497 [7120] INFO  DebugLogger - Account|Login|GET||Ajax: False|Action Executing|{}
+2015-12-23 10:25:08,498 [7120] DEBUG DebugLogger - Account|Login|GET||Ajax: False|Action Executed|
+2015-12-23 10:25:08,498 [7120] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendering|
+2015-12-23 10:25:08,584 [7120] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendered|Result: {"MasterName":"","Model":null,"TempData":{},"View":null,"ViewBag":{"Version":"V3.0.0"},"ViewData":{"Version":"V3.0.0"},"ViewEngineCollection":[{"AreaMasterLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaPartialViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"FileExtensions":["cshtml","vbhtml"],"MasterLocationFormats":["~/Mobile/Views/Shared/{0}.cshtml"],"PartialViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"],"ViewLocationCache":{},"ViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"]}],"ViewName":"Login"}
+2015-12-23 10:25:08,640 [7120] WARN  DebugLogger - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+System.InvalidOperationException: The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-23 10:28:18,947 [9144] INFO  DebugLogger - Home|Index|GET||Ajax: False|Action Executing|{"plat":null}
+2015-12-23 10:28:19,025 [9144] DEBUG DebugLogger - Home|Index|GET||Ajax: False|View rendering|
+2015-12-23 10:28:19,062 [9144] DEBUG DebugLogger - Home|Index|GET||Ajax: False|View rendered|Result: {"Content":null,"ContentEncoding":null,"ContentType":null}
+2015-12-23 10:28:19,534 [9144] INFO  DebugLogger - Account|Login|GET||Ajax: False|Action Executing|{}
+2015-12-23 10:28:19,552 [9144] DEBUG DebugLogger - Account|Login|GET||Ajax: False|Action Executed|
+2015-12-23 10:28:19,552 [9144] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendering|
+2015-12-23 10:28:20,027 [9144] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendered|Result: {"MasterName":"","Model":null,"TempData":{},"View":null,"ViewBag":{"Version":"V3.0.0"},"ViewData":{"Version":"V3.0.0"},"ViewEngineCollection":[{"AreaMasterLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaPartialViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"FileExtensions":["cshtml","vbhtml"],"MasterLocationFormats":["~/Mobile/Views/Shared/{0}.cshtml"],"PartialViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"],"ViewLocationCache":{},"ViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"]}],"ViewName":"Login"}
+2015-12-23 10:28:20,079 [9144] WARN  DebugLogger - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+System.InvalidOperationException: The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-23 10:29:38,644 [8100] INFO  DebugLogger - Home|Index|GET||Ajax: False|Action Executing|{"plat":null}
+2015-12-23 10:29:38,696 [8100] DEBUG DebugLogger - Home|Index|GET||Ajax: False|View rendering|
+2015-12-23 10:29:38,726 [8100] DEBUG DebugLogger - Home|Index|GET||Ajax: False|View rendered|Result: {"Content":null,"ContentEncoding":null,"ContentType":null}
+2015-12-23 10:29:39,200 [8280] INFO  DebugLogger - Account|Login|GET||Ajax: False|Action Executing|{}
+2015-12-23 10:29:39,215 [8280] DEBUG DebugLogger - Account|Login|GET||Ajax: False|Action Executed|
+2015-12-23 10:29:39,215 [8280] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendering|
+2015-12-23 10:29:39,669 [8280] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendered|Result: {"MasterName":"","Model":null,"TempData":{},"View":null,"ViewBag":{"Version":"V3.0.0"},"ViewData":{"Version":"V3.0.0"},"ViewEngineCollection":[{"AreaMasterLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaPartialViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"FileExtensions":["cshtml","vbhtml"],"MasterLocationFormats":["~/Mobile/Views/Shared/{0}.cshtml"],"PartialViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"],"ViewLocationCache":{},"ViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"]}],"ViewName":"Login"}
+2015-12-23 10:29:39,732 [8280] WARN  DebugLogger - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+System.InvalidOperationException: The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-23 10:31:45,882 [8156] INFO  DebugLogger - Home|Index|GET||Ajax: False|Action Executing|{"plat":null}
+2015-12-23 10:31:45,940 [8156] DEBUG DebugLogger - Home|Index|GET||Ajax: False|View rendering|
+2015-12-23 10:31:45,976 [8156] DEBUG DebugLogger - Home|Index|GET||Ajax: False|View rendered|Result: {"Content":null,"ContentEncoding":null,"ContentType":null}
+2015-12-23 10:31:46,438 [7848] INFO  DebugLogger - Account|Login|GET||Ajax: False|Action Executing|{}
+2015-12-23 10:31:46,445 [7848] DEBUG DebugLogger - Account|Login|GET||Ajax: False|Action Executed|
+2015-12-23 10:31:46,445 [7848] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendering|
+2015-12-23 10:31:46,747 [7848] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendered|Result: {"MasterName":"","Model":null,"TempData":{},"View":null,"ViewBag":{"Version":"V3.0.0"},"ViewData":{"Version":"V3.0.0"},"ViewEngineCollection":[{"AreaMasterLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaPartialViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"FileExtensions":["cshtml","vbhtml"],"MasterLocationFormats":["~/Mobile/Views/Shared/{0}.cshtml"],"PartialViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"],"ViewLocationCache":{},"ViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"]}],"ViewName":"Login"}
+2015-12-23 10:31:46,783 [7848] WARN  DebugLogger - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+System.InvalidOperationException: The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-23 10:31:54,041 [8512] INFO  DebugLogger - Account|Login|GET||Ajax: False|Action Executing|{}
+2015-12-23 10:31:54,041 [8512] DEBUG DebugLogger - Account|Login|GET||Ajax: False|Action Executed|
+2015-12-23 10:31:54,041 [8512] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendering|
+2015-12-23 10:31:54,124 [8512] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendered|Result: {"MasterName":"","Model":null,"TempData":{},"View":null,"ViewBag":{"Version":"V3.0.0"},"ViewData":{"Version":"V3.0.0"},"ViewEngineCollection":[{"AreaMasterLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaPartialViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"FileExtensions":["cshtml","vbhtml"],"MasterLocationFormats":["~/Mobile/Views/Shared/{0}.cshtml"],"PartialViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"],"ViewLocationCache":{},"ViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"]}],"ViewName":"Login"}
+2015-12-23 10:31:54,185 [8512] WARN  DebugLogger - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+System.InvalidOperationException: The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-23 10:32:54,365 [8348] INFO  DebugLogger - Home|Index|GET||Ajax: False|Action Executing|{"plat":null}
+2015-12-23 10:32:54,447 [8348] DEBUG DebugLogger - Home|Index|GET||Ajax: False|View rendering|
+2015-12-23 10:32:54,484 [8348] DEBUG DebugLogger - Home|Index|GET||Ajax: False|View rendered|Result: {"Content":null,"ContentEncoding":null,"ContentType":null}
+2015-12-23 10:32:54,952 [4504] INFO  DebugLogger - Account|Login|GET||Ajax: False|Action Executing|{}
+2015-12-23 10:32:54,965 [4504] DEBUG DebugLogger - Account|Login|GET||Ajax: False|Action Executed|
+2015-12-23 10:32:54,965 [4504] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendering|
+2015-12-23 10:32:55,418 [4504] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendered|Result: {"MasterName":"","Model":null,"TempData":{},"View":null,"ViewBag":{"Version":"V3.0.0"},"ViewData":{"Version":"V3.0.0"},"ViewEngineCollection":[{"AreaMasterLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaPartialViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"FileExtensions":["cshtml","vbhtml"],"MasterLocationFormats":["~/Mobile/Views/Shared/{0}.cshtml"],"PartialViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"],"ViewLocationCache":{},"ViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"]}],"ViewName":"Login"}
+2015-12-23 10:32:55,476 [4504] WARN  DebugLogger - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+System.InvalidOperationException: The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2015-12-23 10:33:11,396 [9032] INFO  DebugLogger - Home|Index|GET||Ajax: False|Action Executing|{"plat":null}
+2015-12-23 10:33:11,471 [9032] DEBUG DebugLogger - Home|Index|GET||Ajax: False|View rendering|
+2015-12-23 10:33:11,509 [9032] DEBUG DebugLogger - Home|Index|GET||Ajax: False|View rendered|Result: {"Content":null,"ContentEncoding":null,"ContentType":null}
+2015-12-23 10:33:11,970 [9032] INFO  DebugLogger - Account|Login|GET||Ajax: False|Action Executing|{}
+2015-12-23 10:33:11,982 [9032] DEBUG DebugLogger - Account|Login|GET||Ajax: False|Action Executed|
+2015-12-23 10:33:11,982 [9032] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendering|
+2015-12-23 10:33:12,450 [9032] DEBUG DebugLogger - Account|Login|GET||Ajax: False|View rendered|Result: {"MasterName":"","Model":null,"TempData":{},"View":null,"ViewBag":{"Version":"V3.0.0"},"ViewData":{"Version":"V3.0.0"},"ViewEngineCollection":[{"AreaMasterLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaPartialViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"AreaViewLocationFormats":["~/Areas/{2}/Views/{1}/{0}.cshtml","~/Areas/{2}/Views/{1}/{0}.vbhtml","~/Areas/{2}/Views/Shared/{0}.cshtml","~/Areas/{2}/Views/Shared/{0}.vbhtml"],"FileExtensions":["cshtml","vbhtml"],"MasterLocationFormats":["~/Mobile/Views/Shared/{0}.cshtml"],"PartialViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"],"ViewLocationCache":{},"ViewLocationFormats":["~/Mobile/Views/{1}/{0}.cshtml","~/Mobile/Views/Shared/{0}.cshtml"]}],"ViewName":"Login"}
+2015-12-23 10:33:12,509 [9032] WARN  DebugLogger - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+System.InvalidOperationException: The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Mobile/Views/Account/Login.cshtml
+~/Mobile/Views/Shared/Login.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)

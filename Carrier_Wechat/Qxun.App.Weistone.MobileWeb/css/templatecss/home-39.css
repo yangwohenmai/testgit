@@ -1,0 +1,35 @@
+.body{
+	max-width:640px;
+	margin:auto;
+	min-height:100%;
+	background-color:#f4f4f4;
+	position:relative;
+}
+.list_font{
+    margin:10px 5px;
+    overflow:hidden;
+}
+.list_font li{
+	background-color:#fff;
+	width:33.3%!important;
+	position:relative;
+	height: 120px!important;
+}
+
+.list_font div:first-child{
+	height:120px;
+	margin:0;
+	margin-bottom:5px;
+	background-color:#c6d9e4;
+	line-height:80px;
+}
+.list_font li p{
+	position:absolute;
+	width:100%;
+	bottom:15px;
+	color:#2d6186;
+}
+.width50
+{
+    width:50px;
+}

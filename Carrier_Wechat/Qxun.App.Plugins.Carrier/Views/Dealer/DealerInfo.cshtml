@@ -1,0 +1,286 @@
+﻿@{
+    ViewBag.Title = "WeiPhotoList";
+    ViewBag.subTitle = "授权经销商管理";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var platid = Request["plat"];
+    //var Status = Qxun.UI.Background.App_Code.CreateForm.GetEnumNameByType(typeof(Qxun.App.Plugins.NemakCore.Public.Status), "Status");
+}
+<script src="@Url.Content("~/Scripts/jquery.form.js?v=")@ViewBag.Version" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/ZeroClipboard.js?v=")@ViewBag.Version" type="text/javascript"></script>
+
+<div class="tag mg-bottom-20 clr">
+    <div class="alert" style="width:700px"><span id="notice" style="font-weight:bold;"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="alert">你好，这是首次登陆,没有历史导入导出记录</span></div>
+</div>
+@Html.Partial("_ListResource")
+<link href="@Url.Content("~/Content/datetimepicker/bootstrap-datetimepicker.min.css?v=")@ViewBag.Version" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/Scripts/datetimepicker/bootstrap-datetimepicker.min.js?v=")@ViewBag.Version" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/datetimepicker/locales/bootstrap-datetimepicker.zh-CN.js?v=")@ViewBag.Version" type="text/javascript"></script>
+
+<div class="maincontentinner1">
+
+    <div id="Div12" class="dataTables_wrapper">
+        <div id="dyntable_length" class="dataTables_length">
+
+            <div class="btn-group">
+
+                <label>
+                    
+                    <a href="#importMember" class="btn btn-primary" data-toggle="modal">
+                        导入数据
+                    </a>
+                    <a class="btn btn-primary" id="btnBatchExport">
+                        批量导出
+                    </a>
+                    <a class="btn btn-primary" id="btnBatchExportERP">
+                        ERP导出
+                    </a>
+                </label>
+            </div>
+            <span style="float:right">                   
+                    <input type="text" name="SiteName" id="SiteName" class="search" value="" style="color: gray" placeholder="请输入站点名称" onkeyup="value=value.replace(/[\']+/, '') ">
+                    <input type="text" name="CompanyName" id="CompanyName" class="search" value="" style="color: gray" placeholder="请输入公司名称" onkeyup="value=value.replace(/[\']+/, '') ">
+                    <button class="btn m-bottom-10" id="btnselect">查询</button>
+
+</span>
+        </div>
+        <div class="dataTables_filter" id="dyntable_filter">
+        </div>
+        <table id="Table1" class="table table-bordered responsive dataTable">
+            <thead>
+                <tr>
+                    <th>
+                        BPCode
+                    </th>
+                    @*<th>
+                        ERPCode
+                    </th>*@
+                    <th>
+                        站点名称
+                    </th>
+                    <th>
+                       站点负责人
+                    </th>
+                    <th>
+                        联系电话
+                    </th>
+                    <th>
+                        站点地址
+                    </th>
+                    <th>
+                        成立日期
+                    </th>
+                    <th>
+                        公司名称
+                    </th>
+                    <th>
+                        类型
+                    </th>
+                    <th>
+                        等级
+                    </th>
+                    <th>
+                        区域经理
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+        <div class="dataTables_info" id="Div25">
+            &nbsp;
+        </div>
+        <div class="dataTables_paginate paging_bootstrap pagination" id="Div26">
+            <ul id="tableFoot"></ul>
+        </div>
+    </div>
+    <br>
+    <br>
+</div>
+<!--列表模板-->
+
+<script type="text/x-jquery-tmpl" id="replylist">
+
+    <tr class="gradeX odd" id="tr${DealerId}">
+        <td class=" ">
+            ${BPCode}
+        </td>
+        @*<td class=" ">
+            ${ServerSiteCode}
+        </td>*@
+        <td class=" ">
+            ${SiteName}
+        </td>
+        <td class=" ">
+            ${SiteManager}
+        </td>
+        <td class=" ">
+            ${Tel}
+        </td>
+        <td class=" ">
+            ${SiteAddress}
+        </td>
+        <td class=" ">
+            ${formatDate(EstablishmentTime)}
+        </td>
+        <td class=" ">
+            ${CompanyName}
+        </td>
+        <td class=" ">
+            ${SiteType}
+        </td>
+        <td class=" ">
+            ${SiteGrade}
+        </td>
+        <td class=" ">
+            ${LocalManager}
+        </td>
+        </tr>
+        <div id="dateail_${DealerId}"></div>
+
+    </script>
+    <script type="text/javascript">
+    var plat = jQuery.query.get("plat");
+    var opts = {
+        getListUrl: '@Url.Action("GetDealerPageList", "Dealer")',
+        footUrl: '@Url.Content("~/Content/tmpl/foot1.htm")',
+        tableBodyId: "tableBody",
+        tableFootId: "tableFoot",
+        replyListId: "replylist",
+        pageSize: 15,
+        @*deleteUrl: '@Url.Action("DeleteUserListEntityById", "MasterData")',*@
+        itemId: "item-id",
+        cssClass: ".btn-del-open",
+        plat: plat,
+        checkBox: ""
+    };
+
+
+
+    $(function () {
+        //初始化列表数据
+        listClass.init(opts);
+        //初始化导入记录
+        init();
+        //搜索
+        $("#btnselect").click(function () {
+            var entity = new Object();
+            entity.SiteName = $("#SiteName").val();
+            entity.CompanyName = $("#CompanyName").val();
+            var searchJson = JSON.stringify(entity);
+            opts.getListUrl = '@Url.Action("GetDealerPageList", "Dealer")?searchJson=' + searchJson;
+            listClass.init(opts);
+        });
+
+        $("#btnBatchExport").click(function () {
+            var SiteName = $('#SiteName').val();
+            var CompanyName = $('#CompanyName').val();
+            location.href = '@Url.Action("ExportDealerinfoToExcel", "Dealer")?SiteName=' + SiteName + '&CompanyName=' + CompanyName;
+            return false;
+        });
+
+        $("#btnBatchExportERP").click(function () {
+            var SiteName = $('#SiteName').val();
+            var CompanyName = $('#CompanyName').val();
+            location.href = '@Url.Action("ExportDealerinfoToExcelERP", "Dealer")?SiteName=' + SiteName + '&CompanyName=' + CompanyName;
+            return false;
+        });
+
+    })
+
+    function init() {
+        $.post("@Url.Action("Record", "Dealer")@Html.Raw(ViewBag.oQueryString)", {}, function (data) {
+            //  if (data.IsSuccess) {
+            //alert("注册成功");
+            if (data.AllUploadRecord != null) {
+                var success = data.SuccessRecord;
+                var fail = data.FailRecord;
+                var time = formatDate(data.UploadTime).split(".")[0];
+                var all = data.AllUploadRecord;
+                var a = document.getElementById("alert");
+                var b = document.getElementById("notice");
+                a.innerHTML = "上次历史上传成功" + success + "条，失败" + fail + "条，总共上传" + all + "条，上传时间:" + time + ",现有总数据为：@ViewBag.TotalCount";
+                a.innerHTML = "上次上传时间为：" + time + "，总共上传" + all + "条数据，其中成功" + success + "条，失败" + fail + "条。"
+                b.innerHTML = "现有总数据条数为：@ViewBag.TotalCount 条。         "
+            }
+        });
+    }
+
+
+</script>
+
+
+<!--数据加载的提示-->
+
+<div id="load" class="tipsClass"></div>
+<div id="importMember" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="false" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form id="Form1" method="post" class="form-horizontal" enctype="multipart/form-data">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        ×
+                    </button>
+                    <h4 class="modal-title">
+                        批量导入授权经销商信息
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-info">
+                        文件大小不要超过1M，数据量小于5000条！
+                    </div>
+                    <a href="@Url.Content("~/Content/tmpl/DealerList.csv")" target="_blank" class="green">
+                        下载内容格式模板文件DealerList.csv
+                    </a>
+                    <div style="padding-bottom: 14px;font: 16px verdana;">
+                        上传文件：
+                        <span style="vertical-align: middle;margin-right: 14px;margin-left: 12px;font-size: 16px;">
+                            <input type="file" id="file" name="file1" value="上传" style=" font-size: 16px; /* vertical-align: middle; */ padding-top: 3px; line-height: 20px; height: 28px;" />
+                        </span>
+                    </div>
+
+                    <input type="hidden" id="weiXinUserId" />
+                    <input type="hidden" id="groupID" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        取消
+                    </button>
+                    <button type="button" class="btn btn-primary uploadbtn" @*onclick="alert('数据后台上传，请稍后刷新查看')"*@>
+                        提交
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $(".uploadbtn").click(function () {
+            var fileName = $("#file").val();
+            var fileLenght = fileName.length;
+            var fileEnd = fileName.substring(fileLenght - 4, fileLenght);
+            if (fileEnd == ".csv") {
+                jQuery("#Form1").ajaxSubmit({
+                    url: '@Url.Action("ImportDealerListByFile", "Dealer")',
+                    // data: { vipType: vipType },
+                    success: function (responseTexts) {
+                        //  var responseText = JSON.parse(responseTexts);
+                        if (responseTexts.IsSuccess) {
+                            alert("程序正在后台上传,请稍后刷新查看上传记录!");
+                            $('#importMember').modal('hide');
+                        }
+
+                        else {
+                            $('#importMember').modal('hide');
+                            location.reload();
+                        }
+                    },
+                    complete: function (xhr, ts) { xhr = null },
+                    error: function (content) { alert("文件格式错误！"); }
+                })
+            } else {
+                alert("请上传.cvs格式的文档")
+            }
+        })
+    })
+</script>

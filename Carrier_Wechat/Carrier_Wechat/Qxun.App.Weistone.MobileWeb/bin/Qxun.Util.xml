@@ -1,0 +1,1486 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Qxun.Util</name>
+    </assembly>
+    <members>
+        <member name="T:Qxun.Util.AesHelper">
+            <summary>
+            AES加密帮助类
+            </summary>
+        </member>
+        <member name="M:Qxun.Util.AesHelper.AesEncrypt(System.String,System.Byte[],System.Byte[])">
+            <summary>
+            AES加密
+            </summary>
+            <param name="plainText">明文</param>
+            <param name="Key">密钥</param>
+            <param name="IV">密钥向量</param>
+            <returns>密文</returns>
+        </member>
+        <member name="M:Qxun.Util.AesHelper.AesDecrypt(System.String,System.Byte[],System.Byte[])">
+            <summary>
+            AES解密
+            </summary>
+            <param name="cipherText">密文</param>
+            <param name="Key">密钥</param>
+            <param name="IV">密钥向量</param>
+            <returns>明文</returns>
+        </member>
+        <member name="F:Qxun.Util.AssembleBllHelper.xmlPath">
+            <summary>
+            xml文件路径
+            </summary>
+        </member>
+        <member name="M:Qxun.Util.AssembleBllHelper.GetAssembleBll``1(System.Int32)">
+            <summary>
+            返回对应的bll
+            </summary>
+            <param name="weixinPlatId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.AssembleBllHelper.GetAssembleApi``1(System.Int32)">
+            <summary>
+            返回对应的Api类
+            </summary>
+            <param name="weixinPlatId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.AssembleBllHelper.GetAllHasDbAssembleModels">
+            <summary>
+            获取所有本地有数据库的节点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.AssembleBllHelper.GetAllAssembleModels">
+            <summary>
+            获取所有节点
+            </summary>
+            <returns>所有节点</returns>
+        </member>
+        <member name="P:Qxun.Util.AssembleModel.BllAssemblyName">
+            <summary>
+            bll程序集名称
+            </summary>
+        </member>
+        <member name="P:Qxun.Util.AssembleModel.BllNameSpaceName">
+            <summary>
+            bll命名空间
+            </summary>
+        </member>
+        <member name="P:Qxun.Util.AssembleModel.BllClassName">
+            <summary>
+            bll类名
+            </summary>
+        </member>
+        <member name="P:Qxun.Util.AssembleModel.ApiAssemblyName">
+            <summary>
+            接口的程序集名称
+            </summary>
+        </member>
+        <member name="P:Qxun.Util.AssembleModel.ApiNameSpace">
+            <summary>
+            接口的命名空间
+            </summary>
+        </member>
+        <member name="P:Qxun.Util.AssembleModel.ApiClassName">
+            <summary>
+            接口的类名
+            </summary>
+        </member>
+        <member name="P:Qxun.Util.AssembleModel.PlatId">
+            <summary>
+            平台ID
+            </summary>
+        </member>
+        <member name="P:Qxun.Util.AssembleModel.IsHasDB">
+            <summary>
+            是否有DB
+            </summary>
+        </member>
+        <member name="T:Qxun.Util.CookieHelper">
+            <summary>
+            操作站内cookie的助手
+            </summary>
+        </member>
+        <member name="F:Qxun.Util.CookieHelper.COOKIE_NAME">
+            <summary>
+            写客户端cookie的名字
+            </summary>
+        </member>
+        <member name="M:Qxun.Util.CookieHelper.WriteLoginCookies(System.Collections.Generic.Dictionary{System.String,System.String},System.DateTime,System.String)">
+            <summary>
+            登录后写COOKIE到客户端,代替session
+            </summary>
+            <param name="expires">过期时间，如果永不过期，设为DateTime.MaxValue，<para>如果不想写入客户端，浏览器关闭时即失效则设为DateTime.MinValue</para></param>
+            <param name="platId">平台ID</param>
+            <param name="values">保存cookie信息</param>
+        </member>
+        <member name="M:Qxun.Util.CookieHelper.WriteLoginCookies(System.Collections.Generic.Dictionary{System.String,System.String},System.DateTime)">
+            <summary>
+            登录后写COOKIE到客户端,代替session
+            </summary>
+            <param name="expires">过期时间，如果永不过期，设为DateTime.MaxValue，<para>如果不想写入客户端，浏览器关闭时即失效则设为DateTime.MinValue</para></param>        
+            <param name="values">保存cookie信息</param>
+        </member>
+        <member name="M:Qxun.Util.CookieHelper.GetLoginCookies(System.String[],System.String)">
+            <summary>
+            cookie中获取信息;
+            </summary>
+            <param name="platId">平台Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.CookieHelper.GetLoginCookies(System.String[])">
+            <summary>
+            cookie中获取信息;
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.CookieHelper.CleanLoginCookie(System.String[])">
+            <summary>
+            清除cookie
+            </summary>
+        </member>
+        <member name="T:Qxun.Util.CoordinateHelper">
+            <summary>
+            比较地理位置
+            </summary>
+        </member>
+        <member name="F:Qxun.Util.CoordinateHelper.Latitude">
+            <summary>
+            纬度
+            </summary>
+        </member>
+        <member name="F:Qxun.Util.CoordinateHelper.Longitude">
+            <summary>
+            经度
+            </summary>
+        </member>
+        <member name="M:Qxun.Util.CoordinateHelper.CompareTo(Qxun.Util.CoordinateHelper)">
+            <summary>
+            比较两个地理位置的距离(KM)
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.CoordinateHelper.DistanceOfTwoPoints(System.Double,System.Double,System.Double,System.Double,Qxun.Util.CoordinateHelper.GaussSphere)">
+            <summary>
+            距离计算(米为单位)
+            </summary>
+            <param name="lng1"></param>
+            <param name="lat1"></param>
+            <param name="lng2"></param>
+            <param name="lat2"></param>
+            <param name="gs"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Qxun.Util.CoordinateHelper.GaussSphere">
+            <summary>
+            高斯投影中所选用的参考椭球
+            </summary>
+        </member>
+        <member name="T:Qxun.Util.CSVHelper">
+            <summary>
+            CSV文件导入导出类
+            </summary>
+        </member>
+        <member name="M:Qxun.Util.CSVHelper.ReadCsv(System.Web.HttpPostedFileBase)">
+            <summary>
+            读取csv文件到DataTable
+            </summary>
+        </member>
+        <member name="M:Qxun.Util.CSVHelper.GetRow(System.String,System.Int32)">
+            <summary>
+            解析字符串 获取 该行的数据 已经处理,及"号
+            </summary>
+            <param name="line">该行的内容</param>
+            <param name="cnt">总的条目数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.CSVHelper.RemoveQuotes(System.String[])">
+            <summary>
+            将解析的数据 去除多余的引号
+            </summary>
+        </member>
+        <member name="M:Qxun.Util.CSVHelper.WriteCsv(System.String,System.Linq.IQueryable,System.String[],System.String[])">
+            <summary>
+            保存数据到CSV文件
+            </summary>
+            <param name="excelWorkSheetName"></param>
+            <param name="rows"></param>
+            <param name="headers"></param>
+            <param name="rowKeys"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.CSVHelper.ReplaceSpecialCharacters(System.String)">
+            <summary>
+            Replace special characters. 
+            </summary>
+            <param name="value">Value to input.</param>
+            <returns>Value with special characters replaced.</returns>
+        </member>
+        <member name="M:Qxun.Util.DateTimeHelper.TimeStampToDateTime(System.String)">
+            <summary>
+            时间戳转换C#时间
+            </summary>
+            <param name="timestamp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.DateTimeHelper.DateTimeToTimeStamp(System.DateTime)">
+            <summary>
+            时间转换为时间戳
+            </summary>
+            <param name="datetime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.DateTimeHelper.TimeStampToDateTime(System.Int64)">
+            <summary>
+            时间戳转换C#时间
+            </summary>
+            <param name="timestamp"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Qxun.Util.DynamicMethodExecutorHelper">
+            <summary>
+            动态执行方法
+            </summary>
+        </member>
+        <member name="M:Qxun.Util.DynamicMethodExecutorHelper.#ctor(System.Reflection.MethodInfo)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="methodInfo">方法</param>
+        </member>
+        <member name="M:Qxun.Util.DynamicMethodExecutorHelper.Execute(System.Object,System.Object[])">
+            <summary>
+            执行方法
+            </summary>
+            <param name="instance">方法所在实例</param>
+            <param name="parameters">调用方法的参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:Qxun.Util.EncryptHelper">
+            <summary>
+            MD5加密
+            </summary>
+        </member>
+        <member name="F:Qxun.Util.EncryptHelper.MD5SECRET">
+            <summary>
+            MD5加密密匙
+            </summary>
+        </member>
+        <member name="M:Qxun.Util.EncryptHelper.MD5ToHexString(System.Byte[])">
+            <summary>
+            对字节数据进行MD5加密
+            </summary>
+            <param name="data">需加密的字节数组</param>
+            <returns>加密后的字符串</returns>
+        </member>
+        <member name="M:Qxun.Util.EncryptHelper.MD5ToHexString(System.String)">
+            <summary>
+            对字符串进行MD5加密
+            </summary>
+            <param name="strText">需加密的字符串</param>
+            <returns>加密后字符串</returns>
+        </member>
+        <member name="M:Qxun.Util.EncryptHelper.MD5ForDiscuz(System.String)">
+            <summary>
+            MD5函数，DiscuzNt论坛使用的加密方式
+            </summary>
+            <param name="str">原始字符串</param>
+            <returns>MD5结果</returns>
+        </member>
+        <member name="M:Qxun.Util.EncryptHelper.StringToMd5(System.String,System.String)">
+            <summary>
+            将取输入的字符串的md5值
+            </summary>
+            <param name="inputstr">输入的字符串</param>
+            <param name="otherstr">参与运算的字符</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.EncryptHelper.GetMd5Str(System.String,System.String)">
+            <summary>
+            将字符串加密成16位的md5值
+            </summary>
+            <param name="inputstr">输入的字符串</param>
+            <param name="otherstr">参与运算的字符</param>
+            <returns></returns>
+        </member>
+        <member name="F:Qxun.Util.EncryptHelper.SECRET">
+            <summary>
+            加密密钥
+            </summary>
+        </member>
+        <member name="M:Qxun.Util.EncryptHelper.Encode(System.String,System.String)">
+            <summary>
+            DES加密字符串
+            </summary>
+            <param name="encryptString">待加密的字符串</param>
+            <param name="encryptKey">加密密钥,要求为8位</param>
+            <returns>加密成功返回加密后的字符串,失败返回源串</returns>
+        </member>
+        <member name="M:Qxun.Util.EncryptHelper.Decode(System.String,System.String)">
+            <summary>
+            DES解密字符串
+            </summary>
+            <param name="decryptString">待解密的字符串</param>
+            <param name="decryptKey">解密密钥,要求为8位,和加密密钥相同</param>
+            <returns>解密成功返回解密后的字符串,失败返源串</returns>
+        </member>
+        <member name="T:Qxun.Util.EnumHelper">
+            <summary>
+            枚举辅助类
+            </summary>
+        </member>
+        <member name="M:Qxun.Util.EnumHelper.GetItems(System.Type)">
+            <summary> 
+            获得枚举类型数据项（不包括空项）
+            </summary> 
+            <param name="enumType">枚举类型</param> 
+            <returns></returns> 
+        </member>
+        <member name="M:Qxun.Util.EnumHelper.GetEnumItems(System.Type)">
+            <summary>
+            获取一个枚举类型的列表，用于在dropdownList中显示
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.EnumHelper.GetEnumItems(System.Type,System.Int32,System.Int32)">
+            <summary>
+            获取按照枚举值划分的枚举项列表
+            </summary>
+            <param name="type">枚举类型</param>
+            <param name="flag">比较方式，0为小于，1为等于，2为大于</param>
+            <param name="value">比较值</param>
+            <returns>返回经过比较的枚举项列表</returns>
+        </member>
+        <member name="M:Qxun.Util.EnumHelper.GetDescription(System.Type,System.Int32)">
+            <summary>
+            获取枚举值的描述
+            </summary>
+            <param name="enumType">指定的枚举类型</param>
+            <param name="enumValue">枚举类型的值</param>
+            <returns>枚举值的描述,需用DescriptionAttribute进行描述</returns>
+        </member>
+        <member name="M:Qxun.Util.EnumHelper.GetDescription(System.Type,System.String)">
+            <summary>
+            获取枚举值的描述
+            </summary>
+            <param name="enumType">指定的枚举类型</param>
+            <param name="enumName">枚举类型的Name</param>
+            <returns>枚举值的描述,需用DescriptionAttribute进行描述</returns>
+        </member>
+        <member name="M:Qxun.Util.EnumHelper.GetDescription(System.Object)">
+            <summary>
+            获取枚举值的描述
+            </summary>
+            <param name="enumValue">指定的枚举值: 如SystemParameterEnum.ServerLevel</param>
+            <returns>枚举值的描述,需用DescriptionAttribute进行描述</returns>
+        </member>
+        <member name="T:Qxun.Util.EnumItem">
+            <summary>
+            枚举类项目
+            </summary>
+        </member>
+        <member name="P:Qxun.Util.EnumItem.Name">
+            <summary>
+            枚举名
+            </summary>
+        </member>
+        <member name="P:Qxun.Util.EnumItem.Value">
+            <summary>
+            枚举值
+            </summary>
+        </member>
+        <member name="P:Qxun.Util.EnumItem.Description">
+            <summary>
+            枚举描述
+            </summary>
+        </member>
+        <member name="T:Qxun.Util.ExcelHelper">
+            <summary>
+            Excel文件导入导出类
+            </summary>
+        </member>
+        <member name="M:Qxun.Util.ExcelHelper.Export(System.String,System.Linq.IQueryable,System.String[],System.String[])">
+            <summary>
+            保存数据到EXCEL文件
+            </summary>
+            <param name="excelWorkSheetName"></param>
+            <param name="rows"></param>
+            <param name="headers"></param>
+            <param name="rowKeys"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.ExcelHelper.Import(System.Web.HttpPostedFileBase)">
+            <summary>读取excel
+            默认第一行为标头
+            </summary>
+            <param name="strFileName">excel文档路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.ExpressionHelper.SetValueLambda``2(System.String,``1)">
+            <summary>
+            组合形如u=> {u.Property = value;} 的赋值表达式
+            </summary>
+            <param name="propertyName">属性名</param>
+            <param name="value">要赋的值</param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:Qxun.Util.ExpressionHelper.EquleLambda``2(System.String,``1,System.String,``1)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Qxun.Util.ExpressionHelper.EquleLambda``2(System.String,``1)">
+            <summary>
+            组合形如p=>p.Id == id的查询表达式
+            </summary>
+            <param name="propertyName">属性名</param>
+            <param name="value">要查找的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.ExpressionHelper.NotEquleLambda``2(System.String,``1)">
+            <summary>
+            组合形如p=>p.Id != id的查询表达式
+            </summary>
+            <param name="propertyName">属性名</param>
+            <param name="value">要查找的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.ExpressionHelper.EquleLambda``2(System.String,System.String)">
+            <summary>
+            组合形如(p,q)=>p.FId == q.FId的查询表达式
+            </summary>
+            <param name="propertyNameT1"></param>
+            <param name="propertyNameT2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.ExpressionHelper.WhereInLambda``2(System.String,System.Collections.Generic.IEnumerable{``1})">
+            <summary>
+            组合形如(p,q)=>q.Contains(p.Id)的查询表达式
+            </summary>
+            <typeparam name="TElement">The type of the element.</typeparam>  
+            <typeparam name="TValue">The type of the values.</typeparam>  
+            <param name="propertySelector">The property to be tested.</param>  
+            <param name="values">The accepted values of the property.</param>  
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.HttpRequestExtHelper.HttpGet(System.String,System.Text.Encoding)">
+            <summary>
+            使用Get方法获取字符串结果（暂时没有加入Cookie）
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.ImageHelper.ConvertToSmallImage(System.Drawing.Image,System.Int32,System.Int32)">
+            <summary> 
+            按照比例缩小图片 
+            </summary> 
+            <param name="srcImage">要缩小的图片</param> 
+            <param name="height">高 </param>
+            <param name="width">宽 </param>
+            <returns>缩小后的结果</returns> 
+        </member>
+        <member name="M:Qxun.Util.ImageHelper.ResizeImage(System.Drawing.Image,System.Int32,System.Int32)">
+            <summary>
+            图像缩放
+            </summary>
+            <param name="srcImage">原图</param>
+            <param name="newHeight">新图高度</param>
+            <param name="newWidth">新图宽度</param>
+            <returns>缩放后的图像</returns>
+        </member>
+        <member name="M:Qxun.Util.ImageHelper.GetImageExtension(System.Drawing.Image)">
+            <summary>
+            根据图形获取图形的扩展名 zgke@sina.com qq:116149
+            </summary>
+            <param name="image">图形</param>
+            <returns>扩展名</returns>
+        </member>
+        <member name="M:Qxun.Util.IOHelper.DeleteFile(System.String[])">
+            <summary>
+            删除文件
+            </summary>
+            <param name="strArr">指定文件名</param>
+        </member>
+        <member name="M:Qxun.Util.IOHelper.BackupFile(System.String,System.String,System.Boolean)">
+            <summary>
+            备份文件
+            </summary>
+            <param name="sourceFileName">源文件名</param>
+            <param name="destFileName">目标文件名</param>
+            <param name="overwrite">当目标文件存在时是否覆盖</param>
+            <returns>操作是否成功</returns>
+        </member>
+        <member name="M:Qxun.Util.IOHelper.BackupFile(System.String,System.String)">
+            <summary>
+            备份文件,当目标文件存在时覆盖
+            </summary>
+            <param name="sourceFileName">源文件名</param>
+            <param name="destFileName">目标文件名</param>
+            <returns>操作是否成功</returns>
+        </member>
+        <member name="M:Qxun.Util.IOHelper.RestoreFile(System.String,System.String,System.String)">
+            <summary>
+            恢复文件
+            </summary>
+            <param name="backupFileName">备份文件名</param>
+            <param name="targetFileName">要恢复的文件名</param>
+            <param name="backupTargetFileName">要恢复文件再次备份的名称,如果为null,则不再备份恢复文件</param>
+            <returns>操作是否成功</returns>
+        </member>
+        <member name="M:Qxun.Util.IOHelper.RestoreFile(System.String,System.String)">
+            <summary>
+            恢复文件
+            </summary>
+            <param name="backupFileName"></param>
+            <param name="targetFileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.IOHelper.FileExists(System.String)">
+            <summary>
+            返回文件是否存在
+            </summary>
+            <param name="filename">文件名</param>
+            <returns>是否存在</returns>
+        </member>
+        <member name="M:Qxun.Util.IOHelper.FileExists(System.String,System.Boolean)">
+            <summary>
+            判断文件是否存在，不存在时，是否创建该文件
+            </summary>
+            <param name="filePath"></param>
+            <param name="isCreate">缺省为false（不创建）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.IOHelper.DirectoryExists(System.String,System.Boolean)">
+            <summary>
+            判断目录是否存在
+            </summary>
+            <param name="dirPath">目录全路径(支持带文件名)</param>
+            <param name="isCreate">目录不存在，是否创建该目录，缺省值为false</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.IOHelper.DirectoryExists(System.String)">
+            <summary>
+            判断目录是否存在
+            </summary>
+            <param name="dirPath">目录全路径(支持带文件名)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.IOHelper.WriteText(System.String,System.String)">
+            <summary>
+            覆盖将内容写入文件
+            </summary>
+            <param name="filePath"></param>
+            <param name="strContent"></param>
+        </member>
+        <member name="M:Qxun.Util.IOHelper.ReadText(System.String,System.String)">
+            <summary>
+            读取文件内容
+            </summary>
+            <param name="filePath"></param>
+            <param name="encode">缺省为utf-8</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.IOHelper.ReadText(System.String)">
+            <summary>
+            读取文件内容
+            </summary>
+            <param name="filePath"></param>
+            <param name="encode">缺省为utf-8</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.IOHelper.Move(System.String,System.String)">
+            <summary>
+            文件移动
+            </summary>
+            <param name="sourceFileName"></param>
+            <param name="destFileName"></param>
+        </member>
+        <member name="M:Qxun.Util.JsonHelper.SerializeObject``1(``0)">
+            <summary>
+            序列化
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.JsonHelper.DeserializeObject``1(System.String)">
+            <summary>
+            反序列化
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.MailHelper.Send(System.String,System.String,System.String,System.Boolean,System.String,System.String,System.String,System.String)">
+            <summary>
+            发送邮件
+            </summary>
+            <param name="from"></param>
+            <param name="to"></param>
+            <param name="subject"></param>
+            <param name="isBodyHtml"></param>
+            <param name="body"></param>
+            <param name="smtpHost"></param>
+            <param name="userName"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Qxun.Util.IMemberAccessor">
+            <summary>
+            Abstraction of the function of accessing member of a object at runtime.
+            </summary>
+        </member>
+        <member name="M:Qxun.Util.IMemberAccessor.GetValue(System.Object,System.String)">
+            <summary>
+            Get the member value of an object.
+            </summary>
+            <param name="instance">The object to get the member value from.</param>
+            <param name="memberName">The member name, could be the name of a property of field. Must be public member.</param>
+            <returns>The member value</returns>
+        </member>
+        <member name="M:Qxun.Util.IMemberAccessor.SetValue(System.Object,System.String,System.Object)">
+            <summary>
+            Set the member value of an object.
+            </summary>
+            <param name="instance">The object to get the member value from.</param>
+            <param name="memberName">The member name, could be the name of a property of field. Must be public member.</param>
+            <param name="newValue">The new value of the property for the object instance.</param>
+        </member>
+        <member name="T:Qxun.Util.ObjectPropertyHelper">
+            <summary>
+            动态访问对象
+            </summary>
+        </member>
+        <member name="M:Qxun.Util.ObjectPropertyHelper.GetValue(System.Object,System.String)">
+            <summary>
+            获取指定对象的指定属性的值
+            </summary>
+            <param name="instance">要获取属性值的对象</param>
+            <param name="memberName">要获取的属性的名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.ObjectPropertyHelper.SetValue(System.Object,System.String,System.Object)">
+            <summary>
+            为指定对象的指定属性设置值。
+            </summary>
+            <param name="instance">要设置属性的对象</param>
+            <param name="memberName">要设置的属性名</param>
+            <param name="newValue">要设置的值</param>
+        </member>
+        <member name="T:Qxun.Util.ObjectPropertyHelper`1">
+            <summary>
+            动态访问对象,性能更高
+            </summary>
+            <typeparam name="T">要访问的对象的数据类型</typeparam>
+        </member>
+        <member name="M:Qxun.Util.ObjectPropertyHelper`1.GetValue(System.Object,System.String)">
+            <summary>
+            获取指定对象的指定属性的值
+            </summary>
+            <param name="instance">要获取属性值的对象</param>
+            <param name="memberName">要获取的属性的名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.ObjectPropertyHelper`1.SetValue(System.Object,System.String,System.Object)">
+            <summary>
+            为指定对象的指定属性设置值。
+            </summary>
+            <param name="instance">要设置属性的对象</param>
+            <param name="memberName">要设置的属性名</param>
+            <param name="newValue">要设置的值</param>
+        </member>
+        <member name="M:Qxun.Util.ObjectPropertyHelper`1.GetValue(`0,System.String)">
+            <summary>
+            获取指定对象的指定属性的值
+            </summary>
+            <param name="instance">要获取属性值的对象</param>
+            <param name="memberName">要获取的属性的名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.ObjectPropertyHelper`1.SetValue(`0,System.String,System.Object)">
+            <summary>
+            为指定对象的指定属性设置值。
+            </summary>
+            <param name="instance">要设置属性的对象</param>
+            <param name="memberName">要设置的属性名</param>
+            <param name="newValue">要设置的值</param>
+        </member>
+        <member name="M:Qxun.Util.ObjectPropertyHelper`1.#cctor">
+            <summary>
+            实例化 <see cref="!:PropertyAccess&lt;T&gt;"/> 类
+            </summary>
+        </member>
+        <member name="M:Qxun.Util.ObjectPropertyHelper`1.GenerateGetValue">
+            <summary>
+            构建读取值函数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.ObjectPropertyHelper`1.GenerateSetValue">
+            <summary>
+            构建设置属性值函数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Qxun.Util.PinyinHelper">
+            <summary>
+            获得汉字的拼音
+            </summary>
+        </member>
+        <member name="M:Qxun.Util.PinyinHelper.GetPinyin(System.String)">
+            <summary>
+            获得汉字的拼音，如果输入的是英文字符将原样输出，中文标点符号将被忽略
+            </summary>
+            <param name="chineseChars">汉字字符串</param>
+            <returns>拼音</returns>
+        </member>
+        <member name="M:Qxun.Util.PinyinHelper.GetShortPinyin(System.String)">
+            <summary>
+            获得汉字拼音的简写，即每一个汉字的拼音的首字母组成的串，如果输入的是英文字符将原样输出，中文标点符号将被忽略
+            </summary>
+            <param name="chineseChars">汉字字符串</param>
+            <returns>拼音简写</returns>
+        </member>
+        <member name="F:Qxun.Util.ProtectHelper._mainBoardInfo">
+            <summary>
+            机器码
+            </summary>
+        </member>
+        <member name="F:Qxun.Util.ProtectHelper._regKey">
+            <summary>
+            注册信息
+            </summary>
+        </member>
+        <member name="M:Qxun.Util.ProtectHelper.getMainBoardInfo">
+            <summary>
+            获取机器码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.ProtectHelper.getRegKey">
+            <summary>
+            获取注册信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.ProtectHelper.Decode(System.String)">
+            <summary>
+            解密字符串
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.ProtectHelper.Encode(System.String)">
+            <summary>
+            加密字符串
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Qxun.Util.ProtectHelper.MainBoardInfo">
+            <summary>
+            机器码
+            </summary>
+        </member>
+        <member name="P:Qxun.Util.ProtectHelper.RegKey">
+            <summary>
+            注册信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.RandomHelper.Random(System.Int32,System.Int32)">
+            <summary>
+             返回一个指定范围内的随机整数。
+            </summary>
+            <param name="minValue">返回的随机数的下界（随机数可取该下界值）。</param>
+            <param name="maxValue">返回的随机数的上界（随机数不能取该上界值）。maxValue 必须大于或等于 minValue。</param>
+            <returns>一个大于等于 minValue 且小于 maxValue 的 32 位带符号整数，即：返回的值范围包括 minValue 但不包括 maxValue。
+            如果minValue 等于 maxValue，则返回 minValue。</returns>
+        </member>
+        <member name="M:Qxun.Util.RandomHelper.GetRandomSeed">
+            <summary>
+            生成不重复的Random函数种子
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Qxun.Util.RegexHelper">
+            <summary>
+            正则表达式类
+            </summary>
+        </member>
+        <member name="F:Qxun.Util.RegexHelper.Signless_Integral">
+            <summary>
+            正整数
+            </summary>
+        </member>
+        <member name="F:Qxun.Util.RegexHelper.Integral">
+            <summary>
+            整数
+            </summary>
+        </member>
+        <member name="F:Qxun.Util.RegexHelper.Negative_Integer">
+            <summary>
+            负整数
+            </summary>
+        </member>
+        <member name="F:Qxun.Util.RegexHelper.Floating_Point_Numbers">
+            <summary>
+            浮点数
+            </summary>
+        </member>
+        <member name="F:Qxun.Util.RegexHelper.Double_Words">
+            <summary>
+            中文
+            </summary>
+        </member>
+        <member name="F:Qxun.Util.RegexHelper.Color">
+            <summary>
+            颜色值
+            </summary>
+        </member>
+        <member name="F:Qxun.Util.RegexHelper.Email">
+            <summary>
+            电子邮件
+            </summary>
+        </member>
+        <member name="F:Qxun.Util.RegexHelper.HTML">
+            <summary>
+            html标记
+            </summary>
+        </member>
+        <member name="F:Qxun.Util.RegexHelper.Picture">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="F:Qxun.Util.RegexHelper.Phone">
+            <summary>
+            电话号码
+            </summary>
+        </member>
+        <member name="F:Qxun.Util.RegexHelper.IdentityCard">
+            <summary>
+            身份证号码
+            </summary>
+        </member>
+        <member name="F:Qxun.Util.RegexHelper.Url">
+            <summary>
+            URL
+            </summary>
+        </member>
+        <member name="T:Qxun.Util.RSAHelper">
+            <summary>
+            非对称RSA加密类 可以参考
+            http://www.cnblogs.com/hhh/archive/2011/06/03/2070692.html
+            http://blog.csdn.net/zhilunchen/article/details/2943158
+            若是私匙加密 则需公钥解密
+            反正公钥加密 私匙来解密
+            需要BigInteger类来辅助
+            </summary>
+        </member>
+        <member name="F:Qxun.Util.RSAHelper.DWKEYSIZE">
+            <summary>
+            RSA的容器 可以解密的源字符串长度为 DWKEYSIZE/8-11 
+            </summary>
+        </member>
+        <member name="M:Qxun.Util.RSAHelper.GetRASKey">
+            <summary>
+            得到RSA的解谜的密匙对
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.RSAHelper.CheckSourceValidate(System.String)">
+            <summary>
+            检查明文的有效性 DWKEYSIZE/8-11 长度之内为有效 中英文都算一个字符
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.RSAHelper.ComponentKey(System.Byte[],System.Byte[])">
+            <summary>
+            组合成密匙字符串
+            </summary>
+            <param name="b1"></param>
+            <param name="b2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.RSAHelper.ResolveKey(System.String,System.Byte[]@,System.Byte[]@)">
+            <summary>
+            解析密匙
+            </summary>
+            <param name="key">密匙</param>
+            <param name="b1">RSA的相应参数1</param>
+            <param name="b2">RSA的相应参数2</param>
+        </member>
+        <member name="M:Qxun.Util.RSAHelper.EncryptString(System.String,System.String)">
+            <summary>
+            字符串加密
+            </summary>
+            <param name="source">源字符串 明文</param>
+            <param name="key">密匙</param>
+            <returns>加密遇到错误将会返回原字符串</returns>
+        </member>
+        <member name="M:Qxun.Util.RSAHelper.DecryptString(System.String,System.String)">
+            <summary>
+            字符串解密
+            </summary>
+            <param name="encryptString">密文</param>
+            <param name="key">密钥</param>
+            <returns>遇到解密失败将会返回原字符串</returns>
+        </member>
+        <member name="M:Qxun.Util.RSAHelper.EncryptString(System.String,Qxun.Util.Public.BigInteger,Qxun.Util.Public.BigInteger)">
+            <summary>
+            用指定的密匙加密 
+            </summary>
+            <param name="source">明文</param>
+            <param name="d">可以是RSACryptoServiceProvider生成的D</param>
+            <param name="n">可以是RSACryptoServiceProvider生成的Modulus</param>
+            <returns>返回密文</returns>
+        </member>
+        <member name="M:Qxun.Util.RSAHelper.DecryptString(System.String,Qxun.Util.Public.BigInteger,Qxun.Util.Public.BigInteger)">
+            <summary>
+            用指定的密匙加密 
+            </summary>
+            <param name="source">密文</param>
+            <param name="e">可以是RSACryptoServiceProvider生成的Exponent</param>
+            <param name="n">可以是RSACryptoServiceProvider生成的Modulus</param>
+            <returns>返回明文</returns>
+        </member>
+        <member name="T:Qxun.Util.RSAHelper.RSAKey">
+            <summary>
+            RSA加密的密匙结构  公钥和私匙
+            </summary>
+        </member>
+        <member name="F:Qxun.Util.SessionPageTokenViewHelper.HiddenTokenName">
+            <summary>
+            防重复提交的表单TokenId
+            </summary>
+        </member>
+        <member name="F:Qxun.Util.SessionPageTokenViewHelper.CustomTokenName">
+            <summary>
+            防重复提交的表单自定义TokenName字段名
+            </summary>
+        </member>
+        <member name="M:Qxun.Util.SessionPageTokenViewHelper.GeneratePageToken">
+            <summary>
+            生成page的Token
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.SessionPageTokenViewHelper.GeneratePageToken(System.String)">
+            <summary>
+            生成page的Token
+            </summary>
+            <param name="tokenName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.SessionPageTokenViewHelper.TokensMatch">
+            <summary>
+            比较提交表单的Token是否与session中的一致
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.SessionPageTokenViewHelper.TokensMatch(System.String)">
+            <summary>
+            比较提交表单的Token是否与session中的一致
+            </summary>
+            <param name="tokenName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.SessionPageTokenViewHelper.GetLastPageToken(System.String)">
+            <summary>
+            获取Session中Token
+            </summary>
+            <param name="tokenName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.StringHelper.GetSubString(System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            取指定长度的字符串
+            </summary>
+            <param name="p_SrcString">要检查的字符串</param>
+            <param name="p_StartIndex">起始位置</param>
+            <param name="p_Length">指定长度</param>
+            <param name="p_TailString">用于替换的字符串</param>
+            <returns>截取后的字符串</returns>
+        </member>
+        <member name="M:Qxun.Util.StringHelper.GetSubString(System.String,System.Int32,System.String)">
+            <summary>
+            截取字符串函数,如果超过指定长度则将超出的部分用指定字符串代替
+            </summary>
+            <param name="Str">所要截取的字符串</param>
+            <param name="Num">截取字符串的长度</param>
+            <param name="Num">截取字符串后省略部分的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.StringHelper.FromBase64String(System.String)">
+            <summary>
+            将Base64String转换为String
+            </summary>
+            <param name="base64Str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.StringHelper.ToBase64String(System.String)">
+            <summary>
+            将String转换为Base64String
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Qxun.Util.ITreeNode`1">
+            <summary>
+            An object which implements this interface is considered a node in a tree.
+            </summary>
+        </member>
+        <member name="P:Qxun.Util.ITreeNode`1.NodeId">
+            <summary>
+            A unique identifier for the node.
+            </summary>
+        </member>
+        <member name="P:Qxun.Util.ITreeNode`1.ParentNodeId">
+            <summary>
+            A unique identifier for the parent node.
+            </summary>
+        </member>
+        <member name="P:Qxun.Util.ITreeNode`1.Parent">
+            <summary>
+            The parent of this node, or null if it is the root of the tree.
+            </summary>
+        </member>
+        <member name="P:Qxun.Util.ITreeNode`1.Children">
+            <summary>
+            The children of this node, or an empty list if this is a leaf.
+            </summary>
+        </member>
+        <member name="T:Qxun.Util.TreeHelper">
+            <summary>
+            A helper class for objects which implement <see cref="T:Qxun.Util.ITreeNode`1"/>, providing
+            methods to convert flat lists to and from hierarchical trees, iterators, and
+            other utility methods.
+            </summary>
+        </member>
+        <member name="M:Qxun.Util.TreeHelper.ConvertToForest``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+            <summary>
+            Converts an array of ITreeNode objects into a forest of trees.  The returned list will
+            contain only the root nodes, with each root having a populated <see cref="P:Qxun.Util.ITreeNode`1.Children">Children</see>
+            property.
+            </summary>
+            <param name="flatNodeList">
+            An array of list of node objects, where the <see cref="P:Qxun.Util.ITreeNode`1.Parent">Parent</see> 
+            property of each node is either null for root nodes, or an instantiated object with its
+            <see cref="P:Qxun.Util.ITreeNode`1.NodeId">Id</see> property set.
+            </param>
+        </member>
+        <member name="M:Qxun.Util.TreeHelper.ConvertToFlatArray``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Converts a heirachacle Array of Tree Nodes into a flat array of nodes. The order
+            of the returned nodes is the same as a depth-first traversal of each tree.
+            </summary>
+            <remarks>The relationships between Parent/Children are retained.</remarks>
+        </member>
+        <member name="M:Qxun.Util.TreeHelper.FindDescendant``1(``0,System.Int32)">
+            <summary>Finds the TreeNode with the given Id in the given tree by searching the descendents.
+            Returns null if the node cannot be found.</summary>
+        </member>
+        <member name="M:Qxun.Util.TreeHelper.FindTreeNode``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+            <summary>Finds the TreeNode with the given id from the given forest of trees.
+            Returns null if the node cannot be found.</summary>
+        </member>
+        <member name="M:Qxun.Util.TreeHelper.HasHeirachyLoop``1(``0)">
+            <summary>
+            Checks whether there is a loop from the current node up the tree back to the current node.
+            It is recommended that this is checked to be false before saving the node to your data store.
+            </summary>
+            <example>
+            The most simple example of a hierarchy loop is were there are 2 nodes, "A" and "B", and "A" 
+            is "B"'s parent, and "B" is "A"'s parent. This is not allowed, and should not be saved. , 
+            </example>
+        </member>
+        <member name="M:Qxun.Util.TreeHelper.GetRootNode``1(``0)">
+            <summary>Returns the root node of the tree that the given TreeNode belongs in</summary>
+        </member>
+        <member name="M:Qxun.Util.TreeHelper.GetDepth``1(``0)">
+            <summary>
+            Gets the depth of a node, e.g. a root node has depth 0, its children have depth 1, etc.
+            </summary>
+        </member>
+        <member name="M:Qxun.Util.TreeHelper.GetNodeType``1(``0)">
+            <summary>
+            Gets the type of node that the specified node is.
+            </summary>
+        </member>
+        <member name="M:Qxun.Util.TreeHelper.ClimbToRoot``1(``0)">
+            <summary>
+            Returns an Iterator which starts at the given node, and climbs up the tree to
+            the root node.
+            </summary>
+            <param name="startNode">The node to start iterating from.  This will be the first node returned by the iterator.</param>
+        </member>
+        <member name="M:Qxun.Util.TreeHelper.FromRootToNode``1(``0)">
+            <summary>
+            Returns an Iterator which starts at the root node, and goes down the tree to
+            the given node node.
+            </summary>
+            <param name="startNode">The node to start iterating from.  This will be the first node returned by the iterator.</param>
+        </member>
+        <member name="M:Qxun.Util.TreeHelper.DepthFirstTraversal``1(``0)">
+            <summary>
+            Returns an Iterator which starts at the given node, and traverses the tree in
+            a depth-first search manner.
+            </summary>
+            <param name="startNode">The node to start iterating from.  This will be the first node returned by the iterator.</param>
+        </member>
+        <member name="M:Qxun.Util.TreeHelper.DepthFirstTraversalOfList``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Returns an Iterator which traverses a forest of trees in a depth-first manner.
+            </summary>
+            <param name="trees">The forest of trees to traverse.</param>
+        </member>
+        <member name="M:Qxun.Util.TreeHelper.Siblings``1(``0,System.Boolean)">
+            <summary>
+            Gets the siblings of the given node. Note that the given node is included in the
+            returned list.  Throws an <see cref="T:System.Exception"/> if this is a root node.
+            </summary>
+            <param name="node">The node whose siblings are to be returned.</param>
+            <param name="includeGivenNode">If false, then the supplied node will not be returned in the sibling list.</param>
+        </member>
+        <member name="M:Qxun.Util.TreeHelper.BreadthFirstTraversal``1(``0,System.Boolean)">
+            <summary>
+            Traverses the tree in a breadth-first fashion.
+            </summary>
+            <param name="node">The node to start at.</param>
+            <param name="returnRootNode">If true, the given node will be returned; if false, traversal starts at the node's children.</param>
+        </member>
+        <member name="T:Qxun.Util.NodeType">
+            <summary>
+            A type of tree node.
+            </summary>
+        </member>
+        <member name="F:Qxun.Util.NodeType.Root">
+            <summary>
+            A node which is at the root of the tree, i.e. it has no parents.
+            </summary>
+        </member>
+        <member name="F:Qxun.Util.NodeType.Internal">
+            <summary>
+            A node which has parent and children.
+            </summary>
+        </member>
+        <member name="F:Qxun.Util.NodeType.Leaf">
+            <summary>
+            A node with no children.
+            </summary>
+        </member>
+        <member name="T:Qxun.Util.TypeParseHelper">
+             <summary>
+            TypeParse 数值转换
+             </summary>
+        </member>
+        <member name="M:Qxun.Util.TypeParseHelper.IsNumeric(System.Object)">
+            <summary>
+            判断对象是否为Int32类型的数字
+            </summary>
+            <param name="Expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.TypeParseHelper.StrToBool(System.Object,System.Boolean)">
+            <summary>
+            string型转换为bool型
+            </summary>
+            <param name="expression"> </param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的bool类型结果</returns>
+        </member>
+        <member name="M:Qxun.Util.TypeParseHelper.StrToInt(System.Object,System.Int32)">
+            <summary>
+            将对象转换为Int32类型
+            </summary>
+            <param name="expression"> 要转换的字符串</param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的int类型结果</returns>
+        </member>
+        <member name="M:Qxun.Util.TypeParseHelper.StrToInt(System.String,System.Int32)">
+            <summary>
+            将对象转换为Int32类型
+            </summary>
+            <param name="str">要转换的字符串</param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的int类型结果</returns>
+        </member>
+        <member name="M:Qxun.Util.TypeParseHelper.StrToInt64(System.Object,System.Int32)">
+            <summary>
+            将对象转换为Int64类型
+            </summary>
+            <param name="Expression">要转换的字符串</param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的int64类型结果</returns>
+        </member>
+        <member name="M:Qxun.Util.TypeParseHelper.StrToFloat(System.Object,System.Single)">
+            <summary>
+            string型转换为float型
+            </summary>
+            <param name="strValue">要转换的字符串</param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的int类型结果</returns>
+        </member>
+        <member name="M:Qxun.Util.TypeParseHelper.StrToFloat(System.String,System.Single)">
+            <summary>
+            string型转换为float型
+            </summary>
+            <param name="strValue">要转换的字符串</param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的int类型结果</returns>
+        </member>
+        <member name="M:Qxun.Util.TypeParseHelper.StrToDecimal(System.String,System.Decimal)">
+            <summary>
+            string型转换为decimal型
+            </summary>
+            <param name="strValue"></param>
+            <param name="defValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.TypeParseHelper.IsNumericArray(System.String[])">
+            <summary>
+            判断给定的字符串数组(strNumber)中的数据是不是都为数值型
+            </summary>
+            <param name="strNumber">要确认的字符串数组</param>
+            <returns>是则返加true 不是则返回 false</returns>
+        </member>
+        <member name="M:Qxun.Util.TypeParseHelper.GetTwoDateSpace(System.String,System.String,System.Int32)">
+            <summary>
+            计算两个时间的间隔
+            根据printType的值有不同的输出,已满足不通显示要求
+            </summary>
+            <param name="dateBegin">开始时间</param>
+            <param name="dateEnd">结束时间</param>
+            <param name="printType">输出类型(目前只支持0) </param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.TypeParseHelper.GetXMLClearSpace(System.String)">
+            <summary>
+            过滤XML中换行和空白字符
+            </summary>
+            <param name="xml">要过滤的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.TypeParseHelper.StrToDateTime(System.String,System.DateTime)">
+            <summary>
+            string转换成时间格式
+            </summary>
+            <param name="date"></param>
+            <param name="defValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.TypeParseHelper.ToBase64(System.String)">
+            <summary>
+            BASE64编码
+            </summary>
+            <param name="s">需要编码的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.TypeParseHelper.FromBase64(System.String)">
+            <summary>
+            BASE64解码
+            </summary>
+            <param name="s">需要解码的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.TypeParseHelper.ToSbc(System.String)">
+            <summary>
+            转全角的函数(SBC case)
+            任意字符串
+            全角字符串
+            全角空格为12288，半角空格为32
+            其他字符半角(33-126)与全角(65281-65374)的对应关系是：均相差65248
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.TypeParseHelper.ToDbc(System.String)">
+            <summary>
+            转半角的函数(DBC case)
+            任意字符串
+            半角字符串
+            全角空格为12288，半角空格为32
+            其他字符半角(33-126)与全角(65281-65374)的对应关系是：均相差65248
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Qxun.Util.UrlHelper">
+            <summary>
+            URL编码/解码类
+            </summary>
+        </member>
+        <member name="M:Qxun.Util.UrlHelper.Encode(System.String)">
+            <summary>
+            URL地址编码(HttpServerUtility.URLEncode方法进行编码)
+            </summary>
+            <param name="Input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.UrlHelper.Decode(System.String)">
+            <summary>
+            URL地址解码(HttpServerUtility.URLEncode方法进行解码)
+            </summary>
+            <param name="Input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.UrlHelper.URLEncode(System.String)">
+            <summary>
+            用HttpUtility.UrlEncode方法对URL进行编码
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.UrlHelper.URLDecode(System.String)">
+            <summary>
+            用HttpUtility.UrlEncode方法对URL进行解码
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.UrlHelper.IsLegalUrl(System.String)">
+            <summary>
+            是否为合法的Url路径
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.WebCacheHelper.GetCacheWithFileChange``1(System.String)">
+            <summary>
+            获取缓存中的信息
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.WebCacheHelper.ReadConfigFile(System.String)">
+            <summary>
+            读取配置文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Qxun.Util.WebCacheHelper._timeOut">
+            <summary>
+            默认缓存存活期为3600秒(1小时)
+            </summary>
+        </member>
+        <member name="M:Qxun.Util.WebCacheHelper.AddObject(System.String,System.Object)">
+            <summary>
+            加入当前对象到缓存中
+            </summary>
+            <param name="objId">对象的键值</param>
+            <param name="o">缓存的对象</param>
+        </member>
+        <member name="M:Qxun.Util.WebCacheHelper.AddObject(System.String,System.Object,System.Int32)">
+            <summary>
+            加入当前对象到缓存中
+            </summary>
+            <param name="objId">对象的键值</param>
+            <param name="o"> 缓存的对象 到期时间,单位:秒,0表示永不过期 </param>
+            <param name="expire"> </param>
+        </member>
+        <member name="M:Qxun.Util.WebCacheHelper.AddObjectWithFileChange(System.String,System.Object,System.String[])">
+            <summary>
+            加入当前对象到缓存中,并对相关文件建立依赖
+            </summary>
+            <param name="objId">对象的键值</param>
+            <param name="o">缓存的对象</param>
+            <param name="files">监视的路径文件</param>
+        </member>
+        <member name="M:Qxun.Util.WebCacheHelper.AddObjectWithDepend(System.String,System.Object,System.String[])">
+            <summary>
+            加入当前对象到缓存中,并使用依赖键
+            </summary>
+            <param name="objId">对象的键值</param>
+            <param name="o">缓存的对象</param>
+            <param name="dependKey">依赖关联的键值</param>
+        </member>
+        <member name="M:Qxun.Util.WebCacheHelper.OnRemove(System.String,System.Object,System.Web.Caching.CacheItemRemovedReason)">
+            <summary>
+            建立回调委托的一个实例
+            </summary>
+            <param name="key"></param>
+            <param name="val"></param>
+            <param name="reason"></param>
+        </member>
+        <member name="M:Qxun.Util.WebCacheHelper.RemoveObject(System.String)">
+            <summary>
+            删除缓存对象
+            </summary>
+            <param name="objId">对象的关键字</param>
+        </member>
+        <member name="M:Qxun.Util.WebCacheHelper.RetrieveObject(System.String)">
+            <summary>
+            返回一个指定的对象
+            </summary>
+            <param name="objId">对象的关键字</param>
+            <returns>对象</returns>
+        </member>
+        <member name="M:Qxun.Util.WebCacheHelper.FlushAll">
+            <summary>
+            清空的有缓存数据
+            </summary>
+        </member>
+        <member name="P:Qxun.Util.WebCacheHelper.TimeOut">
+            <summary>
+            设置到期相对时间[单位: 秒]
+            </summary>
+        </member>
+        <member name="T:Qxun.Util.WeixinInternalRequest">
+            <summary>
+            判断是否从微信内置浏览器进入
+            </summary>
+        </member>
+        <member name="M:Qxun.Util.WeixinInternalRequest.Validate">
+            <summary>
+            根据HTTP头User-Agent
+            判断是否从微信内置浏览器进入
+            </summary>
+        </member>
+        <member name="T:Qxun.Util.XmlHelper">
+            <summary>
+            XML文件帮助类
+            </summary>
+        </member>
+        <member name="M:Qxun.Util.XmlHelper.GetXmlByEntity``1(``0)">
+            <summary>
+            根据实体生成xml格式字符串
+            </summary>
+            <typeparam name="T">xml对应的实体类型</typeparam>
+            <param name="entity">xml对应的实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.XmlHelper.GetEntityByStr``1(System.String)">
+            <summary>
+            根据xml格式字符串生成实体信息
+            </summary>
+            <typeparam name="T">根据实体信息返回的实体</typeparam>
+            <param name="xmlStr">xml格式字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Qxun.Util.XmlHelper.Save``1(System.String,``0)">
+            <summary>
+            配置存储到XML文件
+            </summary>
+            <param name="path"> XML文件存储路径 </param>
+            <param name="setting"> 要存储的配置 </param>
+            <returns> 成功或失败 </returns>
+        </member>
+        <member name="M:Qxun.Util.XmlHelper.Load``1(System.String)">
+            <summary>
+            读取XML文件中的配置
+            </summary>
+            <param name="path"> XML文件存储路径 </param>
+            <returns> 配置</returns>
+        </member>
+        <member name="M:Qxun.Util.XmlHelper.LoadList``1(System.String)">
+            <summary>
+            读取XML文件中的配置，转换成List
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

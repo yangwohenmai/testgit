@@ -1,0 +1,79 @@
+﻿body {
+}
+.knowledgeHearder {
+    border-bottom: 1px solid rgb(204, 204, 204);
+    background: rgb(234, 234, 234);
+    height: 44px;
+    line-height: 44px;
+    padding: 0 10px;
+}
+.knowledgeBody {
+width:100%;
+overflow:hidden;
+background: rgb(248, 248, 248);
+}
+.knowledgeBody_left {
+    width: 260px;
+    background-color: rgb(248, 248, 248);
+    float:left;
+    min-height: 50px;
+}
+.knowledgeBody_right {
+    width: calc(100% - 261px);
+    background-color: rgb(248, 248, 248);
+    min-height: 500px;
+    float: left;
+    border-left: 1px solid rgb(204, 204, 204);
+}
+
+.dialog_content {
+    min-height: 120px;
+}
+.dialog_catalog_name {
+    padding: 60px 0 40px 20px;
+}
+.form_item {
+    margin-bottom: 16px;
+    line-height: 34px;
+}
+.form_item:before {
+    content: "";
+    display: table;
+}
+.form_label {
+    float: left;
+    width: 12em;
+    margin-right: .7em;
+    text-align: right;
+    color: rgb(119, 119, 119);
+}
+.form_control {
+    margin-left: 13.7em;
+}
+.form_info_block, .form_vertical .form_info {
+    display: block;
+    line-height: 1.5;
+    margin-left: auto;
+}
+.form_info, .form_info_block {
+    color: rgb(119, 119, 119);
+}
+.form_item:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.form_error .input_text {
+    border-color: rgb(218, 74, 56);
+}
+.form_error .form_info, .form_error .form_info_block {
+    color: rgb(218, 74, 56);
+}
+#edui_fixedlayer {
+z-index:9999 !important;
+}
+ul.jstree-container-ul.jstree-children.jstree-wholerow-ul.jstree-no-dots {
+width:100%;
+overflow:auto;
+    min-height: 120px;
+}

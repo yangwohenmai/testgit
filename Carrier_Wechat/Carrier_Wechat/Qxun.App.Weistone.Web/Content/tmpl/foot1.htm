@@ -1,0 +1,5 @@
+﻿<li class="prev"><a href="javascript:;" page="${First}"><i class="icon-double-angle-left"></i></a></li>
+{{each PageSection}}
+<li class="{{if $value == Current }} active {{/if}}{{if ($value - Current) > 2 }} hidden-phone {{/if}} {{if ($value - Current) < -2 }} hidden-phone {{/if}}"><a href="javascript:;" class="number" title="${$value}" page="${$value}">${$value}</a></li>
+{{/each}}
+<li class="next"><a href="javascript:;"  page="${Last}"><i class="icon-double-angle-right"></i></a></li>

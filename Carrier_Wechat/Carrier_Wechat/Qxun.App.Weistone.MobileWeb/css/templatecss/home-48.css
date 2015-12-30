@@ -1,0 +1,117 @@
+﻿*
+{
+    -webkit-box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.icon
+{
+    font-size: 25px;
+}
+.icon.camera
+{
+    background-position: 0px 0px;
+}
+.icon.sure
+{
+    background-position: -30px 0px;
+}
+.icon.present
+{
+    background-position: -60px 0px;
+}
+.icon.mark
+{
+    background-position: -90px 0px;
+}
+.icon.cup
+{
+    background-position: -120px 0px;
+}
+.icon.download
+{
+    background-position: -150px 0px;
+}
+.body
+{
+    max-width: 640px;
+    margin: auto;
+    min-height: 100%;
+    position: relative;
+    display: block;
+    font-size: 12px;
+    min-width: 320px;
+    background: #005cc9;
+}
+.body .leftbg
+{
+    position: absolute;
+    top: 55px;
+    z-index: 1;
+    border-right: 3px solid #0084e0;
+    height: 380px;
+    width: 190px;
+    border-radius: 0 380px 380px 0;
+}
+.body .leftbg img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 0 380px 380px 0;
+}
+.list
+{
+    width: 100%;
+    height: 100%;
+}
+.list ul
+{
+}
+.list ul li a
+{
+    color: #fff;
+    font-size: 14px;
+}
+.list ul li
+{
+    width: 100%;
+    height: 65px;
+    line-height: 28px;
+    text-align: right;
+    padding: 18px;
+}
+.list ul li:nth-child(odd)
+{
+    background: #005cc9;
+    box-shadow: 0 0 5px #005cc9 inset;
+}
+.list ul li:nth-child(even)
+{
+    background: #0184df;
+    box-shadow: 0 0 5px #0184df inset;
+}
+.body .nav
+{
+    width: 42px;
+    height: 85px;
+    position: fixed;
+    z-index: 200;
+    background: #e5e5e7;
+    bottom: 20px;
+    border-radius: 0 5px 5px 0;
+}
+.body .nav ul li span
+{
+    display: block;
+    background: url(../images/v85_nav.png);
+    background-size: 42px auto;
+    width: 42px;
+    height: 42px;
+}
+.body .nav ul li span.icon.address
+{
+    background-position: 0 42px;
+}
+body
+{
+}

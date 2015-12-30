@@ -1,0 +1,100 @@
+﻿@using Qxun.UI.Background.Config
+@using Qxun.UI.Background.App_Code
+@{ ViewBag.Title = "编辑经销商信息";
+ ViewBag.subTitle = "授权经销商管理";
+ Layout = "~/Views/Shared/_Layout.cshtml";
+ //如果要上传原尺寸图像，请将本参数赋值为"panorama"
+ ViewData["panorama"] = "panorama";
+ var platid = Request["plat"];
+ var formTitle = "编辑经销商信息";
+ string content = "", value = "";
+
+ ViewBag.formlines = new FormLineConfig[] {
+       new FormLineConfig(){desc = "BPCode",name = "BPCode",
+           type = "input-text", tips = "<span class='maroon'>*</span>请填写BP编号Code",vaildType = "required,maxlength:32",inputContent="",functionName="onkeyup",functionStr="value=value.replace(/[^\\d]/g,'')"},
+       //new FormLineConfig(){desc = "ERPCode",name = "ServerSiteCode",
+       //     type = "input-text", tips = "<span class='maroon'>*</span> 请填写ERP代码",vaildType = "required,maxlength:32",inputContent="",functionStr=""} ,
+       new FormLineConfig(){desc = "站点名称",name = "SiteName",
+            type = "input-text", tips = "<span class='maroon'>*</span> 请填写站点名称",vaildType = "required",inputContent="",functionName="onkeyup",functionStr=""} ,
+       new FormLineConfig(){desc = "站点负责人",name = "SiteManager",
+            type = "input-text", tips = "<span class='maroon'>*</span> 请填写站点名称",vaildType = "required",inputContent="",functionName="onkeyup",functionStr=""} ,
+       new FormLineConfig(){desc = "联系电话",name = "Tel",
+            type = "input-text", tips = "<span class='maroon'>*</span> 请填写站点名称",vaildType = "required",inputContent="",functionName="onkeyup",functionStr=""} ,
+       new FormLineConfig(){desc = "站点地址",name = "SiteAddress",
+            type = "input-text", tips = "<span class='maroon'>*</span> 请填写站点名称",vaildType = "required",inputContent="",functionName="onkeyup",functionStr=""} ,
+       new FormLineConfig(){desc = "成立日期",name = "EstablishmentTime",
+            type = "input-text", tips = "<span class='maroon'>*</span> 请填写站点名称",vaildType = "required",inputContent="",functionName="onkeyup",functionStr=""} ,
+       new FormLineConfig(){desc = "公司名称",name = "CompanyName",
+            type = "input-text", tips = "<span class='maroon'>*</span> 请填写站点名称",vaildType = "required",inputContent="",functionName="onkeyup",functionStr=""} ,
+       new FormLineConfig(){desc = "类型",name = "SiteType",
+            type = "input-text", tips = "<span class='maroon'>*</span> 请填写站点名称",vaildType = "required",inputContent="",functionName="onkeyup",functionStr=""} ,
+       new FormLineConfig(){desc = "级别",name = "SiteGrade",
+            type = "input-text", tips = "<span class='maroon'>*</span> 请填写站点名称",vaildType = "required",inputContent="",functionName="onkeyup",functionStr=""} ,
+       new FormLineConfig(){desc = "区域服务经理",name = "LocalManager",
+            type = "input-text", tips = "<span class='maroon'>*</span> 请填写站点名称",vaildType = "required",inputContent="",functionName="onkeyup",functionStr=""} ,
+       
+   };
+ ViewBag.formsecondlines = new FormLineConfig[]{
+       new FormLineConfig(){desc = "",name = "DealerId",
+            type = "input-hidden", tips = "",vaildType = "",inputContent = "",inputValue=""},
+       new FormLineConfig(){desc = "",name = "OpenId",
+            type = "input-hidden", tips = "",vaildType = "",inputContent = "",inputValue=""},
+       new FormLineConfig(){desc = "",name = "WeixinPlatId",
+            type = "input-hidden", tips = "",vaildType = "",inputContent = "",inputValue= Request.QueryString["plat"]}
+   };
+}
+@Html.Partial("_FormResource")
+@Html.Partial("_KindEditorResource")
+@Html.Partial("_DateTimePickerResource", new ViewDataDictionary() { { "className", "form_datetime" } })
+<div id="main">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="box">
+                    @Html.Partial("GoBackButton")
+                    <div class="box-title">
+                        <div class="span10">
+                            <h3>
+                                <i class="icon-edit"></i>@formTitle
+                            </h3>
+                        </div>
+                        <div class="span2">
+                        </div>
+                    </div>
+                    <div class="box-content">
+                        <form action="" method="post" class="form-horizontal form-validate" id="form1" name="form1">
+                            @(new CreateForm().CreateFormBody(ViewBag.formlines))
+
+                            @(new CreateForm().CreateFormBody(ViewBag.formsecondlines, false))
+                            @Html.Partial("CreateFormFoot")
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var id = jQuery.query.get("id");
+    var opts = {
+        primaryKeyId: id,
+        getFormDataUrl: '@Url.Action("GetDealerEntityById", "Dealer")?id=' + id,
+        postFormDataUrl: '@Url.Action("InsertOrUpdateDealerEntity", "Dealer")',
+        returnUrl: '@Url.Action("DealerInfo", "Dealer")@Html.Raw(@ViewBag.oQueryString)',
+        validateOpts: {
+            rules: {
+                @(new CreateForm().CreateFormValid(ViewBag.formlines))
+            }
+        }
+    };
+
+    
+
+    formClass.extFunction.serializeFormFun = function (json) {
+        var jsondata = { "json": json, "plat": jQuery.query.get("plat") };
+        return jsondata;
+    };
+    $(function () {
+        formClass.init(opts);
+    });
+</script>

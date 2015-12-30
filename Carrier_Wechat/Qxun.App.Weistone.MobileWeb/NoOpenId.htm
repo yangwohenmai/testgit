@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>请先关注</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        name="viewport">
+    <!-- #Mobile Devices Support -->
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+    <meta content="no-cache" http-equiv="pragma">
+    <meta content="0" http-equiv="expires">
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- apple devices fullscreen -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <style type="text/css">
+        .mainDiv
+        {
+            font-size: medium;
+            height: 343px;
+        }
+        .btn
+        {
+            background-color: peachpuff;
+            font-size: 18px;
+            border: 0;
+        }
+        .p2
+        {
+            left: 20px;
+            position: relative;
+        }
+        .dvTips
+        {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+    </style>
+    <script type="text/javascript">
+        function ShowDiv() {
+            document.getElementById("dvPayAttention").style.display = "block";
+        }
+        function HideDiv() {
+            document.getElementById("dvPayAttention").style.display = "none";
+        }
+    </script>
+</head>
+<body>
+    <div class="mainDiv">
+        <img src="images/htmlImages/sorry.png" alt="sorry" style="width: 100%" />
+        <p>
+            没有获取到您的身份信息(OpenId)</p>
+        <p class="p2">
+            请先<input value="关注" type="button" onclick="ShowDiv();" class="btn" />
+        </p>
+        <p>
+            如果已经关注</p>
+        <p class="p2">
+            请从<input value="公众号" type="button" onclick="ShowDiv();" class="btn" />消息界面进入</p>
+    </div>
+    <div id="dvPayAttention" style="display: none" class="dvTips">
+        <img src="images/htmlImages/instruction_PublicAccount.png" alt="点击右上角关注" onclick="HideDiv();" />
+    </div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{26E7D9E7-7602-4C41-B759-854D860F1F5D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CarrierCore</RootNamespace>
+    <AssemblyName>CarrierCore</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\QxunFramework\dlls\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\QxunFramework\dlls\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="Qxun.App.Weistone">
+      <HintPath>..\QxunFramework\Qxun.App.Weistone.dll</HintPath>
+    </Reference>
+    <Reference Include="Qxun.App.Weistone.Mobile">
+      <HintPath>..\QxunFramework\Qxun.App.Weistone.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="Qxun.Core">
+      <HintPath>..\QxunFramework\Qxun.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Qxun.UI.Background">
+      <HintPath>..\QxunFramework\Qxun.UI.Background.dll</HintPath>
+    </Reference>
+    <Reference Include="Qxun.Util">
+      <HintPath>..\QxunFramework\Qxun.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.2\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.2\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\DealerSearchEntity.cs" />
+    <Compile Include="Entities\HotLineSearchEntity.cs" />
+    <Compile Include="Entities\PartInfomationSearchEntity.cs" />
+    <Compile Include="Entities\RepairSearchEntity.cs" />
+    <Compile Include="Entities\RepairTimeSearchEntity.cs" />
+    <Compile Include="Entities\RepairTypeSearchEntity.cs" />
+    <Compile Include="Entities\UnitInformationSearchEntity.cs" />
+    <Compile Include="Models\CarrierCoreContext.cs" />
+    <Compile Include="Models\Dealer.cs" />
+    <Compile Include="Models\HotLine.cs" />
+    <Compile Include="Models\PartInformation.cs" />
+    <Compile Include="Models\RecordInfo.cs" />
+    <Compile Include="Models\Repair.cs" />
+    <Compile Include="Models\RepairTime.cs" />
+    <Compile Include="Models\RepairType.cs" />
+    <Compile Include="Models\UnitInformation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Public\Enum.cs" />
+    <Compile Include="Repositories\BaseCarrierCoreRepository.cs" />
+    <Compile Include="Services\BaseCarrierCoreService.cs" />
+    <Compile Include="Services\DealerBll.cs" />
+    <Compile Include="Services\HotLineBll.cs" />
+    <Compile Include="Services\PartInformationBll.cs" />
+    <Compile Include="Services\RecordInfoBll.cs" />
+    <Compile Include="Services\RepairBll.cs" />
+    <Compile Include="Services\RepairTimeBll.cs" />
+    <Compile Include="Services\RepairTypeBll.cs" />
+    <Compile Include="Services\UnitInformationBll.cs" />
+    <Compile Include="Utils\ExcelUtil.cs" />
+    <Compile Include="Utils\Excel\ExcelResult.cs" />
+    <Compile Include="ViewModels\ViewDealer.cs" />
+    <Compile Include="ViewModels\ViewHotLine.cs" />
+    <Compile Include="ViewModels\ViewPartInformation.cs" />
+    <Compile Include="ViewModels\ViewRecordInfo.cs" />
+    <Compile Include="ViewModels\ViewRepair.cs" />
+    <Compile Include="ViewModels\ViewRepairTime.cs" />
+    <Compile Include="ViewModels\ViewRepairType.cs" />
+    <Compile Include="ViewModels\ViewUnitInformation.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

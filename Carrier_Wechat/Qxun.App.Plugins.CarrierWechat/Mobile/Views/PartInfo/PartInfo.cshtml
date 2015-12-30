@@ -1,0 +1,96 @@
+﻿@{
+    var platId = Request["r"];
+}
+<!DOCTYPE html>
+<html style="font-size: 16px; width: 100%; height: 100%; overflow: hidden;">
+<head>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/css/materialize/css/materialize.min.css")" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/css/materialize/css/main.min.css")" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/css/Part.css")" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="@Url.Content("~/js/jquery-1.11.2.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/js/materialize/materialize.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/js/jquery.validate.js")"></script>
+    <title>CarrierWechat</title>    
+</head>
+<body>  
+    <header id="header" class="page-topbar">
+        <!-- start header nav-->
+        <div class="navbar-fixed">
+            <nav class="cyan">
+                <div class="nav-wrapper">
+                    <h1 class="logo-wrapper">
+                        <a href="#!" class="brand-logo darken-1" style="margin:0;padding:0;line-height: 56px;">
+                            零件价格查询
+                        </a>
+                    </h1>
+                </div>
+            </nav>
+        </div>
+        <!-- end header nav-->
+</header>  
+    <div class="col s12" id="form1" style="height:64%;">                                                                                         
+        <div class="row" id="PartTips">
+            请输入您需要查询的零件号
+        </div>                                                
+        <input type="text" name="PartNumber" id="PartNumber" value="" placeholder="请输入零件号" onkeyup="value=value.replace(/[\']+/, '') ">        
+    </div> 
+    <div id="btns">
+        <button class="btn m-bottom-10" id="btnQueryPart">查询</button>
+        <button class="btn m-bottom-10" type="button" id="btnResetPart" style="">重置</button>
+    </div>                              
+                               
+    <script>
+    $(function () {
+        //搜索
+        @*$("#btnQueryPart").click(function () {
+            var entity = new Object();
+            entity.PartNumber = $.trim($("#PartNumber").val());//去掉前后得空格
+            var searchJson = JSON.stringify(entity);
+            if (entity.PartNumber != "") {
+                $.ajax({
+                    url: "@Url.Action("GetPartInformationList", "PartInfo")@Html.Raw(ViewBag.oQueryString)&partNumber=" + entity.PartNumber,
+                    data: {},
+                    success: function (data) {
+                        if (!data.IsSuccess) {
+                            alert("您查找的零件号不存在");
+                            //return false;
+                        }
+                        else {
+                            var checkresult = "@Url.Action("CheckResult", "PartInfo")@Html.Raw(ViewBag.oQueryString)&PartNumber=" + data.ExtInfo.PartNumber;
+                            location.href = checkresult;//实现页面的跳转
+                        }
+                    }
+                });
+            }
+            else
+                return false;
+        })*@
+        //搜索
+        $("#btnQuery").click(function () {
+            var partNumber = $.trim($("#PartNumber").val());
+            if (partNumber != "") {
+                $.post("@Url.Action("GetPartInformationList", "PartInfo")@Html.Raw(ViewBag.oQueryString)", { partNumber: partNumber }, function (data) {
+                    if (!data.IsSuccess) {
+                        alert("您查找的零件号不存在");
+                    }
+                    else {
+                        var checkresult = "@Url.Action("CheckResult", "PartInfo")@Html.Raw(ViewBag.oQueryString)&PartNumber=" + data.ExtInfo.PartNumber;
+                        location.href = checkresult;//实现页面的跳转
+                    }
+                })
+            } else {
+                $("#PartNumber").val("");
+            }
+        })
+        //重置
+        $("#btnResetPart").click(function () {
+            $("#PartNumber").val("");
+        })
+    });
+    </script>
+</body>
+</html>

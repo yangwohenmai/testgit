@@ -1,0 +1,62 @@
+﻿.MobileVisualEdit {
+    float: left;
+    margin-right: 40px;
+}
+.MobileVisualSet {
+    float: left;
+    width: 592px;
+    border: 1px solid #ccc;
+    border-radius: 15px
+}
+.Mobile {
+    background: url(../Images/TempletImages/iphone-portrait.png);
+    background-repeat: no-repeat;
+    height: 712px;
+    float: left;
+    width: 367px;
+}
+.tmplTitleList 
+{
+    width: 100%;
+overflow: hidden;
+}
+.tmplTitleList li
+{
+    list-style-type: none;
+    float: left;
+}
+.Mode {
+     width: 100%;
+overflow: hidden;
+}
+.Mode li{
+    list-style-type: none;
+    float: left;
+}
+.MobileVisualSet .tmplTitleList li a{
+border-radius: 0px;
+padding: 10px 20px;
+}
+#Form1 ul li label
+{
+    padding: 65px 13px 58px 14px;
+    max-width: 143px;
+}
+.active1 a,.active>a:hover,.active>a:focus{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    outline: 0;
+    background-color: rgb(0, 129, 194);
+    background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(0, 136, 204)), to(rgb(0, 119, 179)));
+    background-image: -webkit-linear-gradient(top, rgb(0, 136, 204), rgb(0, 119, 179));
+    background-image: -o-linear-gradient(top, #0088cc, #0077b3);
+    background-image: linear-gradient(to bottom, rgb(0, 136, 204), rgb(0, 119, 179));
+    background-repeat: repeat-x;
+}
+
+.singleList{width: 225px;float: left;border: 1px solid rgb(204, 204, 204);height: 242px;margin:10px}
+.singleList-title{height: 30px;background: red;text-align: center;height: 30px;  border-bottom: 1px solid rgb(204, 204, 204);  text-align: center;  line-height: 30px;  background: rgb(231, 231, 235);}
+.singleList-img{height: 159px;  border-bottom: 1px solid rgb(204, 204, 204);  overflow: hidden;  padding: 10px 10px 0 10px;}
+.singleList-handle{height: 41px;  background: rgb(231, 231, 235);text-align: center;}
+.singleList-del{line-height: 41px;}

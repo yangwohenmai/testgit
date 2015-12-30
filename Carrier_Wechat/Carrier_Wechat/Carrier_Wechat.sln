@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qxun.App.Weistone.MobileWeb", "Qxun.App.Weistone.MobileWeb\Qxun.App.Weistone.MobileWeb.csproj", "{4E61EC37-C8DE-4FC1-AFE3-9FCE76664219}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qxun.App.Weistone.Web", "Qxun.App.Weistone.Web\Qxun.App.Weistone.Web.csproj", "{97D28566-7978-4685-A61E-2D4B9019B310}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qxun.App.Plugins.Carrier", "Qxun.App.Plugins.Carrier\Qxun.App.Plugins.Carrier.csproj", "{14BFFF75-EB0F-47D8-8E2F-1874E54140DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarrierCore", "CarrierCore\CarrierCore.csproj", "{26E7D9E7-7602-4C41-B759-854D860F1F5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qxun.App.Plugins.CarrierWechat", "Qxun.App.Plugins.CarrierWechat\Qxun.App.Plugins.CarrierWechat.csproj", "{9EBF843A-65EB-48ED-9A64-29D6426395FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E61EC37-C8DE-4FC1-AFE3-9FCE76664219}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E61EC37-C8DE-4FC1-AFE3-9FCE76664219}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E61EC37-C8DE-4FC1-AFE3-9FCE76664219}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E61EC37-C8DE-4FC1-AFE3-9FCE76664219}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97D28566-7978-4685-A61E-2D4B9019B310}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97D28566-7978-4685-A61E-2D4B9019B310}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97D28566-7978-4685-A61E-2D4B9019B310}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97D28566-7978-4685-A61E-2D4B9019B310}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14BFFF75-EB0F-47D8-8E2F-1874E54140DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14BFFF75-EB0F-47D8-8E2F-1874E54140DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14BFFF75-EB0F-47D8-8E2F-1874E54140DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14BFFF75-EB0F-47D8-8E2F-1874E54140DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26E7D9E7-7602-4C41-B759-854D860F1F5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26E7D9E7-7602-4C41-B759-854D860F1F5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26E7D9E7-7602-4C41-B759-854D860F1F5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26E7D9E7-7602-4C41-B759-854D860F1F5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EBF843A-65EB-48ED-9A64-29D6426395FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EBF843A-65EB-48ED-9A64-29D6426395FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EBF843A-65EB-48ED-9A64-29D6426395FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EBF843A-65EB-48ED-9A64-29D6426395FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

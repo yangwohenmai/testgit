@@ -1,0 +1,67 @@
+﻿.error {
+       font-size: 12px;
+       color: rgb(255, 0, 0);
+       margin-top: -16px;
+
+}
+
+body {
+    height: 100%;
+}
+.UnitType {
+    position:absolute;
+    top:21%;
+    left:41%;
+    width:50%;
+    height:5%;
+    color:#000;
+    font-size:1.2em;
+}
+.DeadLine{
+    position:absolute;
+    top:42%;
+    left:40%;
+    width:50%;
+    height:5%;
+    color:#000;
+    font-size:1.2em;
+}
+#UnitType {
+    position:absolute;
+    top:28%;
+    left:18%;
+    width:64%;
+    height:42px;
+    border:1px solid gray;
+    color:gray;
+    text-align:center;
+    border-radius:5px;
+    font-size:1.2em;
+}
+#DeadLine {
+    position:absolute;
+    top:48%;
+    left:18%;
+    width:64%;
+    height:42px;
+    border:1px solid gray;
+    color:gray;
+    text-align:center;
+    border-radius:5px;
+    font-size:1.2em;
+}
+#comment {
+    position:absolute;
+    top:56%;
+    left:24%;
+    width:50%;
+    height:10%;
+    color:#000;
+}
+#btnBack {
+    position:absolute;
+    top:72%;
+    left:31%;
+    width:36%;
+    height:5%;
+}

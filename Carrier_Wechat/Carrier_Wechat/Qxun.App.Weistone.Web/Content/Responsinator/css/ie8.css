@@ -1,0 +1,17 @@
+.deviceTitle, #devices .deviceWrap, #tools {
+    width: 1024px;
+} 
+
+.deviceTitle {
+	text-align: center;
+	margin: 20px 0px 60px 0px;
+}
+
+.deviceWrap {
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
+.device {
+	margin: 0px auto;
+}
